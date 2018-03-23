@@ -43,6 +43,7 @@
             this.GameConstructor.TabIndex = 0;
             this.GameConstructor.Text = "GameConstructor";
             this.GameConstructor.UseVisualStyleBackColor = true;
+            this.GameConstructor.Click += new System.EventHandler(this.GameConstructor_Click_1);
             // 
             // Difficulty
             // 
@@ -60,6 +61,7 @@
             this.PlayerUpdate.TabIndex = 2;
             this.PlayerUpdate.Text = "PlayerUpdate";
             this.PlayerUpdate.UseVisualStyleBackColor = true;
+            this.PlayerUpdate.Click += new System.EventHandler(this.PlayerUpdate_Click);
             // 
             // PlayerInfo
             // 

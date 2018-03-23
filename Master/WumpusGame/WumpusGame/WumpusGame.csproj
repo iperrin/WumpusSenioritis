@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{70FD0E36-35F2-404F-9795-D34C6D861524}</ProjectGuid>
+    <ProjectGuid>{0D2E5EDC-141D-4F8F-903A-5E9EA858DBCC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WumpusTest</RootNamespace>
-    <AssemblyName>WumpusTest</AssemblyName>
+    <RootNamespace>WumpusGame</RootNamespace>
+    <AssemblyName>WumpusGame</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,11 +52,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameControl.cs" />
+    <Compile Include="graphicInterface.cs" />
+    <Compile Include="HighScore.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TriviaManagement.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\WumpusGame.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\WumpusGame.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,6 +78,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bin\Debug\WumpusGame.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\WumpusGame.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\WumpusGame.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\WumpusGame.csprojResolveAssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +96,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\WumpusGame.exe" />
+    <Content Include="bin\Debug\WumpusGame.pdb" />
+    <Content Include="obj\Debug\WumpusGame.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\WumpusGame.exe" />
+    <Content Include="obj\Debug\WumpusGame.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

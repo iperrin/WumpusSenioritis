@@ -19,10 +19,25 @@ namespace WumpusGame
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GameConstructor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PlayerUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GameConstructor_Click_1(object sender, EventArgs e)
         {
 
         }

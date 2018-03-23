@@ -5,8 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WumpusTest
-{
+
   class TriviaManagement
   {
     private String[] questions;
@@ -87,4 +86,3 @@ namespace WumpusTest
 
   }
   
-}
