@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WumpusGame;
+using System.IO;
 
 static class Program
 {
@@ -17,6 +19,17 @@ static class Program
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
-        Application.Run(new Form1());
+        Application.Run(new GameControlTest());
+    }
+
+    public static void saveFile(String data, String name)
+    { 
+        StreamWriter sw = new StreamWriter(Environment.CurrentDirectory+name+".txt");
+
+        //Write a line of text
+        sw.WriteLine(data);
+
+        //Close the file
+        sw.Close();
     }
 }

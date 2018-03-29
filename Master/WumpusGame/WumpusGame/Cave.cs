@@ -20,8 +20,8 @@ class Cave
     {
         try
         {
-            String line = sr.ReadLine();
-            String[] lineData = line.Split(' ');
+            //String line = sr.ReadLine();
+            //String[] lineData = line.Split(' ');
         }
         catch (Exception e)
         {
@@ -53,12 +53,6 @@ class Cave
 
     // accesses methods/attributes in Map Object
     public void accessMap()
-    {
-
-    }
-
-    // accesses methods/attributes in Player Object
-    public void accessPlayer()
     {
 
     }

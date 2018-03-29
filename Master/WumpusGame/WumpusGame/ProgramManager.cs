@@ -12,6 +12,4 @@ public class ProgramManager
         //intiailize GUI views and such
 	}
 
-    public 
-
 }

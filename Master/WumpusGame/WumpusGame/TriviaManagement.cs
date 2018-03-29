@@ -68,8 +68,8 @@ using System.Threading.Tasks;
       return "No more trivia questions available!";
     }
 
-    public boolean CorrectAnswer(String userInput) {
-      return userInput.equals(this.answers[this.nextQuestion]);
+    public Boolean CorrectAnswer(String userInput) {
+      return userInput.Equals(this.answers[this.nextQuestion]);
     }
 
     public String QuestionAndAnswer(String userInput)

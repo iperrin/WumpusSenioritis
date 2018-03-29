@@ -15,17 +15,20 @@ class Map{
     }
 
     public Boolean CheckBat(Cave currentRoom){
+        /*
         foreach (int creature in currentRoom.getCreatureNumbers()){
             if (Cave.caveSystem[creature].getRoomStatus() == 1){
                 return true;
             }
         }
+        */
         return false;
         //Haven't joined code yet so i just assumed some names for class and method names from cave.
     }
 
     public Boolean CheckWumpus(Cave currentRoom)
     {
+        /*
         foreach (int creature in currentRoom.getCreatureNumbers())
         {
             if (Cave.caveSystem[creature].hasWumpus() == true)
@@ -33,6 +36,7 @@ class Map{
                 return true;
             }
         }
+        */
         return false;
         //Haven't joined code yet so i just assumed some names for class and method names from cave.
     }

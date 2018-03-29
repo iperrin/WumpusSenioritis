@@ -1,6 +1,6 @@
 ﻿namespace WumpusGame
 {
-    partial class Form1
+    partial class GameControlTest
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,7 @@
             this.PlayerUpdate = new System.Windows.Forms.Button();
             this.PlayerInfo = new System.Windows.Forms.Label();
             this.DifTitle = new System.Windows.Forms.Label();
+            this.SaveFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GameConstructor
@@ -71,6 +72,7 @@
             this.PlayerInfo.Size = new System.Drawing.Size(84, 20);
             this.PlayerInfo.TabIndex = 3;
             this.PlayerInfo.Text = "Player Info";
+            this.PlayerInfo.Click += new System.EventHandler(this.PlayerInfo_Click);
             // 
             // DifTitle
             // 
@@ -82,17 +84,28 @@
             this.DifTitle.Text = "Difficulty";
             this.DifTitle.Click += new System.EventHandler(this.label2_Click);
             // 
-            // Form1
+            // SaveFile
+            // 
+            this.SaveFile.Location = new System.Drawing.Point(818, 451);
+            this.SaveFile.Name = "SaveFile";
+            this.SaveFile.Size = new System.Drawing.Size(149, 72);
+            this.SaveFile.TabIndex = 5;
+            this.SaveFile.Text = "SaveFile";
+            this.SaveFile.UseVisualStyleBackColor = true;
+            this.SaveFile.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // AAGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 573);
+            this.Controls.Add(this.SaveFile);
             this.Controls.Add(this.DifTitle);
             this.Controls.Add(this.PlayerInfo);
             this.Controls.Add(this.PlayerUpdate);
             this.Controls.Add(this.Difficulty);
             this.Controls.Add(this.GameConstructor);
-            this.Name = "Form1";
+            this.Name = "AAGame";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,6 +119,7 @@
         private System.Windows.Forms.Button PlayerUpdate;
         private System.Windows.Forms.Label PlayerInfo;
         private System.Windows.Forms.Label DifTitle;
+        private System.Windows.Forms.Button SaveFile;
     }
 }
 

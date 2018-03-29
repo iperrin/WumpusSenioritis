@@ -10,24 +10,25 @@ class graphicInterface
     //Access actions. 
     private void getActions()
     {
-        Console.WriteLine(actions);
+        //Console.WriteLine(actions);
     }
 
     //get userScore
     private void getScore()
     {
-        Console.WriteLine(score);
+        //Console.WriteLine(score);
     }
 
     //Access highScore 
     private void getHighScore()
     {
-        Console.WriteLine(highScore);
+        //Console.WriteLine(highScore);
     }
 
     //warningMessage displayed 
     public void warningMessage()
     {
+        /*
         if (//player is adjacent to wumpus)
         {
             Console.WriteLine("I smell a Wumpus!");
@@ -40,6 +41,7 @@ class graphicInterface
         {
             Console.WriteLine("I feel a draft...");
         }
+        */
     }
 
     //Displays Hint onscreen for user 

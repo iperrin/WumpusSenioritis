@@ -19,6 +19,7 @@ class Player{
     }
 
     public void ShootArrow(int targetRoom){
+        /*
         arrows--;
         if (GameControl.checkHit(targetRoom)){
             GameControl.killWumpus();
@@ -31,6 +32,7 @@ class Player{
             GameControl.moveWumpus();
         }
         //Haven't joined code yet so i just assumed some names for class and method names from cave.
+        */
     }
 
     public int PlayerGold(){
@@ -41,7 +43,8 @@ class Player{
     public String PlayerInventory(){
         //Prints out the Player's inventory.
         //Calls the Graphical Interface.
-        return PlayerArrows() + " " + PlayerGold() + " ";
+        //return PlayerArrows() + " " + PlayerGold() + " ";
+        return "";
     }
 
     public int NumberOfTurns(){

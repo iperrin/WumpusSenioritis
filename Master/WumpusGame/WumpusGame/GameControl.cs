@@ -5,7 +5,7 @@ public class GameControl
     Player player;
     Map map;
     TriviaManagement trivia;
-
+    /*
     public GameControl(int difficulty)
 	{
         player = new Player();
@@ -29,6 +29,7 @@ public class GameControl
         score.move();
         score.trivia(Trivia(3));
         wumpus.move();
-        gui.(/*pass current rooom object*/);
+        gui.(/*pass current rooom object);
     }
+    */
 }

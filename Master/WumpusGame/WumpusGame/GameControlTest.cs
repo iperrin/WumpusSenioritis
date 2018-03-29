@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WumpusGame
 {
-    public partial class Form1 : Form
+    public partial class GameControlTest : Form
     {
-        public Form1()
+        public GameControlTest()
         {
             InitializeComponent();
         }
@@ -38,6 +39,16 @@ namespace WumpusGame
         }
 
         private void GameConstructor_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.saveFile("test123q3rkldfj;lasdk", "TestAlpha");
+        }
+
+        private void PlayerInfo_Click(object sender, EventArgs e)
         {
 
         }
