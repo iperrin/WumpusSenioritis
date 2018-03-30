@@ -46,13 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cave.cs" />
-    <Compile Include="GameControlTest.cs">
+    <Compile Include="GameControl.cs" />
+    <Compile Include="GameControlTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GameControlTest.Designer.cs">
-      <DependentUpon>GameControlTest.cs</DependentUpon>
+    <Compile Include="GameControlTestForm.Designer.cs">
+      <DependentUpon>GameControlTestForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameControl.cs" />
     <Compile Include="graphicInterface.cs" />
     <Compile Include="HighScore.cs" />
     <Compile Include="Map.cs" />
@@ -64,8 +64,8 @@
     <Compile Include="ProgramManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TriviaManagement.cs" />
-    <EmbeddedResource Include="GameControlTest.resx">
-      <DependentUpon>GameControlTest.cs</DependentUpon>
+    <EmbeddedResource Include="GameControlTestForm.resx">
+      <DependentUpon>GameControlTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\WumpusGame.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\WumpusGame.Properties.Resources.resources" />

@@ -19,7 +19,7 @@ static class Program
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
-        Application.Run(new GameControlTest());
+        Application.Run(new GameControlTestForm());
     }
 
     public static void saveFile(String data, String name)

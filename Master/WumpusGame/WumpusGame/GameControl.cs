@@ -5,14 +5,23 @@ public class GameControl
     Player player;
     Map map;
     TriviaManagement trivia;
-    /*
+    int level;
+
+
     public GameControl(int difficulty)
 	{
         player = new Player();
-        map = new Map(difficulty);
-        trivia = new TriviaManagement();
+        map = new Map();
+        level = difficulty;
+
+       // trivia = new TriviaManagement();
 
 	}
+
+    public String testMethod()
+    {
+        return level.ToString();
+    }
 
     public void RunGame()
     {
@@ -21,15 +30,14 @@ public class GameControl
 
     private void updatePlayer(int newPosition)
     {
-        updatePlayer.setPosition(newPosition);
+        //updatePlayer.setPosition(newPosition);
     }
 
     private void move()
     {
-        score.move();
-        score.trivia(Trivia(3));
-        wumpus.move();
-        gui.(/*pass current rooom object);
+        //score.move();
+        //score.trivia(Trivia(3));
+        //wumpus.move();
+        //gui.(/*pass current rooom object);
     }
-    */
 }
