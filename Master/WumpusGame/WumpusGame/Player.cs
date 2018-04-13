@@ -1,47 +1,50 @@
 ﻿using System;
 
-namespace WumpusTest
-{
-    class Player{
-        int arrows = 3;
-        int goldCoins = 0;
-        int playerTurns = 0;
+public class Player{
+    int arrows;
+    int goldCoins;
+    int playerTurns;
 
-        public Player(int arrows, int goldCoins, int playerTurns)
-        {
-            this.arrows = arrows;
-            this.goldCoins = goldCoins;
-            this.playerTurns = playerTurns;
-        }
+    public Player()
+    {
+        arrows = 0;
+        goldCoins = 0;
+        playerTurns = 0;
+    }
 
-        public void Move(int direction)
-        {
-            
-        }
+    public void move(int direction)
+    {
+           //changes that occur after change 
+    }
 
-        public void AddArrows(int addition)
-        {
-            arrows += addition;
-        }
+    public void AddArrows(int addition)
+    {
+        arrows += addition;
+    }
 
-        public void ShootArrows(int subtraction)
-        {
-            arrows -= subtraction;
-        }
+    public void ShootArrows(int subtraction)
+    {
+        arrows -= subtraction;
+    }
 
-        public void AddGold(int addition)
-        {
-            goldCoins += addition;
-        }
+    public void AddGold(int addition)
+    {
+        goldCoins += addition;
+    }
 
-        public void UseGold(int subtraction)
-        {
-            goldCoins -= subtraction;
-        }
+    public void UseGold(int subtraction)
+    {
+        goldCoins -= subtraction;
+    }
 
-        public void AddTurns(int addition)
-        {
-            playerTurns += addition;
-        }
+    public void AddTurns(int addition)
+    {
+        playerTurns += addition;
+    }
+
+    public int[] getPlayerInfo()
+    {
+        int[] output = {playerTurns, goldCoins, arrows};
+        return output;
     }
 }
