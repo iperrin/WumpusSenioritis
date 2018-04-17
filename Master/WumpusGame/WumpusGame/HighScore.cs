@@ -8,30 +8,27 @@ using System.Threading.Tasks;
 class HighScore
 {
 
-    private ArrayList Record;
-    private String FileLocation;
+    public struct PlayerInfo
+    {
+        public string name;
+        public int turns;
+        public int gold;
+        public int arrows;
+        public int cave;
+    }
 
-    //public HighScore(String StoredFiles)
-    //{
-    //    Record = new ArrayList();
-    //    FileLocation = StoredFiles;
-    //}
+    private static String FileLocation = "tempLocation";
 
-    //public static ArrayList GetHighScore()
-    //{
-        
-    //}
-
-    public static void ReplaceScore()
+    public ArrayList GetHighScore()
+    {
+        return Record;
+    }
+    public void ReplaceScore()
     {
         //checks if score is good enough;
     }
-    public static void WriteNewScores(String StoredFiles)
+    public void WriteNewScores(String StoredFiles)
     {
         //write to file eventually
-    }
-
-    public static void addScore(String name, int[] data) {
-        //calculates score and adds to high score file
     }
 }

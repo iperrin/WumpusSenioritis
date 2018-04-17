@@ -27,7 +27,7 @@ namespace WumpusGame
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String temp = game.testMethod();
+            String temp = game.data[3];
             label1.Text = temp;
         }
     }

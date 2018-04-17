@@ -16,6 +16,11 @@ class Cave
         readFromFile("filename.txt");
     }
 
+    public void load(int cave)
+    {
+        //loads cave number from file into current cave
+    }
+
     public void readFromFile(String filename)
     {
         try

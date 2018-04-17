@@ -5,66 +5,51 @@ public class GameControl
     Player player;
     Map map;
     TriviaManagement trivia;
-    String name;
-    int[] data; // {turns, gold, arrows, cave}
+    HighScore.PlayerInfo data;
+    Cave cave;
+    public string name;
+    public int turns;
+    public int gold;
+    public int arrows;
+    public int level;
 
 
-    public GameControl(int difficulty)
+    public GameControl()
 	{
         player = new Player();
         map = new Map();
-        data = new int[4] {0, 0, 0, difficulty};
-        updateData();
-        //need to update file location parameters "Environment.CurrentDirectory" or something
-        trivia = new TriviaManagement("temp","temp","temp");
+        cave = new Cave();
+       // trivia = new TriviaManagement();
+       
 	}
 
-
-    private void updatePlayer(int newPosition)
+    public String testMethod()
     {
-        //updatePlayer.setPosition(newPosition);
+        return level.ToString();
     }
 
-    private void move(int direction)
+    public void StartGame(int caveNumber)
     {
-        player.move(direction);
-        updateData();
-        //Update GUI birdeye view
-        if (triviaQuery(3)){
-            player.AddGold(1);
-        }
-        else{
+        player.Reset();
+        cave.load(caveNumber);
+        trivia.Reset();
+        map.Reset();
+    }
 
-        }
+    private void getPlayerData(int newPosition)
+    {
+        int[] inputArray = new int[3];
+        inputArray = player.getData();
+        turns = inputArray[0];
+        gold = inputArray[1];
+        arrows = inputArray[2];
+    }
+
+    private void move()
+    {
+        //score.move();
+        //score.trivia(Trivia(3));
+        //wumpus.move();
         //gui.(/*pass current rooom object);
-        map.checkHazards();
-    }
-
-    private Boolean triviaQuery(int count)
-    {
-        int score = 0;
-        for(int i = 0; i<count; i++)
-        {
-            //retrive question from trivia class
-            //send question info to gui
-        }
-        if (score > count - score) return true;
-        else return false;
-
-    }
-
-    private void updateData()
-    {
-        int[] update = player.getPlayerInfo();
-        for(int i = 0; i<3; i++)
-        {
-            data[i] = update[i];
-        }
-    }
-
-    private void endgame()
-    {
-        HighScore.addScore(name, data);
-        //GUI display endgame page with button that resets game
     }
 }

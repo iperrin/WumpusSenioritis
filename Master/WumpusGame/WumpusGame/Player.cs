@@ -1,20 +1,25 @@
 ﻿using System;
 
-public class Player{
-    int arrows;
-    int goldCoins;
-    int playerTurns;
+class Player{
+    int arrows = 3;
+    int goldCoins = 0;
+    int playerTurns = 0;
 
     public Player()
     {
-        arrows = 0;
-        goldCoins = 0;
         playerTurns = 0;
+        goldCoins = 0;
+        arrows = 0;
     }
 
-    public void move(int direction)
+    public void Reset()
     {
-           //changes that occur after change 
+        //rests all values
+    }
+
+    public void Move(int direction)
+    {
+            
     }
 
     public void AddArrows(int addition)
@@ -42,9 +47,10 @@ public class Player{
         playerTurns += addition;
     }
 
-    public int[] getPlayerInfo()
+    public int[] getData()
     {
-        int[] output = {playerTurns, goldCoins, arrows};
+        //returns int array [turns, gold, arrows]
+        int[] output = new int[3];
         return output;
     }
 }
