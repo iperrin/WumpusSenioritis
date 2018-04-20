@@ -17,9 +17,6 @@ namespace WumpusTest
     private int nextSecret;
 
 
-    // NOTE TO SELF: MODIFY QUESTIONS & FACTS SO YOU GET THEM IN RANDOM ORDER
-    // MAKE RESET METHOD: RESETS ALL THE USED FACTS AND QUESTIONS AND SUCH
-
     // creates new trivia management object using file addresses in arguments
     // ensure arguments are verbatim string literals, with @ before the quotes begin
     // example: @"C:\Users\vaish\Documents\VVP\12th Grade (2017-2018)\AP Computer Science\HuntTheWumpus\TriviaQuestions.txt"
