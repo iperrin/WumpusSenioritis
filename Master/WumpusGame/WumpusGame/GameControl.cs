@@ -8,9 +8,6 @@ public class GameControl
     HighScore.PlayerInfo data;
     Cave cave;
     public string name;
-    public int turns;
-    public int gold;
-    public int arrows;
     public int level;
 
 
@@ -23,11 +20,6 @@ public class GameControl
        
 	}
 
-    public String testMethod()
-    {
-        return level.ToString();
-    }
-
     public void StartGame(int caveNumber)
     {
         player.Reset();
@@ -38,18 +30,24 @@ public class GameControl
 
     private void getPlayerData(int newPosition)
     {
-        int[] inputArray = new int[3];
-        inputArray = player.getData();
-        turns = inputArray[0];
-        gold = inputArray[1];
-        arrows = inputArray[2];
+        
     }
 
-    private void move()
+    private void move(int newRoom)
     {
-        //score.move();
-        //score.trivia(Trivia(3));
-        //wumpus.move();
-        //gui.(/*pass current rooom object);
+        //update map with new move
+        //run trivia game
+        //purchase prompts
+        //update player
+        //update view (get new room info)
+        //check for wumpus
+        //check for hazards
+        
+    }
+
+    private void endGame()
+    {
+        //add player data to high score
+        //send high score data to GUI for display
     }
 }

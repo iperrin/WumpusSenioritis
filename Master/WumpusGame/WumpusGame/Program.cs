@@ -19,8 +19,8 @@ static class Program
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
-        Application.Run(new GameControlTestForm());
         GameControl management = new GameControl();
+        Application.Run(new GameControlTestForm());
     }
 
     public static void saveFile(String data, String name)

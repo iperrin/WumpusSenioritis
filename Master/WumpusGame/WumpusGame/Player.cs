@@ -9,7 +9,7 @@ class Player{
     {
         playerTurns = 0;
         goldCoins = 0;
-        arrows = 0;
+        arrows = 3;
     }
 
     public void Reset()
@@ -47,10 +47,4 @@ class Player{
         playerTurns += addition;
     }
 
-    public int[] getData()
-    {
-        //returns int array [turns, gold, arrows]
-        int[] output = new int[3];
-        return output;
-    }
 }
