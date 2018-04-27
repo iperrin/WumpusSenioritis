@@ -1,6 +1,0 @@
-7
-hello 
-there 
-i
-am 
-mac
