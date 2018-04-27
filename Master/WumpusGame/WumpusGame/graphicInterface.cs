@@ -82,4 +82,12 @@ class graphicInterface
     {
         return 0; 
     }
+
+    public static void displayDoors(int[] doors)
+    {
+        if(doors[0] == 0)
+            Door0
+
+    }
+
 }

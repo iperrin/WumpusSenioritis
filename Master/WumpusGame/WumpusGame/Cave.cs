@@ -8,17 +8,20 @@ class Cave
 {
     private int numRooms;
     private int roomEdges;
+    int cave;
 
-    public Cave(int size, int numEdges)
+    public Cave(int startCave)//(int size, int numEdges)
     {
-        numRooms = size;
-        roomEdges = numEdges;
+        cave = startCave;
+        //numRooms = size;
+        //roomEdges = numEdges;
         readFromFile("filename.txt");
     }
 
     public void load(int cave)
     {
         //loads cave number from file into current cave
+        this.cave = cave;
     }
 
     public void readFromFile(String filename)
@@ -78,6 +81,22 @@ class Cave
     public int numConnected()
     {
         return 0;
+    }
+
+    //returns room doors
+    public int[] GetDoors(int room)
+    {
+        //example: {6,27,0,0,3,2}
+        //top door goes to room 6
+        //top right door goes to room 27
+        //there is no bottom right or bottom door
+        //bottom left door goes to room 3
+        //top left door goes to room 2
+
+        //example return
+        int[] output = { 6, 27, 0, 0, 3, 2 };
+        return output;
+
     }
 }
     

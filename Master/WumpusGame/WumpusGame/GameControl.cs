@@ -28,11 +28,6 @@ public class GameControl
         map.Reset();
     }
 
-    private void getPlayerData(int newPosition)
-    {
-        
-    }
-
     private void move(int newRoom)
     {
         //update map with new move
@@ -40,9 +35,21 @@ public class GameControl
         //purchase prompts
         //update player
         //update view (get new room info)
-        //check for wumpus
-        //check for hazards
-        
+        if (true) {//check wumpus position for player position
+            if (!trivia.run(5))
+                endGame();
+            else
+                //call map to move wumpus
+        }
+
+        if (true) {//check for hazards calls map
+
+        }
+    }
+
+    private void updateRoom(int room)
+    {
+        graphicInterface.displayDoors(cave.GetDoors(5));
     }
 
     private void endGame()

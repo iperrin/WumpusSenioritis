@@ -30,5 +30,40 @@ namespace WumpusGame
             String temp = game.data[3];
             label1.Text = temp;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Door0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Door1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Door2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Door3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Door4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Door5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

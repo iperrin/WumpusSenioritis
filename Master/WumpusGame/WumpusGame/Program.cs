@@ -14,6 +14,7 @@ static class Program
 
     [STAThread]
 
+    public GameControl;
 
     static void Main()
     {
