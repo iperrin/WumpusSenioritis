@@ -94,8 +94,12 @@ class Cave
         //top left door goes to room 2
 
         //example return
-        int[] output = { 6, 27, 0, 0, 3, 2 };
-        return output;
+
+        int[] outputA = { 26, 0, 18, 0, 17, 24 };
+        int[] outputB = { 0, 12, 3, 4, 15, 0 };
+
+        if (room < 15) return outputA;
+        return outputB;
 
     }
 }

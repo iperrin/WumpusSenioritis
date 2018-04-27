@@ -36,13 +36,17 @@
             this.Door4 = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Door0 = new System.Windows.Forms.Button();
-            this.LoadRoom1 = new System.Windows.Forms.Button();
+            this.RoomNumber = new System.Windows.Forms.Label();
+            this.Question = new System.Windows.Forms.Label();
+            this.GetQuestion = new System.Windows.Forms.Button();
+            this.GetFact = new System.Windows.Forms.Button();
+            this.Fact = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // Door1
             // 
-            this.Door1.Location = new System.Drawing.Point(1317, 467);
+            this.Door1.Location = new System.Drawing.Point(1121, 326);
             this.Door1.Name = "Door1";
             this.Door1.Size = new System.Drawing.Size(120, 53);
             this.Door1.TabIndex = 5;
@@ -52,7 +56,7 @@
             // 
             // Door2
             // 
-            this.Door2.Location = new System.Drawing.Point(1317, 687);
+            this.Door2.Location = new System.Drawing.Point(1121, 529);
             this.Door2.Name = "Door2";
             this.Door2.Size = new System.Drawing.Size(120, 53);
             this.Door2.TabIndex = 6;
@@ -62,7 +66,7 @@
             // 
             // Door3
             // 
-            this.Door3.Location = new System.Drawing.Point(1074, 844);
+            this.Door3.Location = new System.Drawing.Point(913, 675);
             this.Door3.Name = "Door3";
             this.Door3.Size = new System.Drawing.Size(120, 53);
             this.Door3.TabIndex = 7;
@@ -72,7 +76,7 @@
             // 
             // Door5
             // 
-            this.Door5.Location = new System.Drawing.Point(818, 467);
+            this.Door5.Location = new System.Drawing.Point(642, 288);
             this.Door5.Name = "Door5";
             this.Door5.Size = new System.Drawing.Size(120, 53);
             this.Door5.TabIndex = 8;
@@ -82,7 +86,7 @@
             // 
             // Door4
             // 
-            this.Door4.Location = new System.Drawing.Point(818, 687);
+            this.Door4.Location = new System.Drawing.Point(642, 529);
             this.Door4.Name = "Door4";
             this.Door4.Size = new System.Drawing.Size(120, 53);
             this.Door4.TabIndex = 9;
@@ -92,7 +96,7 @@
             // 
             // Door0
             // 
-            this.Door0.Location = new System.Drawing.Point(1074, 325);
+            this.Door0.Location = new System.Drawing.Point(904, 170);
             this.Door0.Name = "Door0";
             this.Door0.Size = new System.Drawing.Size(120, 53);
             this.Door0.TabIndex = 10;
@@ -100,22 +104,67 @@
             this.Door0.UseVisualStyleBackColor = true;
             this.Door0.Click += new System.EventHandler(this.Door0_Click);
             // 
-            // LoadRoom1
+            // RoomNumber
             // 
-            this.LoadRoom1.Location = new System.Drawing.Point(117, 76);
-            this.LoadRoom1.Name = "LoadRoom1";
-            this.LoadRoom1.Size = new System.Drawing.Size(142, 53);
-            this.LoadRoom1.TabIndex = 11;
-            this.LoadRoom1.Text = "Load Room 1";
-            this.LoadRoom1.UseVisualStyleBackColor = true;
-            this.LoadRoom1.Click += new System.EventHandler(this.LoadRoom1_Click);
+            this.RoomNumber.AutoSize = true;
+            this.RoomNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.RoomNumber.Location = new System.Drawing.Point(792, 417);
+            this.RoomNumber.Name = "RoomNumber";
+            this.RoomNumber.Size = new System.Drawing.Size(286, 37);
+            this.RoomNumber.TabIndex = 11;
+            this.RoomNumber.Text = "Current Room: null";
+            this.RoomNumber.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Question
+            // 
+            this.Question.AutoSize = true;
+            this.Question.Location = new System.Drawing.Point(120, 308);
+            this.Question.Name = "Question";
+            this.Question.Size = new System.Drawing.Size(73, 20);
+            this.Question.TabIndex = 13;
+            this.Question.Text = "Question";
+            this.Question.Click += new System.EventHandler(this.Question_Click);
+            // 
+            // GetQuestion
+            // 
+            this.GetQuestion.Location = new System.Drawing.Point(124, 222);
+            this.GetQuestion.Name = "GetQuestion";
+            this.GetQuestion.Size = new System.Drawing.Size(137, 55);
+            this.GetQuestion.TabIndex = 14;
+            this.GetQuestion.Text = "Get Question";
+            this.GetQuestion.UseVisualStyleBackColor = true;
+            this.GetQuestion.Click += new System.EventHandler(this.GetQuestion_Click);
+            // 
+            // GetFact
+            // 
+            this.GetFact.Location = new System.Drawing.Point(124, 375);
+            this.GetFact.Name = "GetFact";
+            this.GetFact.Size = new System.Drawing.Size(137, 55);
+            this.GetFact.TabIndex = 16;
+            this.GetFact.Text = "Get Fact";
+            this.GetFact.UseVisualStyleBackColor = true;
+            this.GetFact.Click += new System.EventHandler(this.GetFact_Click);
+            // 
+            // Fact
+            // 
+            this.Fact.AutoSize = true;
+            this.Fact.Location = new System.Drawing.Point(120, 461);
+            this.Fact.Name = "Fact";
+            this.Fact.Size = new System.Drawing.Size(41, 20);
+            this.Fact.TabIndex = 15;
+            this.Fact.Text = "Fact";
+            this.Fact.Click += new System.EventHandler(this.Fact_Click);
             // 
             // GameControlTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1767, 1063);
-            this.Controls.Add(this.LoadRoom1);
+            this.ClientSize = new System.Drawing.Size(1330, 1063);
+            this.Controls.Add(this.GetFact);
+            this.Controls.Add(this.Fact);
+            this.Controls.Add(this.GetQuestion);
+            this.Controls.Add(this.Question);
+            this.Controls.Add(this.RoomNumber);
             this.Controls.Add(this.Door0);
             this.Controls.Add(this.Door4);
             this.Controls.Add(this.Door5);
@@ -126,6 +175,7 @@
             this.Text = "GameControlTestForm";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -137,6 +187,10 @@
         private System.Windows.Forms.Button Door4;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button Door0;
-        private System.Windows.Forms.Button LoadRoom1;
+        private System.Windows.Forms.Label RoomNumber;
+        private System.Windows.Forms.Label Question;
+        private System.Windows.Forms.Button GetQuestion;
+        private System.Windows.Forms.Button GetFact;
+        private System.Windows.Forms.Label Fact;
     }
 }

@@ -17,7 +17,7 @@ namespace WumpusGame
             player = new Player();
             map = new Map();
             cave = new Cave(1);
-            // trivia = new TriviaManagement();
+            trivia = new TriviaManagement(Environment.CurrentDirectory+"TriviaQuestions.txt", Environment.CurrentDirectory + "TriviaAnswers.txt", Environment.CurrentDirectory + "TriviaFacts.txt");
 
         }
 
@@ -27,6 +27,16 @@ namespace WumpusGame
             cave.load(caveNumber);
             trivia.Reset();
             //map.Reset();
+        }
+
+        public String getTriviaQuestion()
+        {
+            return trivia.GetNextQuestion();
+        }
+
+        public String getTriviaFact()
+        {
+            return trivia.GetNextFact();
         }
 
         private void move(int newRoom)
@@ -52,7 +62,7 @@ namespace WumpusGame
 
         public void updateRoom(System.Windows.Forms.Button[] ButtonArray,int room)
         {
-            graphicInterface.displayDoors(ButtonArray,cave.GetDoors(5));
+            graphicInterface.displayDoors(ButtonArray,cave.GetDoors(room));
         }
 
         private void endGame()
