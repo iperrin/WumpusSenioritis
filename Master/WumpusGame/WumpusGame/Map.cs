@@ -4,15 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class Map{
-    public int currentRoom;
-    public int creature;
+namespace WumpusTest
+{
+    class Map
+    {
+        public int currentRoom;
+        public int creature;
 
-    public Map(){
-        //currentCave = ProgramManager.info.cave;
-    }
+        Cave currentCave = new Cave();
 
-    public void PlayerLocation(){
-        //currentCave.getRoom();
+        public Map(int currentCave)
+        {
+            currentCave = ProgramManager.info.cave;
+        }
+
+        public void PlayerLocation()
+        {
+            GameControl.getPlayerData();
+        }
     }
 }
