@@ -13,9 +13,7 @@ static class Program
     /// </summary>
 
     [STAThread]
-
-    public GameControl;
-
+    
     static void Main()
     {
         Application.EnableVisualStyles();

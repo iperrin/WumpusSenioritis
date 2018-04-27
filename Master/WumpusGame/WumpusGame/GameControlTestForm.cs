@@ -14,25 +14,18 @@ namespace WumpusGame
     {
 
         GameControl game;
+        public System.Windows.Forms.Button[] ButtonArray = new System.Windows.Forms.Button[6];
 
         public GameControlTestForm()
         {
+            game = new GameControl();
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {      
-            game = new GameControl(Convert.ToInt16(textBox1.Text));
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            String temp = game.data[3];
-            label1.Text = temp;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
+            ButtonArray[0] = Door0;
+            ButtonArray[1] = Door1;
+            ButtonArray[2] = Door2;
+            ButtonArray[3] = Door3;
+            ButtonArray[4] = Door4;
+            ButtonArray[5] = Door5;
 
         }
 
@@ -64,6 +57,11 @@ namespace WumpusGame
         private void Door5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoadRoom1_Click(object sender, EventArgs e)
+        {
+            game.updateRoom(ButtonArray, 1);
         }
     }
 }

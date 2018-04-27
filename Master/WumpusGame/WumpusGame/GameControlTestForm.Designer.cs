@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Door1 = new System.Windows.Forms.Button();
             this.Door2 = new System.Windows.Forms.Button();
             this.Door3 = new System.Windows.Forms.Button();
@@ -40,44 +36,9 @@
             this.Door4 = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Door0 = new System.Windows.Forms.Button();
+            this.LoadRoom1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(77, 78);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 81);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(357, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 26);
-            this.textBox1.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(77, 225);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 83);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(389, 256);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
             // 
             // Door1
             // 
@@ -139,35 +100,36 @@
             this.Door0.UseVisualStyleBackColor = true;
             this.Door0.Click += new System.EventHandler(this.Door0_Click);
             // 
+            // LoadRoom1
+            // 
+            this.LoadRoom1.Location = new System.Drawing.Point(117, 76);
+            this.LoadRoom1.Name = "LoadRoom1";
+            this.LoadRoom1.Size = new System.Drawing.Size(142, 53);
+            this.LoadRoom1.TabIndex = 11;
+            this.LoadRoom1.Text = "Load Room 1";
+            this.LoadRoom1.UseVisualStyleBackColor = true;
+            this.LoadRoom1.Click += new System.EventHandler(this.LoadRoom1_Click);
+            // 
             // GameControlTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1767, 1063);
+            this.Controls.Add(this.LoadRoom1);
             this.Controls.Add(this.Door0);
             this.Controls.Add(this.Door4);
             this.Controls.Add(this.Door5);
             this.Controls.Add(this.Door3);
             this.Controls.Add(this.Door2);
             this.Controls.Add(this.Door1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
             this.Name = "GameControlTestForm";
             this.Text = "GameControlTestForm";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Door1;
         private System.Windows.Forms.Button Door2;
         private System.Windows.Forms.Button Door3;
@@ -175,5 +137,6 @@
         private System.Windows.Forms.Button Door4;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button Door0;
+        private System.Windows.Forms.Button LoadRoom1;
     }
 }
