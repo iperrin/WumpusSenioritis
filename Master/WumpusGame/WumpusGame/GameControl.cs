@@ -17,7 +17,7 @@ namespace WumpusGame
             player = new Player();
             map = new Map();
             cave = new Cave(1);
-            trivia = new TriviaManagement(Environment.CurrentDirectory+"TriviaQuestions.txt", Environment.CurrentDirectory + "TriviaAnswers.txt", Environment.CurrentDirectory + "TriviaFacts.txt");
+            trivia = new TriviaManagement();
 
         }
 

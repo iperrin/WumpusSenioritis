@@ -18,8 +18,12 @@ class TriviaManagement
     // creates new trivia management object using file addresses in arguments
     // ensure arguments are verbatim string literals, with @ before the quotes begin
     // example: @"C:\Users\vaish\Documents\VVP\12th Grade (2017-2018)\AP Computer Science\HuntTheWumpus\TriviaQuestions.txt"
-    public TriviaManagement(String questionsFileAddress, String answersFileAddress, String factsFileAddress) 
+    public TriviaManagement() 
     {
+        string directory = Environment.CurrentDirectory.Substring(0,Environment.CurrentDirectory.Length-9);
+        string questionsFileAddress = directory+"TriviaQuestions.txt";
+        string answersFileAddress = directory + "TriviaAnswers.txt";
+        string factsFileAddress = directory + "TriviaFacts.txt";
         this.questions = System.IO.File.ReadAllLines(questionsFileAddress);
         this.answers = System.IO.File.ReadAllLines(answersFileAddress);
         this.facts = System.IO.File.ReadAllLines(factsFileAddress);
