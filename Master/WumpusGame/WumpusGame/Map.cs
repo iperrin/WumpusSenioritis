@@ -8,19 +8,38 @@ namespace WumpusTest
 {
     class Map
     {
+        Random random = new Random();
         public int currentRoom;
-        public int creature;
+        public int bat1;
+        public int bat2;
+        public int Wumpus;
 
         Cave currentCave = new Cave();
 
         public Map()
         {
-            currentCave = ProgramManager.info.cave;
+            //currentCave = GameControl.getCaveInfo(); 
+            //Calls Cave to find information on the current cave
+            bat1 = random.Next(0, 30);
+            bat2 = random.Next(0, 30);
+            Wumpus = random.Next(0, 30);
         }
 
         public void PlayerLocation()
         {
-            GameControl.getPlayerData();
+            //currentCave.findPlayer();
+            //Finds player object in the current cave
+        }
+
+        public void MoveBat()
+        {
+            bat1 = random.Next(0, 30);
+            bat2 = random.Next(0, 30);
+        }
+
+        public void MoveWumpus()
+        {
+            Wumpus = random.Next(0, 30);
         }
        
     }
