@@ -11,27 +11,26 @@ namespace WumpusGame
         private HashSet<int> batRooms = new HashSet<int>(); // set of rooms bats can be in
         private HashSet<int> pitRooms = new HashSet<int>(); // set of rooms pits can be in
 
-        public int InitialWumpusRoom { get; private set; }
+        public int WumpusRoom;
         Random random = new Random();
         public int currentRoom;
-        public int Wumpus;
 
 
         public Map()
         {
             currentRoom = 1;
-            Wumpus = random.Next(0, 30);
+            WumpusRoom = GenerateWumpusRoomNumber();
         }
 
         public void Reset()
         {
             currentRoom = 1;
-            Wumpus = random.Next(1, 30);
+            WumpusRoom = GenerateWumpusRoomNumber();
         }
 
-        public void PlayerLocation(int newRoom)
+        public void setRoom(int newRoom)
         {
-            currentRoom = currentRoom + GameControl.move(newRoom); 
+            currentRoom = newRoom; 
         }
 
         private void GenerateBatRoomNumbers()
@@ -41,8 +40,34 @@ namespace WumpusGame
 
             while (batRooms.Count < numOfRooms)
             {
-                batRooms.Add(random.Next(1, 30));
+                int randomRoom = random.Next(1, 30);
+                if (pitRooms.Contains(randomRoom))
+                    continue; //(another one) random room number
+                else
+                    batRooms.Add(randomRoom);
             }
+        }
+
+        public void EncounteredBat()
+        {
+            batRooms.Remove(currentRoom);
+            int randomNumber = random.Next(1, 30);
+
+            while (batRooms.Contains(randomNumber) && pitRooms.Contains(randomNumber))
+            {
+                randomNumber = random.Next(1, 30);
+            }
+
+            currentRoom = randomNumber;
+
+            randomNumber = random.Next(1, 30);
+
+            while (batRooms.Contains(randomNumber) && pitRooms.Contains(randomNumber))
+            {
+                randomNumber = random.Next(1, 30);
+            }
+
+            batRooms.Add(randomNumber);
         }
 
         private void GeneratePitRoomNumbers()
@@ -68,13 +93,17 @@ namespace WumpusGame
             {
                 randomNumber = random.Next(1, 30);
             }
-
             return randomNumber;
         }
 
-        public void MoveWumpus()
+        public int getWumpusLocation()
         {
-            Wumpus = random.Next(1, 30);
+            return WumpusRoom;
+        }
+
+        public void setWumpusLocation(int newRoom)
+        {
+            WumpusRoom = newRoom;
         }
 
     }

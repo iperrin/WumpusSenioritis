@@ -4,11 +4,11 @@ class Player
 {
     public int Arrow { get; private set; }
     public int GoldCoins { get; private set; }
-    public bool HasShotArrow { get; private set; }
     public int playerTurns { get; set; }
+    public bool HasShotArrow { get; private set; }
 
     private int CostOfArrow;
-    private int ArrowsBought;
+    private int ArrowsBought;   
     private int CostOfHint;
 
     public Player()
