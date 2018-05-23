@@ -143,5 +143,10 @@ namespace WumpusGame
         {
             Close();
         }
+
+        private void _FinalGame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
