@@ -2,50 +2,63 @@
 
 class Player
 {
-    int arrows;
-    int goldCoins;
-    int playerTurns;
+    public int Arrow { get; private set; }
+    public int GoldCoins { get; private set; }
+    public bool HasShotArrow { get; private set; }
+    public int playerTurns { get; set; }
+
+    private int CostOfArrow;
+    private int ArrowsBought;
+    private int CostOfHint;
 
     public Player()
     {
-        int arrows = 3;
-        int goldCoins = 0;
-        int playerTurns = 0;
+        CostOfArrow = 15;
+        CostOfHint = 25;
+        GoldCoins = 5;
+        Arrow = 3;
+        ArrowsBought = 0;
+        HasShotArrow = false;
     }
 
-    public void Reset()
+    public bool CanBuyArrow()
     {
-        //rests all values
+        return GoldCoins >= CostOfArrow;
+    }
+    public void BuyArrows()
+    {
+        GoldCoins -= CostOfArrow;
+    }
+    public int NeedForBuyArrows()
+    {
+        return Math.Max(0, CostOfArrow - GoldCoins);
+    }
+    public void GiveArrows()
+    {
+        ArrowsBought += 2;
+        Arrow += 2;
     }
 
-    public void Move(int direction)
+    public void PushArrow()
     {
-
+        --Arrow;
+        HasShotArrow = true;
     }
-
-    public void AddArrows(int addition)
+    public bool CanBuyHint()
     {
-        arrows += addition;
+        return GoldCoins >= CostOfHint;
     }
-
-    public void ShootArrows(int subtraction)
+    public void BuyHint()
     {
-        arrows -= subtraction;
+        GoldCoins -= CostOfHint;
     }
-
-    public void AddGold(int addition)
+    public int NeedForBuyHint()
     {
-        goldCoins += addition;
+        return Math.Max(0, CostOfHint - GoldCoins);
     }
-
-    public void UseGold(int subtraction)
+    public void AddCoins(int i)
     {
-        goldCoins -= subtraction;
-    }
-
-    public void AddTurns(int addition)
-    {
-        playerTurns += addition;
+        GoldCoins += i;
     }
 
     public int[] GetData()
@@ -53,8 +66,8 @@ class Player
         //returns int array [turns, gold, arrows]
         int[] output = new int[3];
         output[0] = playerTurns;
-        output[1] = goldCoins;
-        output[2] = arrows;
+        output[1] = GoldCoins;
+        output[2] = Arrow;
 
         return output;
     }
