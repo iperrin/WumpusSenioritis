@@ -20,7 +20,7 @@ namespace WumpusGame
         public int level;
 
 
-        public GameControl(PictureBox[] images, Button[] buttons, Label[] texts, Button ScoreBoard)
+        public GameControl(PictureBox[] images, Button[] buttons, Label[] texts, TextBox ScoreBoard)
         {
             player = new Player();
             map = new Map();
@@ -50,7 +50,7 @@ namespace WumpusGame
             return trivia.GetNextFact();
         }
 
-        private void move(int newRoom)
+        public void move(int newRoom)
         {
 
             //update map with new move

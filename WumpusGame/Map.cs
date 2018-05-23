@@ -29,10 +29,10 @@ namespace WumpusGame
             Wumpus = random.Next(1, 30);
         }
 
-        public void PlayerLocation(int newRoom)
+    /*    public void PlayerLocation(int newRoom)
         {
             currentRoom = currentRoom + GameControl.move(newRoom); 
-        }
+        } */
 
         private void GenerateBatRoomNumbers()
         {

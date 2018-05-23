@@ -28,9 +28,9 @@ namespace WumpusGame
         Label Coins;
         Label Arrows;
 
-        Button ScoreBoard;
+        TextBox ScoreBoard;
 
-        public graphicInterface(PictureBox[] images, Button[] buttons, Label[] texts, Button ScoreBoard){
+        public graphicInterface(PictureBox[] images, Button[] buttons, Label[] texts, TextBox ScoreBoard){
             doors = new Button[6];
             buttonArray = buttons;
             imageArray = images;
@@ -177,7 +177,7 @@ namespace WumpusGame
         {
             String[] scores = HighScore.GetHighScores();
 
-            ScoreBoard.Text = "SCORE    TURNS      GOLD      ARROWS      CAVE       PLAYER\n";
+            ScoreBoard.Text = "SCORE    TURNS      GOLD      ARROWS      CAVE       PLAYER\r\n";
             int count = 0;
 
             for (int c = 0; c < 10; c++) {
@@ -186,7 +186,7 @@ namespace WumpusGame
                     ScoreBoard.Text += (scores[count]+"           ");
                     count++;
                 }
-                ScoreBoard.Text += "\n";
+                ScoreBoard.Text += "\r\n";
             }
             ScoreBoard.Visible = true;
 

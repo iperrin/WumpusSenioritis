@@ -13,6 +13,11 @@ class Player
 
     public Player()
     {
+        Reset();   
+    }
+
+    public void Reset()
+    {
         CostOfArrow = 15;
         CostOfHint = 25;
         GoldCoins = 5;

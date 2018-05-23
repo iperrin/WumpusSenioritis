@@ -45,15 +45,15 @@
             this.Turns = new System.Windows.Forms.Label();
             this.Coins = new System.Windows.Forms.Label();
             this.Arrows = new System.Windows.Forms.Label();
-            this.ScoreBoard = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
+            this.ScoreBoard = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             this.SuspendLayout();
             // 
             // background
             // 
             this.background.Location = new System.Drawing.Point(0, 0);
-            this.background.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.background.Margin = new System.Windows.Forms.Padding(2);
             this.background.Name = "background";
             this.background.Size = new System.Drawing.Size(1267, 666);
             this.background.TabIndex = 0;
@@ -62,7 +62,7 @@
             // StartButton
             // 
             this.StartButton.Location = new System.Drawing.Point(573, 390);
-            this.StartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StartButton.Margin = new System.Windows.Forms.Padding(2);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(133, 65);
             this.StartButton.TabIndex = 1;
@@ -73,7 +73,7 @@
             // cave1
             // 
             this.cave1.Location = new System.Drawing.Point(105, 531);
-            this.cave1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cave1.Margin = new System.Windows.Forms.Padding(2);
             this.cave1.Name = "cave1";
             this.cave1.Size = new System.Drawing.Size(80, 39);
             this.cave1.TabIndex = 2;
@@ -84,7 +84,7 @@
             // cave2
             // 
             this.cave2.Location = new System.Drawing.Point(339, 531);
-            this.cave2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cave2.Margin = new System.Windows.Forms.Padding(2);
             this.cave2.Name = "cave2";
             this.cave2.Size = new System.Drawing.Size(80, 39);
             this.cave2.TabIndex = 3;
@@ -95,7 +95,7 @@
             // cave3
             // 
             this.cave3.Location = new System.Drawing.Point(593, 531);
-            this.cave3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cave3.Margin = new System.Windows.Forms.Padding(2);
             this.cave3.Name = "cave3";
             this.cave3.Size = new System.Drawing.Size(80, 39);
             this.cave3.TabIndex = 4;
@@ -106,7 +106,7 @@
             // cave4
             // 
             this.cave4.Location = new System.Drawing.Point(835, 531);
-            this.cave4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cave4.Margin = new System.Windows.Forms.Padding(2);
             this.cave4.Name = "cave4";
             this.cave4.Size = new System.Drawing.Size(80, 39);
             this.cave4.TabIndex = 5;
@@ -117,7 +117,7 @@
             // cave5
             // 
             this.cave5.Location = new System.Drawing.Point(1091, 531);
-            this.cave5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cave5.Margin = new System.Windows.Forms.Padding(2);
             this.cave5.Name = "cave5";
             this.cave5.Size = new System.Drawing.Size(80, 39);
             this.cave5.TabIndex = 6;
@@ -128,7 +128,7 @@
             // MainMenu
             // 
             this.MainMenu.Location = new System.Drawing.Point(8, 8);
-            this.MainMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainMenu.Margin = new System.Windows.Forms.Padding(2);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(42, 34);
             this.MainMenu.TabIndex = 7;
@@ -139,7 +139,7 @@
             // Door0
             // 
             this.Door0.Location = new System.Drawing.Point(855, 178);
-            this.Door0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Door0.Margin = new System.Windows.Forms.Padding(2);
             this.Door0.Name = "Door0";
             this.Door0.Size = new System.Drawing.Size(40, 39);
             this.Door0.TabIndex = 8;
@@ -149,7 +149,7 @@
             // Door1
             // 
             this.Door1.Location = new System.Drawing.Point(997, 259);
-            this.Door1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Door1.Margin = new System.Windows.Forms.Padding(2);
             this.Door1.Name = "Door1";
             this.Door1.Size = new System.Drawing.Size(40, 39);
             this.Door1.TabIndex = 9;
@@ -159,7 +159,7 @@
             // Door2
             // 
             this.Door2.Location = new System.Drawing.Point(997, 403);
-            this.Door2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Door2.Margin = new System.Windows.Forms.Padding(2);
             this.Door2.Name = "Door2";
             this.Door2.Size = new System.Drawing.Size(40, 39);
             this.Door2.TabIndex = 10;
@@ -169,7 +169,7 @@
             // Door3
             // 
             this.Door3.Location = new System.Drawing.Point(855, 488);
-            this.Door3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Door3.Margin = new System.Windows.Forms.Padding(2);
             this.Door3.Name = "Door3";
             this.Door3.Size = new System.Drawing.Size(40, 39);
             this.Door3.TabIndex = 11;
@@ -179,7 +179,7 @@
             // Door4
             // 
             this.Door4.Location = new System.Drawing.Point(711, 403);
-            this.Door4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Door4.Margin = new System.Windows.Forms.Padding(2);
             this.Door4.Name = "Door4";
             this.Door4.Size = new System.Drawing.Size(40, 39);
             this.Door4.TabIndex = 12;
@@ -189,7 +189,7 @@
             // Door5
             // 
             this.Door5.Location = new System.Drawing.Point(711, 259);
-            this.Door5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Door5.Margin = new System.Windows.Forms.Padding(2);
             this.Door5.Name = "Door5";
             this.Door5.Size = new System.Drawing.Size(40, 39);
             this.Door5.TabIndex = 13;
@@ -229,21 +229,10 @@
             this.Arrows.TabIndex = 16;
             this.Arrows.Text = "0";
             // 
-            // ScoreBoard
-            // 
-            this.ScoreBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScoreBoard.Location = new System.Drawing.Point(58, 125);
-            this.ScoreBoard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ScoreBoard.Name = "ScoreBoard";
-            this.ScoreBoard.Size = new System.Drawing.Size(787, 159);
-            this.ScoreBoard.TabIndex = 18;
-            this.ScoreBoard.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ScoreBoard.UseVisualStyleBackColor = true;
-            // 
             // Exit
             // 
             this.Exit.Location = new System.Drawing.Point(1205, 625);
-            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Exit.Margin = new System.Windows.Forms.Padding(2);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(53, 33);
             this.Exit.TabIndex = 19;
@@ -251,13 +240,22 @@
             this.Exit.UseVisualStyleBackColor = true;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // ScoreBoard
+            // 
+            this.ScoreBoard.Location = new System.Drawing.Point(58, 124);
+            this.ScoreBoard.Multiline = true;
+            this.ScoreBoard.Name = "ScoreBoard";
+            this.ScoreBoard.ReadOnly = true;
+            this.ScoreBoard.Size = new System.Drawing.Size(787, 159);
+            this.ScoreBoard.TabIndex = 20;
+            // 
             // _FinalGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1265, 666);
-            this.Controls.Add(this.Exit);
             this.Controls.Add(this.ScoreBoard);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.Arrows);
             this.Controls.Add(this.Coins);
             this.Controls.Add(this.Turns);
@@ -275,7 +273,7 @@
             this.Controls.Add(this.cave1);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.background);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "_FinalGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wumpus - Senioritis";
@@ -305,7 +303,7 @@
         private System.Windows.Forms.Label Turns;
         private System.Windows.Forms.Label Coins;
         private System.Windows.Forms.Label Arrows;
-        private System.Windows.Forms.Button ScoreBoard;
         private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.TextBox ScoreBoard;
     }
 }
