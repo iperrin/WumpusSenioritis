@@ -28,17 +28,14 @@ namespace WumpusGame
             WumpusRoom = GenerateWumpusRoomNumber();
         }
 
-<<<<<<< HEAD
     /*    public void PlayerLocation(int newRoom)
         {
             currentRoom = currentRoom + GameControl.move(newRoom); 
         } */
-=======
         public void setRoom(int newRoom)
         {
             currentRoom = newRoom; 
         }
->>>>>>> master
 
         private void GenerateBatRoomNumbers()
         {

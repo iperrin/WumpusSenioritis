@@ -38,6 +38,15 @@ namespace WumpusGame
             trivia.Reset();
             map.Reset();
             graphics.loadDoors(cave.GetDoors(map.currentRoom));
+            //temp test code below
+            int[] testArray = new int[6];
+            testArray[0] = 0;
+            testArray[1] = 6;
+            testArray[2] = 7;
+            testArray[3] = 0;
+            testArray[4] = 4;
+            testArray[5] = 0;
+            graphics.loadDoors(testArray);
         }
 
         public String getTriviaQuestion()
