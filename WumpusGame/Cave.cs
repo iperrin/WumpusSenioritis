@@ -55,5 +55,33 @@ class Cave
 
         return output;
     }
+    
+    public boolean checkForDoor(int door, int roomNum){
+        if (array[roomNum, door] > 0){
+            return true;
+        } 
+        return false;
+    }
+    
+    public int getRandomDoor(int roomNum){
+        boolean checker = false;
+        Random r = new Random();
+        while (checker != true){
+            int door = r.Next(1,7);
+            checker = checkForDoor(roomNum, door);
+        }
+        return door;
+    }
+    
+    // use this method to input number of steps and the current room you're in and output is a new room you can be in w/ number of steps
+    public int goToNewRoom(int numSteps, int roomNum){
+        int currentRoom = roomNum;
+        for (int i = 0; i < numSteps; i++){
+            currentRoom = getRandomDoor(currentRoom);
+        }
+        return currentRoom;
+    }
+
+    
 }
     
