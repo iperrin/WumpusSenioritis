@@ -23,7 +23,13 @@ class Player
         GoldCoins = 5;
         Arrow = 3;
         ArrowsBought = 0;
+        playerTurns = 0;
         HasShotArrow = false;
+    }
+
+    public void incrementTurn()
+    {
+        playerTurns++;
     }
 
     public bool CanBuyArrow()
