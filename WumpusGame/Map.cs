@@ -28,13 +28,22 @@ namespace WumpusGame
             WumpusRoom = GenerateWumpusRoomNumber();
         }
 
-    /*    public void PlayerLocation(int newRoom)
+        public void PlayerLocation(int newRoom)
         {
             currentRoom = currentRoom + GameControl.move(newRoom); 
-        } */
+        }
+        
         public void setRoom(int newRoom)
         {
             currentRoom = newRoom; 
+        }
+        
+        public Boolean Overlap(int currentRoom)
+        {
+            if (batRooms.Contains(currentRoom) && pitRooms.Contains(currentRoom)) return true;
+            else if (pitRooms.Contains(currentRoom) && GetWumpusLocation() == currentRoom) return true;
+            else if (batRooms.Contains(currentRoom) && GetWumpusLocation() == currentRoom) return true;
+            return false;
         }
 
         private void GenerateBatRoomNumbers()
