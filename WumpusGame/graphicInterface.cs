@@ -102,49 +102,27 @@ namespace WumpusGame
             MainMenu.Visible = true;
             showStats();
         }
+        
+        //receives secret 
+        public void Secret(String secret) {
+			Console.WriteLine("Here's a secret for you: " + secret); 
+		}
 
-        //Access actions. 
-        private void getActions()
-        {
-            //Console.WriteLine(actions);
-        }
+		public void pitWarning {
+			Console.WriteLine("There's a pit in this room. Watch yourself!"); 
+		}
 
-        //get userScore
-        private void getScore()
-        {
-            //Console.WriteLine(score);
-        }
+		public void batWarning {
+			Console.WriteLine("There are bats in this room. You have been moved to a new room!"); 
+		}
+		
+		public void wumpusWarning {
+			Console.WriteLine("You've entered a room with the wumpus. Battle commences."); 
+		} 
 
-        //Access highScore 
-        private void getHighScore()
-        {
-            //Console.WriteLine(highScore);
-        }
-
-        //warningMessage displayed 
-        public void warningMessage()
-        {
-            /*
-            if (//player is adjacent to wumpus)
-            {
-                Console.WriteLine("I smell a Wumpus!");
-            }
-            else if (//player is adjacent to bats)
-            {
-                Console.WriteLine("Bats nearby.");
-            }
-            else
-            {
-                Console.WriteLine("I feel a draft...");
-            }
-            */
-        }
-
-        //Displays Hint onscreen for user 
-        public String Hint()
-        {
-            return null;
-        }
+		public void notEnoughMoney {
+			Console.WriteLine("Not enough money for purchase."); 
+		} 
 
         //Displays to user the current stats of gold coins, arrows, trivia pieces 
         public String Inventory()
