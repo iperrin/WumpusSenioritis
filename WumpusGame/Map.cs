@@ -41,8 +41,6 @@ namespace WumpusGame
         public Boolean Overlap(int currentRoom)
         {
             if (batRooms.Contains(currentRoom) && pitRooms.Contains(currentRoom)) return true;
-            else if (pitRooms.Contains(currentRoom) && GetWumpusLocation() == currentRoom) return true;
-            else if (batRooms.Contains(currentRoom) && GetWumpusLocation() == currentRoom) return true;
             return false;
         }
 
@@ -66,7 +64,7 @@ namespace WumpusGame
             batRooms.Remove(currentRoom);
             int randomNumber = random.Next(1, 30);
 
-            while (batRooms.Contains(randomNumber) && pitRooms.Contains(randomNumber))
+            while (batRooms.Contains(randomNumber) || pitRooms.Contains(randomNumber))
             {
                 randomNumber = random.Next(1, 30);
             }
@@ -75,7 +73,7 @@ namespace WumpusGame
 
             randomNumber = random.Next(1, 30);
 
-            while (batRooms.Contains(randomNumber) && pitRooms.Contains(randomNumber))
+            while (batRooms.Contains(randomNumber) || pitRooms.Contains(randomNumber))
             {
                 randomNumber = random.Next(1, 30);
             }
