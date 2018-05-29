@@ -102,48 +102,58 @@ namespace WumpusGame
             MainMenu.Visible = true;
             showStats();
         }
+        
+        //receives secret 
+        public void Secret(String secret) {
+		Console.WriteLine("Here's a secret for you: " + secret); 
+		}
 
-        //Access actions. 
-        private void getActions()
-        {
-            //Console.WriteLine(actions);
-        }
+	public void pitWarning {
+		Console.WriteLine("There's a pit in this room. Watch yourself!"); 
+		}
 
-        //get userScore
-        private void getScore()
-        {
-            //Console.WriteLine(score);
-        }
+	public void batWarning {
+		Console.WriteLine("There are bats in this room. You have been moved to a new room!"); 
+		}
+		
+	public void wumpusWarning {
+		Console.WriteLine("You've entered a room with the wumpus. Battle commences."); 
+		} 
 
-        //Access highScore 
-        private void getHighScore()
-        {
-            //Console.WriteLine(highScore);
-        }
+	public void notEnoughMoney {
+		Console.WriteLine("Not enough money for purchase."); 
+		} 
+	    
+	public String ChooseAction {
+            String[] action = {"move", "shoot", "purchase arrow", "purchase secret" }; 
+            Console.WriteLine("Which action will you choose?"); 
+            Console.WriteLine("A. Move"); 
+            Console.WriteLine("B. Shoot arrow"); 
+            Console.WriteLine("C. Purchase arrow"); 
+            Console.WriteLine("D. Purchase secret"); 
 
-        //warningMessage displayed 
-        public void warningMessage()
-        {
-            /*
-            if (//player is adjacent to wumpus)
-            {
-                Console.WriteLine("I smell a Wumpus!");
+            String choice = Console.ReadLine(); 
+            
+            while (choice == null) {
+                choice = Console.ReadLine(); 
             }
-            else if (//player is adjacent to bats)
-            {
-                Console.WriteLine("Bats nearby.");
-            }
-            else
-            {
-                Console.WriteLine("I feel a draft...");
-            }
-            */
-        }
+            if(choice.Equals("A") || choice.Equals ("a")) 
+                return action[0]; 
+            
+            else if(choice.Equals("B") || choice.Equals ("b"))
+                return action[1];  
 
-        //Displays Hint onscreen for user 
-        public String Hint()
-        {
-            return null;
+            else if(choice.Equals("B") || choice.Equals ("b"))
+                return action[1];  
+
+            else if(choice.Equals("C") || choice.Equals ("c"))
+                return action[2]; 
+
+            else if(choice.Equals("D") || choice.Equals ("d"))
+                return action[3]; 
+
+            else 
+                return ChooseAction();   
         }
 
         //Displays to user the current stats of gold coins, arrows, trivia pieces 
