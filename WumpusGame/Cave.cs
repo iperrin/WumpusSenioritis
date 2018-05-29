@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -63,6 +63,7 @@ class Cave
         return false;
     }
     
+    // gets a random door from the open ones
     public int getRandomDoor(int roomNum){
         boolean checker = false;
         Random r = new Random();
