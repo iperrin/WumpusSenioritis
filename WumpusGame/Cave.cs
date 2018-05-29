@@ -56,18 +56,19 @@ class Cave
         return output;
     }
     
-    public boolean checkForDoor(int door, int roomNum){
-        if (array[roomNum, door] > 0){
+    public Boolean checkForDoor(int door, int roomNum){
+        if (doors[roomNum, door] > 0){
             return true;
         } 
         return false;
     }
     
     public int getRandomDoor(int roomNum){
-        boolean checker = false;
+        Boolean checker = false;
         Random r = new Random();
+        int door = 0;
         while (checker != true){
-            int door = r.Next(1,7);
+            door = r.Next(1,7);
             checker = checkForDoor(roomNum, door);
         }
         return door;

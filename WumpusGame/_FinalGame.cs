@@ -38,12 +38,7 @@ namespace WumpusGame
             buttons[4] = cave4;
             buttons[5] = cave5;
             buttons[6] = MainMenu;
-            buttons[7] = Door0;
-            buttons[8] = Door1;
-            buttons[9] = Door2;
-            buttons[10] = Door3;
-            buttons[11] = Door4;
-            buttons[12] = Door5;
+            
 
             ScoreBoard.Visible = false;
 
