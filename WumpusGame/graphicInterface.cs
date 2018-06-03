@@ -31,7 +31,7 @@ namespace WumpusGame
         TextBox ScoreBoard;
 
         public graphicInterface(PictureBox[] images, Button[] buttons, Label[] texts, TextBox ScoreBoard){
-            doors = new Button[6];
+            doors = new Button[13];
             buttonArray = buttons;
             imageArray = images;
             background = images[0];
@@ -108,23 +108,23 @@ namespace WumpusGame
 		Console.WriteLine("Here's a secret for you: " + secret); 
 		}
 
-	public void pitWarning {
+	public void pitWarning (){
 		Console.WriteLine("There's a pit in this room. Watch yourself!"); 
 		}
 
-	public void batWarning {
+	public void batWarning() {
 		Console.WriteLine("There are bats in this room. You have been moved to a new room!"); 
 		}
 		
-	public void wumpusWarning {
+	public void wumpusWarning (){
 		Console.WriteLine("You've entered a room with the wumpus. Battle commences."); 
 		} 
 
-	public void notEnoughMoney {
+	public void notEnoughMoney (){
 		Console.WriteLine("Not enough money for purchase."); 
 		} 
 	    
-	public String ChooseAction {
+	public String ChooseAction() {
             String[] action = {"move", "shoot", "purchase arrow", "purchase secret" }; 
             Console.WriteLine("Which action will you choose?"); 
             Console.WriteLine("A. Move"); 

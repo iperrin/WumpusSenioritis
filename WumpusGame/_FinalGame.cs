@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WumpusGame;
+using System.Media;
 
 namespace WumpusGame
 {
@@ -17,10 +18,12 @@ namespace WumpusGame
         GameControl SystemGameControl;
         public _FinalGame()
         {
+
             InitializeComponent();
             PictureBox[] images = new PictureBox[1];
-            Button[] buttons = new Button[13];
+            Button[] buttons = new Button[7];
             Label[] outputTexts = new Label[3];
+
 
             //sets texts
             outputTexts[0] = Turns;

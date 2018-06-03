@@ -40,9 +40,15 @@ namespace WumpusGame
             runTurn();
         }
 
-        public static void runTurn()
+        public void runTurn()
         {
-            //lays out options for turn
+            if (checkEndConditions())
+            {
+                endGame();
+            }
+
+
+            //graphics displays 
         }
 
         public void endTurn()
