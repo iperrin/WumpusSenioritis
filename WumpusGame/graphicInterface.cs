@@ -12,66 +12,85 @@ namespace WumpusGame
     public class graphicInterface
     {
 
-        Button[] buttonArray;
-        PictureBox[] imageArray;
+        PictureBox[] images;
+        Label[] texts;
+        Label[] trivia;
 
-        Button[] doors;
+
+        PictureBox[] doors;
         PictureBox background;
-        Button startButton;
-        Button cave1;
-        Button cave2;
-        Button cave3;
-        Button cave4;
-        Button cave5;
-        Button MainMenu;
+
+        TextBox ScoreBoard;
+
         Label Turns;
         Label Coins;
         Label Arrows;
 
-        TextBox ScoreBoard;
+        public graphicInterface(PictureBox[] images, Label[] texts, TextBox ScoreBoard, Label[] trivia){
+            doors = new PictureBox[13];
 
-        public graphicInterface(PictureBox[] images, Button[] buttons, Label[] texts, TextBox ScoreBoard){
-            doors = new Button[13];
-            buttonArray = buttons;
-            imageArray = images;
+            this.images = images;
+            this.texts = texts;
             background = images[0];
-            startButton = buttons[0];
-            cave1 = buttons[1];
-            cave2 = buttons[2];
-            cave3 = buttons[3];
-            cave4 = buttons[4];
-            cave5 = buttons[5];
-            doors[0] = buttons[7];
-            doors[1] = buttons[8];
-            doors[2] = buttons[9];
-            doors[3] = buttons[10];
-            doors[4] = buttons[11];
-            doors[5] = buttons[12];
-            MainMenu = buttons[6];
+            this.trivia = trivia;
+
+
+            doors[0] = images[9];
+            doors[1] = images[10];
+            doors[2] = images[11];
+            doors[3] = images[12];
+            doors[4] = images[13];
+            doors[5] = images[14];
             this.ScoreBoard = ScoreBoard;
             Turns = texts[0];
             Coins = texts[1];
             Arrows = texts[2];
+
+            setDirectory();
+
             hideAll();
             showLoad();
             
         }
 
+        private void setDirectory()
+        {
+            images[0].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Load Page.png");
+            images[1].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Start Button (Load).png");
+            //images[2].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            //images[3].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            //images[4].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            //images[5].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            //images[6].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            //images[7].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            //images[8].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            images[9].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\1.png");
+            images[10].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\2.png");
+            images[11].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\3.png");
+            images[12].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\4.png");
+            images[13].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\5.png");
+            images[14].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\6.png");
+            images[15].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\buyArrows.png");
+            images[16].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\buySecret.png");
+        }
+
         private void hideAll()
         {
-            for(int i = 0; i<buttonArray.Length; i++)
+            for(int i = 0; i<images.Length; i++)
             {
-                buttonArray[i].Visible = false;
+                images[i].Visible = false;
             }
 
-            for (int i = 0; i < imageArray.Length; i++)
+            for (int i = 0; i < texts.Length; i++)
             {
-                imageArray[i].Visible = false;
+                texts[i].Visible = false;
             }
 
-            Turns.Visible = false;
-            Coins.Visible = false;
-            Arrows.Visible = false;
+            for(int i = 0; i<trivia.Length; i++)
+            {
+                trivia[i].Visible = false;
+            }
+
             ScoreBoard.Visible = false;
         }
 
@@ -79,7 +98,8 @@ namespace WumpusGame
         {
             background.Image = Image.FromFile(Environment.CurrentDirectory + "\\Graphics\\Load Page.png");
             background.Visible = true;
-            startButton.Visible = true;
+            images[1].Visible = true;
+            images[3].Visible = true;
         }
 
         public void goMain()
@@ -87,11 +107,12 @@ namespace WumpusGame
             hideAll();
             background.Image = Image.FromFile(Environment.CurrentDirectory + "\\Graphics\\Menu.png");
             background.Visible = true;
-            for(int i = 1; i<6; i++)
+            for(int i = 4; i<9; i++)
             {
-                buttonArray[i].Visible = true;
+                images[i].Visible = true;
             }
             displayScores();
+            images[3].Visible = true;
         }
 
         public void loadCave(int cave)
@@ -99,10 +120,34 @@ namespace WumpusGame
             hideAll();
             background.Image = Image.FromFile(Environment.CurrentDirectory + "\\Graphics\\Cave "+cave+".png");
             background.Visible = true;
-            MainMenu.Visible = true;
+            images[2].Visible = true;
+            images[3].Visible = true;
             showStats();
         }
-        
+
+        public void updateStats(int turns, int coins, int arrows)
+        {
+            this.Turns.Text = ""+turns;
+            this.Coins.Text = ""+coins;
+            this.Arrows.Text = "" + arrows;
+
+        }
+
+        public void showPurchase()
+        {
+            images[15].Visible = true;
+            images[16].Visible = true;
+        }
+
+        public void loadTrivia(String[] input)
+        {
+            for(int i = 0; i<trivia.Length; i++)
+            {
+                trivia[i].Text = input[i];
+                trivia[i].Visible = true;
+            }
+        }
+        /*
         //receives secret 
         public void Secret(String secret) {
 		Console.WriteLine("Here's a secret for you: " + secret); 
@@ -182,6 +227,7 @@ namespace WumpusGame
         {
 
         }
+        */
 
         public void displayScores()
         {
@@ -202,12 +248,7 @@ namespace WumpusGame
 
         }
 
-        //shows player's turns 
-        public int Turn()
-        {
-            return 0;
-        }
-
+        
         public void loadDoors(int[] caveDoors)
         {
             for (int i = 0; i < 6; i++)

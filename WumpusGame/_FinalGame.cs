@@ -20,10 +20,16 @@ namespace WumpusGame
         {
 
             InitializeComponent();
-            PictureBox[] images = new PictureBox[1];
-            Button[] buttons = new Button[7];
-            Label[] outputTexts = new Label[3];
 
+            PictureBox[] images = new PictureBox[17];
+            Label[] outputTexts = new Label[3];
+            Label[] trivia = new Label[5];
+
+            trivia[0] = Question;
+            trivia[1] = A;
+            trivia[2] = B;
+            trivia[3] = C;
+            trivia[4] = D;
 
             //sets texts
             outputTexts[0] = Turns;
@@ -32,18 +38,31 @@ namespace WumpusGame
 
             //sets images
             images[0] = background;
-
-            //sets buttons
-            buttons[0] = StartButton;
-            buttons[1] = cave1;
-            buttons[2] = cave2;
-            buttons[3] = cave3;
-            buttons[4] = cave4;
-            buttons[5] = cave5;
-            buttons[6] = MainMenu;
-            
+            images[1] = start;
+            images[2] = MainMenu;
+            images[3] = exit;
+            images[4] = cave1;
+            images[5] = cave2;
+            images[6] = cave3;
+            images[7] = cave4;
+            images[8] = cave5;
+            images[9] = door1;
+            images[10] = door2;
+            images[11] = door3;
+            images[12] = door4;
+            images[13] = door5;
+            images[14] = door6;
+            images[15] = buyArrows;
+            images[16] = buySecrets;
 
             ScoreBoard.Visible = false;
+
+            for(int i = 0; i<trivia.Length; i++)
+            {
+                background.Controls.Add(trivia[i]);
+                trivia[i].Visible = false;
+                trivia[i].BackColor = Color.Transparent;
+            }
 
             //sets images initial state
             for (int i = 0; i<images.Length; i++)
@@ -51,25 +70,31 @@ namespace WumpusGame
                 images[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 images[i].Visible = false;
             }
-            
-            //sets buttons initial view
-            for (int i = 0; i<buttons.Length; i++)
+
+            for(int i = 1; i<images.Length; i++)
             {
-                buttons[i].Visible = false;
+                images[0].Controls.Add(images[i]);
+                images[i].BackColor = Color.Transparent;
             }
 
+            for(int i = 0; i<3; i++)
+            {
+                outputTexts[i].BackColor = Color.Transparent;
+                background.Controls.Add(outputTexts[i]);
+            }
+            
             //sets labels initial view
             for(int i = 0; i<outputTexts.Length; i++)
             {
                 outputTexts[i].Visible = false;
             }
 
-            SystemGameControl = new GameControl(images, buttons, outputTexts, ScoreBoard);
+            SystemGameControl = new GameControl(images, outputTexts, ScoreBoard, trivia);
         }
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            SystemGameControl.getGraphicInterface().goMain();
+            SystemGameControl.graphics.goMain();
         }
 
         private void cave1_Click(object sender, EventArgs e)
@@ -99,7 +124,7 @@ namespace WumpusGame
 
         private void MainMenu_Click(object sender, EventArgs e)
         {
-            SystemGameControl.getGraphicInterface().goMain();
+            SystemGameControl.graphics.goMain();
         }
 
         private void Door0_Click(object sender, EventArgs e)
@@ -148,6 +173,96 @@ namespace WumpusGame
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainMenu_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.graphics.goMain();
+        }
+
+        private void start_Click(object sender, EventArgs e)
+        {
+            SystemGameControl.graphics.goMain();
+        }
+
+        private void exit_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cave1_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.StartGame(1);
+        }
+
+        private void cave2_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.StartGame(2);
+        }
+
+        private void cave3_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.StartGame(3);
+        }
+
+        private void cave4_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.StartGame(4);
+        }
+
+        private void cave5_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.StartGame(5);
+        }
+
+        private void buyArrows_Click(object sender, EventArgs e)
+        {
+            SystemGameControl.buyArrow();
+        }
+
+        private void buySecrets_Click(object sender, EventArgs e)
+        {
+            SystemGameControl.buySecret();
+        }
+
+        private void door2_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.direction2();
+        }
+
+        private void door3_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.direction3();
+        }
+
+        private void door4_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.direction4();
+        }
+
+        private void background_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void door1_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.direction1();
+        }
+
+        private void door6_Click(object sender, EventArgs e)
+        {
+            SystemGameControl.direction6();
+        }
+
+        private void door5_Click_1(object sender, EventArgs e)
+        {
+            SystemGameControl.direction5();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }

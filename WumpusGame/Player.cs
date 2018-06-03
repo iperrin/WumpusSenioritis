@@ -3,7 +3,7 @@
 class Player
 {
     public int Arrow { get; private set; }
-    public int GoldCoins { get; private set; }
+    public int GoldCoins { get; set; }
     public int playerTurns { get; set; }
     public bool HasShotArrow { get; private set; }
 
