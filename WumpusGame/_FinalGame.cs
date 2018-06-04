@@ -21,7 +21,7 @@ namespace WumpusGame
 
             InitializeComponent();
 
-            PictureBox[] images = new PictureBox[19];
+            PictureBox[] images = new PictureBox[20];
             Label[] outputTexts = new Label[5];
             Label[] trivia = new Label[5];
 
@@ -58,6 +58,7 @@ namespace WumpusGame
             images[16] = buySecrets;
             images[17] = shootArrow;
             images[18] = hazard;
+            images[19] = ScoreSubmit;
 
             ScoreBoard.Visible = false;
 
@@ -81,7 +82,7 @@ namespace WumpusGame
                 images[i].BackColor = Color.Transparent;
             }
 
-            for(int i = 0; i<3; i++)
+            for(int i = 0; i<outputTexts.Length; i++)
             {
                 outputTexts[i].BackColor = Color.Transparent;
                 background.Controls.Add(outputTexts[i]);
@@ -93,7 +94,7 @@ namespace WumpusGame
                 outputTexts[i].Visible = false;
             }
 
-            SystemGameControl = new GameControl(images, outputTexts, ScoreBoard, trivia);
+            SystemGameControl = new GameControl(images, outputTexts, ScoreBoard, trivia, Name, ScoreReport);
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -183,7 +184,7 @@ namespace WumpusGame
 
         private void MainMenu_Click_1(object sender, EventArgs e)
         {
-            SystemGameControl.graphics.goMain();
+            SystemGameControl.endGame();
         }
 
         private void start_Click(object sender, EventArgs e)
@@ -289,6 +290,16 @@ namespace WumpusGame
         private void D_Click(object sender, EventArgs e)
         {
             SystemGameControl.selectD();
+        }
+
+        private void shootArrow_Click(object sender, EventArgs e)
+        {
+            SystemGameControl.arrowMode();
+        }
+
+        private void ScoreSubmit_Click(object sender, EventArgs e)
+        {
+            SystemGameControl.addScore(Name.Text);
         }
     }
 }

@@ -23,21 +23,26 @@ namespace WumpusGame
         public string name;
         public int level;
         String turnStatus;
+        int[] output;
+        Boolean wumpusAlive;
 
 
-        public GameControl(PictureBox[] images, Label[] texts, TextBox ScoreBoard, Label[] triviaLabels)
+        public GameControl(PictureBox[] images, Label[] texts, TextBox ScoreBoard, Label[] triviaLabels, TextBox name, TextBox ScoreReport)
         {
             player = new Player();
             map = new Map();
             cave = new Cave();
             trivia = new TriviaManagement();
-            graphics = new graphicInterface(images, texts, ScoreBoard, triviaLabels);
+            graphics = new graphicInterface(images, texts, ScoreBoard, triviaLabels, name, ScoreReport);
             updateStats();
         }
 
         public void StartGame(int caveNumber)
         {
-            Boolean run = true;
+            wumpusAlive = true;
+            graphics.hideScoreReport();
+            output = new int[5];
+            output[4] = caveNumber;
             player.Reset();
             cave.load(caveNumber);
             graphics.loadCave(caveNumber);
@@ -49,10 +54,11 @@ namespace WumpusGame
 
         public void runTurn()
         {
-            graphics.update("Click Arrow to move, fire an arrow, or make a purchase!");
+            graphics.update("Click direction to move, fire an arrow, or make a purchase!");
             graphics.showCenter("Player Icon.gif");
 
-            giveSecret();
+            graphics.loadDoors(cave.GetDoors(map.currentRoom));
+            graphics.showPurchases();
 
             if (checkEndConditions())
             {
@@ -61,9 +67,9 @@ namespace WumpusGame
 
             turnStatus = "move";
 
-            graphics.showPurchase();
+            graphics.showPurchases();
 
-            //graphics displays 
+            graphics.showArrowButton();
         }
 
         public void giveSecret()
@@ -73,23 +79,48 @@ namespace WumpusGame
 
             if(test == 0)
             {
-                //bat room number
-            }else if(test == 1)
+                if (rand.Next(2) == 1)
+                    graphics.update("There is a bat in room ");//get bat1 location from map
+                else
+                    graphics.update("There is a bat in room ");//get bat1 location from map
+            }
+            else if(test == 1)
             {
-                //pit room number
-            }else if(test == 2)
+                if (rand.Next(2) == 1)
+                    graphics.update("There is a pit in room ");//get pit1 location from map
+                else
+                    graphics.update("There is a pit in room ");//get pit2 location from map
+            }
+            else if(test == 2)
             {
-                //is wumpus withing 2 rooms?
+                int distance = -1;
+                for(int i = 0; i<6; i++)
+                {
+                    if (cave.GetDoors(map.GetPlayerRoom())[i] == map.GetWumpusLocation()) distance = 1;
+                    for (int j = 0; j < 6; j++)
+                    {
+                        if (cave.GetDoors(cave.GetDoors(map.GetPlayerRoom())[i])[j] == map.GetWumpusLocation()) distance = 2;
+                    }
+                }
+                if (distance == -1)
+                    graphics.update("Wumpus is more than 2 rooms from you!");
+                else
+                {
+                    graphics.update("Wumpus is within 2 rooms from you!");
+                }
+
+
             }else if(test == 3)
             {
-                //room # of wumpus
+                graphics.update("Wumpus is in room number " + map.GetWumpusLocation());
             }else if(test == 4)
             {
-                //current room number
+                graphics.update("You are in room number " + map.GetPlayerRoom());
+
             }
             else
             {
-                //trivia secret
+                graphics.update(trivia.GetSecret());
             }
 
         }
@@ -108,6 +139,7 @@ namespace WumpusGame
         public Boolean checkEndConditions()
         {
             if(player.playerTurns >= 100) return true;
+            if (player.GoldCoins < 1) return true;
             if (player.Arrow < 1) return true;
             return false;
         }
@@ -131,7 +163,11 @@ namespace WumpusGame
             map.SetPlayerRoom(newRoom);
             graphics.loadDoors(cave.GetDoors(newRoom));
             
-            //check wumpus
+            if(map.GetPlayerRoom() == map.GetWumpusLocation())
+            {
+                fightWumpus();
+
+            }
 
             //check hazards in room
 
@@ -148,7 +184,27 @@ namespace WumpusGame
 
         public void arrowThrow(int arrowDirection)
         {
-            //check wumpus impact
+            if (cave.GetDoors(map.GetPlayerRoom())[arrowDirection - 1] == map.GetWumpusLocation())
+            {
+                Random temp = new Random();
+                if(temp.Next(2) == 1)
+                {
+                    wumpusAlive = false;
+                    endTurn();
+                    endGame();
+                }
+                else
+                {
+                    int newRoom = 0;
+                    while(newRoom == 0)
+                    {
+                        newRoom = cave.GetDoors(map.GetWumpusLocation())[temp.Next(6)];
+                    }
+                    map.SetWumpusLocation(newRoom);
+                }
+            }
+
+            graphics.update("You missed");
             player.shotArrow();
             endTurn();
         }
@@ -160,10 +216,31 @@ namespace WumpusGame
             graphics.hidePurchases();
         }
 
-        private void endGame()
+        public void endGame()
         {
-            //add player data to high score
-            //send high score data to GUI for display
+            //score turns gold arrows cave player
+
+            output[1] = player.playerTurns;
+            output[2] = player.GoldCoins;
+            output[3] = player.Arrow;
+
+            if (wumpusAlive)
+                output[0] = 0;
+            else
+                output[0] = 100 - output[1] + output[2] + (10 * output[3]);
+            graphics.goMain();
+            graphics.showScoreReport(output);
+            
+        }
+
+        public void addScore(String name)
+        {
+            String[] scoreData = new String[6];
+            scoreData[0] = name;
+            for (int i = 1; i < scoreData.Length; i++)
+                scoreData[i] = ""+output[i - 1];
+            HighScore tempScoring = new HighScore(scoreData);
+
         }
 
         public void direction1()
@@ -262,12 +339,12 @@ namespace WumpusGame
 
         public void foundBat()
         {
-            turnStatus = "bat";
-            triviaScore = 0;
-            triviaAsked = 0;
-            triviaNumQs = 3;
-            updateStats();
-            loadTrivia();
+            
+            Random rand = new Random();
+            map.SetPlayerRoom(1 + rand.Next(30));
+
+            //set new bat location
+            
         }
 
         public void winTrivia()
@@ -292,12 +369,7 @@ namespace WumpusGame
                 map.SetPlayerRoom(1);
                 
             }
-            if (turnStatus.Equals("bat"))
-            {
-                Random rand = new Random();
-                map.SetPlayerRoom(1 + rand.Next(30));
-                
-            }
+            
             graphics.hideTrivia();
             endTurn();
         }
@@ -319,6 +391,7 @@ namespace WumpusGame
         {
             graphics.hideDoors();
             graphics.hidePurchases();
+            graphics.hideArrowButton();
             updateStats();
             String temp = trivia.GetNextQuestion();
             String[] inputs = new String[5];
@@ -366,14 +439,10 @@ namespace WumpusGame
             if((triviaNumQs == 3 && triviaScore > 1) || (triviaNumQs == 5 && triviaScore>2))
             {
                 winTrivia();
-            }
-
-            if(triviaAsked == triviaNumQs)
+            }else if(triviaAsked >= triviaNumQs)
             {
                 lostTrivia();
-            }
-
-            if(triviaAsked<triviaNumQs)
+            }else
                 loadTrivia();
         }
 

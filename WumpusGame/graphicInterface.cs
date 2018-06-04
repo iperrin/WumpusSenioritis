@@ -30,7 +30,13 @@ namespace WumpusGame
         Label Hint;
         Label Instructions;
 
-        public graphicInterface(PictureBox[] images, Label[] texts, TextBox ScoreBoard, Label[] trivia){
+        TextBox name;
+        TextBox ScoreReport;
+
+        public graphicInterface(PictureBox[] images, Label[] texts, TextBox ScoreBoard, Label[] trivia, TextBox name, TextBox ScoreReport){
+            this.name = name;
+            this.ScoreReport = ScoreReport;
+
             doors = new PictureBox[13];
 
             this.images = images;
@@ -81,6 +87,8 @@ namespace WumpusGame
             images[16].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\buySecret.png");
             images[17].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\shootArrow.png");
             images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Player Icon.gif");
+            images[19].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Player Icon.gif");
+
         }
 
         public void hidePurchases()
@@ -120,6 +128,37 @@ namespace WumpusGame
             }
 
             ScoreBoard.Visible = false;
+            name.Visible = false;
+            ScoreReport.Visible = false;
+
+        }
+
+        public void hideScoreReport()
+        {
+            images[19].Visible = false;
+            name.Visible = false;
+            ScoreReport.Visible = false;
+        }
+
+        public void showScoreReport(int[] input)
+        {
+            //score turns gold arrows cave player
+
+            name.Visible = true;
+            name.Text = "Name";
+            images[19].Visible = true;
+            ScoreReport.Visible = true;
+            ScoreReport.Text = "Score: " + input[0] + "\r\nTurns: " + input[1] + "\r\nGold: " + input[2] + "\r\nArrows: " + input[3] + "\r\nCave: " + input[4];
+        }
+
+        public void hideArrowButton()
+        {
+            images[17].Visible = false;
+        }
+
+        public void showArrowButton()
+        {
+            images[17].Visible = true;
         }
 
         private void showLoad()
@@ -162,12 +201,6 @@ namespace WumpusGame
 
         }
 
-        public void showPurchase()
-        {
-            images[15].Visible = true;
-            images[16].Visible = true;
-        }
-
         public void loadTrivia(String[] input)
         {
             for(int i = 0; i<trivia.Length; i++)
@@ -184,6 +217,8 @@ namespace WumpusGame
                 trivia[i].Visible = false;
             }
         }
+
+
         /*
         //receives secret 
         public void Secret(String secret) {

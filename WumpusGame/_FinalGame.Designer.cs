@@ -58,6 +58,9 @@
             this.shootArrow = new System.Windows.Forms.PictureBox();
             this.hazard = new System.Windows.Forms.PictureBox();
             this.Hint = new System.Windows.Forms.Label();
+            this.ScoreReport = new System.Windows.Forms.TextBox();
+            this.Name = new System.Windows.Forms.TextBox();
+            this.ScoreSubmit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door4)).BeginInit();
@@ -77,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buySecrets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shootArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hazard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScoreSubmit)).BeginInit();
             this.SuspendLayout();
             // 
             // background
@@ -356,6 +360,7 @@
             this.shootArrow.Size = new System.Drawing.Size(187, 76);
             this.shootArrow.TabIndex = 44;
             this.shootArrow.TabStop = false;
+            this.shootArrow.Click += new System.EventHandler(this.shootArrow_Click);
             // 
             // hazard
             // 
@@ -375,11 +380,40 @@
             this.Hint.TabIndex = 46;
             this.Hint.Text = "Hint";
             // 
+            // ScoreReport
+            // 
+            this.ScoreReport.Location = new System.Drawing.Point(885, 124);
+            this.ScoreReport.Multiline = true;
+            this.ScoreReport.Name = "ScoreReport";
+            this.ScoreReport.ReadOnly = true;
+            this.ScoreReport.Size = new System.Drawing.Size(317, 160);
+            this.ScoreReport.TabIndex = 47;
+            // 
+            // Name
+            // 
+            this.Name.Location = new System.Drawing.Point(885, 300);
+            this.Name.Name = "Name";
+            this.Name.Size = new System.Drawing.Size(100, 20);
+            this.Name.TabIndex = 48;
+            // 
+            // ScoreSubmit
+            // 
+            this.ScoreSubmit.BackColor = System.Drawing.SystemColors.Control;
+            this.ScoreSubmit.Location = new System.Drawing.Point(992, 290);
+            this.ScoreSubmit.Name = "ScoreSubmit";
+            this.ScoreSubmit.Size = new System.Drawing.Size(100, 50);
+            this.ScoreSubmit.TabIndex = 49;
+            this.ScoreSubmit.TabStop = false;
+            this.ScoreSubmit.Click += new System.EventHandler(this.ScoreSubmit_Click);
+            // 
             // _FinalGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1265, 666);
+            this.Controls.Add(this.ScoreSubmit);
+            this.Controls.Add(this.Name);
+            this.Controls.Add(this.ScoreReport);
             this.Controls.Add(this.Hint);
             this.Controls.Add(this.hazard);
             this.Controls.Add(this.shootArrow);
@@ -411,7 +445,7 @@
             this.Controls.Add(this.Turns);
             this.Controls.Add(this.background);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "_FinalGame";
+   //         this.Name = "_FinalGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wumpus - Senioritis";
             this.Load += new System.EventHandler(this._FinalGame_Load);
@@ -434,6 +468,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buySecrets)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shootArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hazard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScoreSubmit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,5 +506,8 @@
         private System.Windows.Forms.PictureBox shootArrow;
         private System.Windows.Forms.PictureBox hazard;
         private System.Windows.Forms.Label Hint;
+        private System.Windows.Forms.TextBox ScoreReport;
+        private System.Windows.Forms.TextBox Name;
+        private System.Windows.Forms.PictureBox ScoreSubmit;
     }
 }
