@@ -45,6 +45,7 @@ namespace WumpusGame
 
         public void runTurn()
         {
+            graphics.update("Click Arrow to move, fire an arrow, or make a purchase!");
             graphics.showCenter("Player Icon.gif");
             if (checkEndConditions())
             {
@@ -66,6 +67,7 @@ namespace WumpusGame
             {
                 endGame();
             }
+            runTurn();
         }
 
         public Boolean checkEndConditions()

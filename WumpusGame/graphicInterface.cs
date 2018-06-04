@@ -64,11 +64,11 @@ namespace WumpusGame
             images[1].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Start Button (Load).png");
             images[2].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\smallMenu.png");
             images[3].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\smallExit.png");
-            //images[4].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
-            //images[5].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
-            //images[6].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
-            //images[7].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
-            //images[8].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            images[4].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Start Button (Load).png");
+            images[5].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Start Button (Load).png");
+            images[6].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Start Button (Load).png");
+            images[7].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Start Button (Load).png");
+            images[8].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Start Button (Load).png");
             images[9].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\1.png");
             images[10].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\2.png");
             images[11].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\3.png");
@@ -77,8 +77,14 @@ namespace WumpusGame
             images[14].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\6.png");
             images[15].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\buyArrows.png");
             images[16].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\buySecret.png");
-            //images[17].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
-            //images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            images[17].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\shootArrow.png");
+            images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Player Icon.gif");
+        }
+
+        public void update(String input)
+        {
+            Instructions.Text = input;
+            Instructions.Visible = true;
         }
 
         private void hideAll()
@@ -96,6 +102,7 @@ namespace WumpusGame
             for(int i = 0; i<trivia.Length; i++)
             {
                 trivia[i].Visible = false;
+                trivia[i].Text = " ";
             }
 
             ScoreBoard.Visible = false;
@@ -130,6 +137,7 @@ namespace WumpusGame
             images[2].Visible = true;
             images[3].Visible = true;
             showStats();
+            images[17].Visible = true;
         }
 
         public void updateStats(int turns, int coins, int arrows)

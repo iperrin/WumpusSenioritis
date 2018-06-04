@@ -350,10 +350,10 @@
             // 
             // shootArrow
             // 
-            this.shootArrow.Location = new System.Drawing.Point(82, 310);
+            this.shootArrow.Location = new System.Drawing.Point(150, 308);
             this.shootArrow.Margin = new System.Windows.Forms.Padding(2);
             this.shootArrow.Name = "shootArrow";
-            this.shootArrow.Size = new System.Drawing.Size(78, 42);
+            this.shootArrow.Size = new System.Drawing.Size(187, 76);
             this.shootArrow.TabIndex = 44;
             this.shootArrow.TabStop = false;
             // 

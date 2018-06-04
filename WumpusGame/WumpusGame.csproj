@@ -219,6 +219,9 @@
     <Content Include="graphics\Player Icon.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="graphics\shootArrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="graphics\smallExit.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

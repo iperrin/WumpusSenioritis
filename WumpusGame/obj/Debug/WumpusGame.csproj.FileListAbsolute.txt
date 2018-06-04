@@ -91,4 +91,4 @@ C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\buyAr
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\buySecret.png
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\smallExit.png
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\smallMenu.png
-C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.csprojResolveAssemblyReference.cache
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\shootArrow.png
