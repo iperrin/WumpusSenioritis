@@ -11,6 +11,10 @@ namespace WumpusGame
 {
     public class GameControl
     {
+        int triviaScore;
+        int triviaAsked;
+        int triviaNumQs;
+
         Player player;
         Map map;
         TriviaManagement trivia;
@@ -47,6 +51,9 @@ namespace WumpusGame
         {
             graphics.update("Click Arrow to move, fire an arrow, or make a purchase!");
             graphics.showCenter("Player Icon.gif");
+
+            giveSecret();
+
             if (checkEndConditions())
             {
                 endGame();
@@ -57,6 +64,34 @@ namespace WumpusGame
             graphics.showPurchase();
 
             //graphics displays 
+        }
+
+        public void giveSecret()
+        {
+            Random rand = new Random();
+            int test = rand.Next(6);
+
+            if(test == 0)
+            {
+                //bat room number
+            }else if(test == 1)
+            {
+                //pit room number
+            }else if(test == 2)
+            {
+                //is wumpus withing 2 rooms?
+            }else if(test == 3)
+            {
+                //room # of wumpus
+            }else if(test == 4)
+            {
+                //current room number
+            }
+            else
+            {
+                //trivia secret
+            }
+
         }
 
         public void endTurn()
@@ -87,20 +122,15 @@ namespace WumpusGame
             return trivia.GetNextFact();
         }
 
-        public void newHint()
-        {
-            //show some trivia
-        }
 
         public void move(int door)
         {
+            graphics.hidePurchases();
             int startRoom = map.GetPlayerRoom();
             int newRoom = cave.GetDoors(startRoom)[door-1];
-            newHint();
             map.SetPlayerRoom(newRoom);
-
-            //update room
-
+            graphics.loadDoors(cave.GetDoors(newRoom));
+            
             //check wumpus
 
             //check hazards in room
@@ -118,12 +148,16 @@ namespace WumpusGame
 
         public void arrowThrow(int arrowDirection)
         {
-
+            //check wumpus impact
+            player.shotArrow();
+            endTurn();
         }
 
         public void arrowMode()
         {
             turnStatus = "throwArrow";
+            graphics.update("Choose a direction to throw the arrow!");
+            graphics.hidePurchases();
         }
 
         private void endGame()
@@ -187,17 +221,105 @@ namespace WumpusGame
         public void buySecret()
         {
             turnStatus = "buySecret";
+            triviaScore = 0;
+            triviaAsked = 0;
+            triviaNumQs = 3;
+            player.Buy();
+            updateStats();
             loadTrivia();
         }
 
         public void buyArrow()
         {
-            turnStatus = "byArrow";
+            turnStatus = "buyArrow";
+            triviaScore = 0;
+            triviaAsked = 0;
+            triviaNumQs = 3;
+            player.Buy();
+            updateStats();
             loadTrivia();
+        }
+
+        public void fightWumpus()
+        {
+            turnStatus = "fightWumpus";
+            triviaScore = 0;
+            triviaAsked = 0;
+            triviaNumQs = 5;
+            updateStats();
+            loadTrivia();
+        }
+
+        public void fellInPit()
+        {
+            turnStatus = "pit";
+            triviaScore = 0;
+            triviaAsked = 0;
+            triviaNumQs = 3;
+            updateStats();
+            loadTrivia();
+        }
+
+        public void foundBat()
+        {
+            turnStatus = "bat";
+            triviaScore = 0;
+            triviaAsked = 0;
+            triviaNumQs = 3;
+            updateStats();
+            loadTrivia();
+        }
+
+        public void winTrivia()
+        {
+            if (turnStatus.Equals("buySecret"))
+            {
+                giveSecret();
+                
+            }
+            if (turnStatus.Equals("buyArrow"))
+            {
+                player.GiveArrows();
+                
+            }
+            if (turnStatus.Equals("fightWumpus"))
+            {
+                //wumpus runs away
+                
+            }
+            if (turnStatus.Equals("pit"))
+            {
+                map.SetPlayerRoom(1);
+                
+            }
+            if (turnStatus.Equals("bat"))
+            {
+                Random rand = new Random();
+                map.SetPlayerRoom(1 + rand.Next(30));
+                
+            }
+            graphics.hideTrivia();
+            endTurn();
+        }
+
+        public void lostTrivia()
+        {
+            graphics.hideTrivia();
+            if (turnStatus.Equals("buySecret") || turnStatus.Equals("buyArrow"))
+            {
+                endTurn();
+            }
+            else
+            {
+                endGame();
+            }
         }
 
         private void loadTrivia()
         {
+            graphics.hideDoors();
+            graphics.hidePurchases();
+            updateStats();
             String temp = trivia.GetNextQuestion();
             String[] inputs = new String[5];
 
@@ -214,50 +336,45 @@ namespace WumpusGame
 
         public void selectA()
         {
-            if (trivia.CorrectAnswer("A"))
-            {
-                player.BuyArrows();
-                player.GiveArrows();
-                updateStats();
-            }
-
-            graphics.hideTrivia();
+            triviaResponse("A");
         }
 
         public void selectB()
         {
-            if (trivia.CorrectAnswer("B"))
-            {
-                player.BuyArrows();
-                player.GiveArrows();
-                updateStats();
-            }
-
-            graphics.hideTrivia();
+            triviaResponse("B");
         }
 
         public void selectC()
         {
-            if (trivia.CorrectAnswer("C"))
-            {
-                player.BuyArrows();
-                player.GiveArrows();
-                updateStats();
-            }
-
-            graphics.hideTrivia();
+            triviaResponse("C");
         }
 
         public void selectD()
         {
-            if (trivia.CorrectAnswer("D"))
+            triviaResponse("D");
+        }
+
+        public void triviaResponse(String answer)
+        {
+            if (trivia.CorrectAnswer(answer))
             {
-                player.BuyArrows();
-                player.GiveArrows();
-                updateStats();
+                triviaScore++;
+                triviaAsked++;
+            }else
+                triviaAsked++;
+
+            if((triviaNumQs == 3 && triviaScore > 1) || (triviaNumQs == 5 && triviaScore>2))
+            {
+                winTrivia();
             }
 
-            graphics.hideTrivia();
+            if(triviaAsked == triviaNumQs)
+            {
+                lostTrivia();
+            }
+
+            if(triviaAsked<triviaNumQs)
+                loadTrivia();
         }
 
     }

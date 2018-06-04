@@ -11,6 +11,8 @@ namespace WumpusGame
 {
     public class graphicInterface
     {
+        
+
 
         PictureBox[] images;
         Label[] texts;
@@ -79,6 +81,18 @@ namespace WumpusGame
             images[16].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\buySecret.png");
             images[17].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\shootArrow.png");
             images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Player Icon.gif");
+        }
+
+        public void hidePurchases()
+        {
+            images[15].Visible = false;
+            images[16].Visible = false;
+        }
+
+        public void showPurchases()
+        {
+            images[15].Visible = true;
+            images[16].Visible = true;
         }
 
         public void update(String input)
@@ -278,10 +292,12 @@ namespace WumpusGame
                 if (caveDoors[i] > 0)
                 {
                     doors[i].Visible = true;
+                    doors[i].Enabled = true;
                 }
                 else
                 {
                     doors[i].Visible = false;
+                    doors[i].Enabled = false;
                 }
                     
         }

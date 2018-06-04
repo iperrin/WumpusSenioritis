@@ -18,13 +18,18 @@ class Player
 
     public void Reset()
     {
-        CostOfArrow = 15;
+        CostOfArrow = 3;
         CostOfHint = 25;
         GoldCoins = 5;
         Arrow = 3;
         ArrowsBought = 0;
         playerTurns = 0;
         HasShotArrow = false;
+    }
+
+    public void shotArrow()
+    {
+        Arrow--;
     }
 
     public void incrementTurn()
@@ -36,9 +41,9 @@ class Player
     {
         return GoldCoins >= CostOfArrow;
     }
-    public void BuyArrows()
+    public void Buy()
     {
-        GoldCoins -= CostOfArrow;
+        GoldCoins -= 3;
     }
     public int NeedForBuyArrows()
     {
