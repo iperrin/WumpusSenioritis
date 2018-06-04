@@ -57,8 +57,8 @@ namespace WumpusGame
         {
             images[0].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Load Page.png");
             images[1].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Start Button (Load).png");
-            //images[2].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
-            //images[3].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            images[2].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\smallMenu.png");
+            images[3].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\smallExit.png");
             //images[4].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
             //images[5].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
             //images[6].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
@@ -72,6 +72,8 @@ namespace WumpusGame
             images[14].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\6.png");
             images[15].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\buyArrows.png");
             images[16].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\buySecret.png");
+            //images[17].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
+            //images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\
         }
 
         private void hideAll()

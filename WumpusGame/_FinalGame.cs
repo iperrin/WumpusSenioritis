@@ -21,7 +21,7 @@ namespace WumpusGame
 
             InitializeComponent();
 
-            PictureBox[] images = new PictureBox[17];
+            PictureBox[] images = new PictureBox[19];
             Label[] outputTexts = new Label[3];
             Label[] trivia = new Label[5];
 
@@ -54,6 +54,8 @@ namespace WumpusGame
             images[14] = door6;
             images[15] = buyArrows;
             images[16] = buySecrets;
+            images[17] = shootArrow;
+            images[18] = hazard;
 
             ScoreBoard.Visible = false;
 
@@ -265,6 +267,26 @@ namespace WumpusGame
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void A_Click(object sender, EventArgs e)
+        {
+            SystemGameControl.selectA();
+        }
+
+        private void B_Click(object sender, EventArgs e)
+        {
+            SystemGameControl.selectB();
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+            SystemGameControl.selectC();
+        }
+
+        private void D_Click(object sender, EventArgs e)
+        {
+            SystemGameControl.selectD();
         }
     }
 }

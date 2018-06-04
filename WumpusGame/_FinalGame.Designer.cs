@@ -54,8 +54,9 @@
             this.B = new System.Windows.Forms.Label();
             this.C = new System.Windows.Forms.Label();
             this.D = new System.Windows.Forms.Label();
-            this.ShootArrow = new System.Windows.Forms.Label();
             this.Update = new System.Windows.Forms.Label();
+            this.shootArrow = new System.Windows.Forms.PictureBox();
+            this.hazard = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door4)).BeginInit();
@@ -73,6 +74,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cave5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buyArrows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buySecrets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shootArrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hazard)).BeginInit();
             this.SuspendLayout();
             // 
             // background
@@ -303,6 +306,7 @@
             this.A.Size = new System.Drawing.Size(14, 13);
             this.A.TabIndex = 38;
             this.A.Text = "A";
+            this.A.Click += new System.EventHandler(this.A_Click);
             // 
             // B
             // 
@@ -312,6 +316,7 @@
             this.B.Size = new System.Drawing.Size(14, 13);
             this.B.TabIndex = 39;
             this.B.Text = "B";
+            this.B.Click += new System.EventHandler(this.B_Click);
             // 
             // C
             // 
@@ -321,6 +326,7 @@
             this.C.Size = new System.Drawing.Size(14, 13);
             this.C.TabIndex = 40;
             this.C.Text = "C";
+            this.C.Click += new System.EventHandler(this.C_Click);
             // 
             // D
             // 
@@ -330,15 +336,7 @@
             this.D.Size = new System.Drawing.Size(15, 13);
             this.D.TabIndex = 41;
             this.D.Text = "D";
-            // 
-            // ShootArrow
-            // 
-            this.ShootArrow.AutoSize = true;
-            this.ShootArrow.Location = new System.Drawing.Point(118, 319);
-            this.ShootArrow.Name = "ShootArrow";
-            this.ShootArrow.Size = new System.Drawing.Size(65, 13);
-            this.ShootArrow.TabIndex = 42;
-            this.ShootArrow.Text = "Shoot Arrow";
+            this.D.Click += new System.EventHandler(this.D_Click);
             // 
             // Update
             // 
@@ -349,13 +347,32 @@
             this.Update.TabIndex = 43;
             this.Update.Text = "Update";
             // 
+            // shootArrow
+            // 
+            this.shootArrow.Location = new System.Drawing.Point(82, 310);
+            this.shootArrow.Margin = new System.Windows.Forms.Padding(2);
+            this.shootArrow.Name = "shootArrow";
+            this.shootArrow.Size = new System.Drawing.Size(78, 42);
+            this.shootArrow.TabIndex = 44;
+            this.shootArrow.TabStop = false;
+            // 
+            // hazard
+            // 
+            this.hazard.Location = new System.Drawing.Point(810, 310);
+            this.hazard.Margin = new System.Windows.Forms.Padding(2);
+            this.hazard.Name = "hazard";
+            this.hazard.Size = new System.Drawing.Size(151, 103);
+            this.hazard.TabIndex = 45;
+            this.hazard.TabStop = false;
+            // 
             // _FinalGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1265, 666);
+            this.Controls.Add(this.hazard);
+            this.Controls.Add(this.shootArrow);
             this.Controls.Add(this.Update);
-            this.Controls.Add(this.ShootArrow);
             this.Controls.Add(this.D);
             this.Controls.Add(this.C);
             this.Controls.Add(this.B);
@@ -404,6 +421,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cave5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buyArrows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buySecrets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shootArrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hazard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,7 +456,8 @@
         private System.Windows.Forms.Label B;
         private System.Windows.Forms.Label C;
         private System.Windows.Forms.Label D;
-        private System.Windows.Forms.Label ShootArrow;
         private System.Windows.Forms.Label Update;
+        private System.Windows.Forms.PictureBox shootArrow;
+        private System.Windows.Forms.PictureBox hazard;
     }
 }

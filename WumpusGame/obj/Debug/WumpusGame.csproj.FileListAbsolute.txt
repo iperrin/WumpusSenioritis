@@ -72,7 +72,6 @@ C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\TriviaQuestion
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\WumpusGame.exe.config
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\WumpusGame.exe
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\WumpusGame.pdb
-C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.csprojResolveAssemblyReference.cache
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.Form1.resources
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.bin.Loader.resources
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.GameControlTestForm.resources
@@ -82,3 +81,13 @@ C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.csp
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.csproj.CoreCompileInputs.cache
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.exe
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.pdb
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\1.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\2.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\3.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\4.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\5.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\6.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\buyArrows.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\buySecret.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\smallExit.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\smallMenu.png

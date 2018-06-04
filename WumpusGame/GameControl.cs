@@ -208,5 +208,25 @@ namespace WumpusGame
             graphics.loadTrivia(inputs);
         }
 
+        public void selectA()
+        {
+
+        }
+
+        public void selectB()
+        {
+
+        }
+
+        public void selectC()
+        {
+
+        }
+
+        public void selectD()
+        {
+
+        }
+
     }
 }
