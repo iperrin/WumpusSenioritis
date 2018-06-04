@@ -22,7 +22,7 @@ namespace WumpusGame
             InitializeComponent();
 
             PictureBox[] images = new PictureBox[19];
-            Label[] outputTexts = new Label[3];
+            Label[] outputTexts = new Label[5];
             Label[] trivia = new Label[5];
 
             trivia[0] = Question;
@@ -35,6 +35,8 @@ namespace WumpusGame
             outputTexts[0] = Turns;
             outputTexts[1] = Coins;
             outputTexts[2] = Arrows;
+            outputTexts[3] = Hint;
+            outputTexts[4] = Update;
 
             //sets images
             images[0] = background;

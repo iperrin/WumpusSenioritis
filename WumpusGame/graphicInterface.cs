@@ -25,6 +25,8 @@ namespace WumpusGame
         Label Turns;
         Label Coins;
         Label Arrows;
+        Label Hint;
+        Label Instructions;
 
         public graphicInterface(PictureBox[] images, Label[] texts, TextBox ScoreBoard, Label[] trivia){
             doors = new PictureBox[13];
@@ -45,6 +47,9 @@ namespace WumpusGame
             Turns = texts[0];
             Coins = texts[1];
             Arrows = texts[2];
+            Hint = texts[3];
+            Instructions = texts[4];
+            
 
             setDirectory();
 
@@ -147,6 +152,14 @@ namespace WumpusGame
             {
                 trivia[i].Text = input[i];
                 trivia[i].Visible = true;
+            }
+        }
+
+        public void hideTrivia()
+        {
+            for(int i = 0; i < trivia.Length; i++)
+            {
+                trivia[i].Visible = false;
             }
         }
         /*
@@ -278,6 +291,12 @@ namespace WumpusGame
             Turns.Visible = true;
             Coins.Visible = true;
             Arrows.Visible = true;
+        }
+
+        public void showCenter(String item)
+        {
+            images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\"+item);
+            images[18].Visible = true;
         }
 
     }

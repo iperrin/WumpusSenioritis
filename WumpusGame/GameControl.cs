@@ -45,6 +45,7 @@ namespace WumpusGame
 
         public void runTurn()
         {
+            graphics.showCenter("Player Icon.gif");
             if (checkEndConditions())
             {
                 endGame();
@@ -110,6 +111,7 @@ namespace WumpusGame
         public void updateStats()
         {
             graphics.updateStats(player.playerTurns, player.GoldCoins, player.Arrow);
+            graphics.showStats();
         }
 
         public void arrowThrow(int arrowDirection)
@@ -210,22 +212,50 @@ namespace WumpusGame
 
         public void selectA()
         {
+            if (trivia.CorrectAnswer("A"))
+            {
+                player.BuyArrows();
+                player.GiveArrows();
+                updateStats();
+            }
 
+            graphics.hideTrivia();
         }
 
         public void selectB()
         {
+            if (trivia.CorrectAnswer("B"))
+            {
+                player.BuyArrows();
+                player.GiveArrows();
+                updateStats();
+            }
 
+            graphics.hideTrivia();
         }
 
         public void selectC()
         {
+            if (trivia.CorrectAnswer("C"))
+            {
+                player.BuyArrows();
+                player.GiveArrows();
+                updateStats();
+            }
 
+            graphics.hideTrivia();
         }
 
         public void selectD()
         {
+            if (trivia.CorrectAnswer("D"))
+            {
+                player.BuyArrows();
+                player.GiveArrows();
+                updateStats();
+            }
 
+            graphics.hideTrivia();
         }
 
     }

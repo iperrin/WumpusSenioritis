@@ -57,6 +57,7 @@
             this.Update = new System.Windows.Forms.Label();
             this.shootArrow = new System.Windows.Forms.PictureBox();
             this.hazard = new System.Windows.Forms.PictureBox();
+            this.Hint = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door4)).BeginInit();
@@ -195,7 +196,7 @@
             this.MainMenu.Location = new System.Drawing.Point(11, 11);
             this.MainMenu.Margin = new System.Windows.Forms.Padding(2);
             this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(78, 42);
+            this.MainMenu.Size = new System.Drawing.Size(77, 58);
             this.MainMenu.TabIndex = 27;
             this.MainMenu.TabStop = false;
             this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click_1);
@@ -212,10 +213,10 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(1205, 625);
+            this.exit.Location = new System.Drawing.Point(1189, 605);
             this.exit.Margin = new System.Windows.Forms.Padding(2);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(49, 30);
+            this.exit.Size = new System.Drawing.Size(65, 50);
             this.exit.TabIndex = 29;
             this.exit.TabStop = false;
             this.exit.Click += new System.EventHandler(this.exit_Click_1);
@@ -358,18 +359,28 @@
             // 
             // hazard
             // 
-            this.hazard.Location = new System.Drawing.Point(810, 310);
+            this.hazard.Location = new System.Drawing.Point(808, 300);
             this.hazard.Margin = new System.Windows.Forms.Padding(2);
             this.hazard.Name = "hazard";
-            this.hazard.Size = new System.Drawing.Size(151, 103);
+            this.hazard.Size = new System.Drawing.Size(151, 138);
             this.hazard.TabIndex = 45;
             this.hazard.TabStop = false;
+            // 
+            // Hint
+            // 
+            this.Hint.AutoSize = true;
+            this.Hint.Location = new System.Drawing.Point(747, 53);
+            this.Hint.Name = "Hint";
+            this.Hint.Size = new System.Drawing.Size(26, 13);
+            this.Hint.TabIndex = 46;
+            this.Hint.Text = "Hint";
             // 
             // _FinalGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1265, 666);
+            this.Controls.Add(this.Hint);
             this.Controls.Add(this.hazard);
             this.Controls.Add(this.shootArrow);
             this.Controls.Add(this.Update);
@@ -459,5 +470,6 @@
         private System.Windows.Forms.Label Update;
         private System.Windows.Forms.PictureBox shootArrow;
         private System.Windows.Forms.PictureBox hazard;
+        private System.Windows.Forms.Label Hint;
     }
 }
