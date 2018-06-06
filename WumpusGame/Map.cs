@@ -10,6 +10,10 @@ namespace WumpusGame
     {
         private HashSet<int> batRooms = new HashSet<int>(); // set of rooms bats can be in
         private HashSet<int> pitRooms = new HashSet<int>(); // set of rooms pits can be in
+        private int bat1Room;
+        private int bat2Room;
+        private int pit1Room;
+        private int pit2Room;
 
         public int WumpusRoom;
         Random random = new Random();
@@ -18,6 +22,10 @@ namespace WumpusGame
         public Map()
         {
             currentRoom = 1;
+            bat1Room = GenerateBatRoomNumber();
+            bat2Room = GenerateBatRoomNumber();
+            pit1Room = GeneratePitRoomNumber();
+            pit2Room = GeneratePitRoomNumber();
             WumpusRoom = GenerateWumpusRoomNumber();
         }
 
@@ -37,76 +45,41 @@ namespace WumpusGame
             currentRoom = newRoom; 
         }
 
-        public Boolean Overlap(int currentRoom)
+        public Boolean NoOverlap(int room)
         {
-            if (batRooms.Contains(currentRoom) && pitRooms.Contains(currentRoom)) return true;
-            else if (pitRooms.Contains(currentRoom) && GetWumpusLocation() == currentRoom) return true;
-            else if (batRooms.Contains(currentRoom) && GetWumpusLocation() == currentRoom) return true;
-            return false;
+            if (batRooms.Contains(room) && pitRooms.Contains(room)) return false;
+            else if (pitRooms.Contains(room) && GetWumpusLocation() == room) return false;
+            else if (batRooms.Contains(room) && GetWumpusLocation() == room) return false;
+            //DELETE THE ABOVE 2 LINES IF THE WUMPUS CAN BE IN THE SAME ROOM AS THE PITS/BATS BECAUSE IM NOT SURE ABOUT THIS
+            return true;
         }
 
-        private void GenerateBatRoomNumbers()
+        private int GenerateBatRoomNumber()
         {
-            batRooms.Clear();
-            int numOfRooms = 3;
-
-            while (batRooms.Count < numOfRooms)
-            {
-                int randomRoom = random.Next(1, 30);
-                if (pitRooms.Contains(randomRoom))
-                    continue; //(another one) random room number
-                else
-                    batRooms.Add(randomRoom);
-            }
+            int randomRoom = random.Next(1, 30);
+            if (!NoOverlap(randomRoom)) randomRoom = random.Next(1,30); //(another one) random room number
+            batRooms.Add(randomRoom);
+            return randomRoom;
         }
 
-        public void EncounteredBat()
+        private int GeneratePitRoomNumber()
         {
-            batRooms.Remove(currentRoom);
-            int randomNumber = random.Next(1, 30);
-
-            while (batRooms.Contains(randomNumber) || pitRooms.Contains(randomNumber))
-            {
-                randomNumber = random.Next(1, 30);
-            }
-
-            currentRoom = randomNumber;
-            //changes player location
-            randomNumber = random.Next(1, 30);
-
-            while (batRooms.Contains(randomNumber) || pitRooms.Contains(randomNumber))
-            {
-                randomNumber = random.Next(1, 30);
-            }
-
-            batRooms.Add(randomNumber);
-            //randomizes bat location again
-        }
-
-        private void GeneratePitRoomNumbers()
-        {
-            pitRooms.Clear();
-            int numOfRooms = 2;
-
-            while (pitRooms.Count < numOfRooms)
-            {
-                int randomRoom = random.Next(1, 30);
-                if (batRooms.Contains(randomRoom))
-                    continue; //(another one) random room number
-                else
-                    pitRooms.Add(randomRoom);
-            }
+            int randomRoom = random.Next(1, 30);
+            if (!NoOverlap(randomRoom)) randomRoom = random.Next(1, 30); //(another one) random room number
+            pitRooms.Add(randomRoom);
+            return randomRoom;
         }
 
         private int GenerateWumpusRoomNumber()
         {
-            int randomNumber = random.Next(1, 30);
+            int randomRoom = random.Next(1, 30);
 
-            while (batRooms.Contains(randomNumber) && pitRooms.Contains(randomNumber))
+            while (!NoOverlap(randomRoom))
             {
-                randomNumber = random.Next(1, 30);
+                randomRoom = random.Next(1, 30);
             }
-            return randomNumber;
+
+            return randomRoom;
         }
 
         public int GetWumpusLocation()
