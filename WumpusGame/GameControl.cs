@@ -480,7 +480,7 @@ namespace WumpusGame
 
             data[0] = "" + map.GetPlayerRoom();
             data[1] = "" + map.GetWumpusLocation();
-            data[2] = "";
+            data[2] = "" + map.;
             data[3] = "";
             data[4] = "";
             data[5] = "";
