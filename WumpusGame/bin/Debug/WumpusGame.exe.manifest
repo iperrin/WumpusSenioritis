@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kqiB+W1yEQkZROb+iMZide/7rjRDZOTdOYSK+3HdEhw=</dsig:DigestValue>
+        <dsig:DigestValue>FL++6yZQtmCJurQc2ICDwVOVc7FIdLh7IGlOKh0Iyc0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -161,13 +161,13 @@
       <dsig:DigestValue>iXYMxZe4GkR2OT8G19K0eXIF3MuNAUR9TeTtKdW6cpc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Caves\map5.txt" size="541">
+  <file name="Caves\map5.txt" size="463">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/SOmN3luhojPWCV35SqOUU2k4x+7TX/b0anGt5gLS+A=</dsig:DigestValue>
+      <dsig:DigestValue>PilRDMkE4GvLZn8UJb1rj7D1mj6jPAQPxJUT8Frnz24=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Caves\map6.txt" size="541">
@@ -473,7 +473,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>hQLJd1ughJz+Psztef54Vu7hBqwZuebytR+MSCaprzY=</dsig:DigestValue>
+      <dsig:DigestValue>lkGpPpJqBNbVZrcsQQLyR5QVbXhfh4NQ+ACggLSZ07k=</dsig:DigestValue>
     </hash>
   </file>
   <file name="obj\Debug\WumpusGame.pdb" size="110080">
@@ -482,7 +482,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ybwm1WNExS7dZ+ZqWNBfgdvoFTDMJ97eUYGQw3yeZms=</dsig:DigestValue>
+      <dsig:DigestValue>rYUMxWL16s9UzszCgy/fKG3cYqZckc9LSxxBBjZ9QZA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TriviaAnswers.txt" size="300">
