@@ -72,6 +72,10 @@ namespace WumpusGame
             batRooms.Add(randomRoom);
             return randomRoom;
         }
+        
+        private int getBat1Location(){
+            return bat1Room;
+        }
 
         private int MoveBat2Location()
         {
@@ -81,6 +85,10 @@ namespace WumpusGame
             return randomRoom;
         }
         
+        private int getBat2Location(){
+            return bat2Room;
+        }
+        
         //sets pits room to a random room, but first checks for overlap between other rooms
         private int GeneratePitRoomNumber()
         {
@@ -88,6 +96,14 @@ namespace WumpusGame
             if (!NoOverlap(randomRoom)) randomRoom = random.Next(1, 30); //(another one) random room number
             pitRooms.Add(randomRoom);
             return randomRoom;
+        }
+        
+        private int getPit1Location(){
+            return pit1Room;
+        }
+        
+         private int getPit2Location(){
+            return pit2Room;
         }
 
         private int GenerateWumpusRoomNumber()
