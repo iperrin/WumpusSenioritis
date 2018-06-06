@@ -84,4 +84,18 @@ class TriviaManagement
         else return this.facts[i];
       
     }
+
+  // allows game control to determine whether int[] wrongAnswers is empty (i.e. user has answered all answers correctly so far)
+  // if wrongAnswers is empty, game control will not call trivia.GetSecret(); will use alternate source of secrets
+  public Boolean IsWrongAnswersEmpty()
+  {
+    for (int i = 0; i < this.wrongAnswers.Length; i++)
+    {
+      if (this.wrongAnswers[i] == 1)
+      {
+        return false;
+      }
+    }
+    return true;
+  }
 }
