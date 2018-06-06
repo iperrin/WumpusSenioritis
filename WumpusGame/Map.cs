@@ -44,7 +44,8 @@ namespace WumpusGame
         {
             currentRoom = newRoom; 
         }
-
+        
+        //checks for overlap of pits and bats in the rooms
         public Boolean NoOverlap(int room)
         {
             if (batRooms.Contains(room) && pitRooms.Contains(room)) return false;
@@ -53,7 +54,8 @@ namespace WumpusGame
             //DELETE THE ABOVE 2 LINES IF THE WUMPUS CAN BE IN THE SAME ROOM AS THE PITS/BATS BECAUSE IM NOT SURE ABOUT THIS
             return true;
         }
-
+        
+        //sets bats room to a random room, but first checks for overlap between other rooms
         private int GenerateBatRoomNumber()
         {
             int randomRoom = random.Next(1, 30);
@@ -62,8 +64,8 @@ namespace WumpusGame
             return randomRoom;
         }
         
-        
-        private int MoveBat1Location()
+        //next 2 methods changes the bats location
+        private int MoveBat1Location(int bat)
         {
             int randomRoom = random.Next(1, 30);
             if (!NoOverlap(randomRoom) || batRooms.Contains(randomRoom)) randomRoom = random.Next(1, 30); //(another one) random room number
@@ -78,7 +80,8 @@ namespace WumpusGame
             batRooms.Add(randomRoom);
             return randomRoom;
         }
-
+        
+        //sets pits room to a random room, but first checks for overlap between other rooms
         private int GeneratePitRoomNumber()
         {
             int randomRoom = random.Next(1, 30);
