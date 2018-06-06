@@ -191,7 +191,7 @@ namespace WumpusGame
         public void updateStats()
         {
             graphics.updateStats(player.playerTurns, player.GoldCoins, player.Arrow);
-            graphics.showStats();
+            
             debug();
         }
 
@@ -251,12 +251,14 @@ namespace WumpusGame
 
         public void addScore(String name)
         {
-            debug();
+            
             String[] scoreData = new String[6];
-            scoreData[0] = name;
-            for (int i = 1; i < scoreData.Length; i++)
-                scoreData[i] = ""+output[i - 1];
+            scoreData[5] = name;
+            for (int i = 0; i < scoreData.Length-1; i++)
+                scoreData[i] = ""+output[i];
             HighScore tempScoring = new HighScore(scoreData);
+            tempScoring.addScore();
+            graphics.goMain();
 
         }
 

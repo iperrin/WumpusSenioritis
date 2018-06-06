@@ -71,6 +71,8 @@ namespace WumpusGame
 
         }
 
+        //major private methods
+
         private void setDirectory()
         {
             images[0].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Load Page.png");
@@ -96,6 +98,82 @@ namespace WumpusGame
 
         }
 
+        private void hideAll()
+        {
+            for (int i = 0; i < images.Length; i++)
+            {
+                images[i].Visible = false;
+            }
+
+            for (int i = 0; i < texts.Length; i++)
+            {
+                texts[i].Visible = false;
+            }
+
+            for (int i = 0; i < trivia.Length; i++)
+            {
+                trivia[i].Visible = false;
+                trivia[i].Text = " ";
+            }
+
+            ScoreBoard.Visible = false;
+            name.Visible = false;
+            ScoreReport.Visible = false;
+
+        }
+
+        //pages
+
+        //loading page
+        public void showLoad()
+        {
+            hideAll();
+            background.Image = Image.FromFile(Environment.CurrentDirectory + "\\Graphics\\Load Page.png");
+            background.Visible = true;
+            images[1].Visible = true;
+            images[3].Visible = true;
+        }
+
+        //main menu
+        public void goMain()
+        {
+            hideAll();
+            background.Image = Image.FromFile(Environment.CurrentDirectory + "\\Graphics\\Menu.png");
+            background.Visible = true;
+            for (int i = 4; i < 9; i++)
+            {
+                images[i].Visible = true;
+            }
+            displayScores();
+            images[3].Visible = true;
+        }
+
+        //startgame
+        public void loadCave(int cave)
+        {
+            hideAll();
+            background.Image = Image.FromFile(Environment.CurrentDirectory + "\\Graphics\\Cave " + cave + ".png");
+            background.Visible = true;
+            images[2].Visible = true;
+            images[3].Visible = true;
+            Turns.Visible = true;
+            Coins.Visible = true;
+            Arrows.Visible = true;
+            images[17].Visible = true;
+        }
+
+
+
+
+        //hides all move related things to 
+        public void hideMoveEntities()
+        {
+            hideTrivia();
+            hideDoors();
+            hideTrivia();
+        }
+
+
         public void hidePurchases()
         {
             images[15].Visible = false;
@@ -114,30 +192,7 @@ namespace WumpusGame
             Instructions.Visible = true;
         }
 
-        private void hideAll()
-        {
-            for(int i = 0; i<images.Length; i++)
-            {
-                images[i].Visible = false;
-            }
-
-            for (int i = 0; i < texts.Length; i++)
-            {
-                texts[i].Visible = false;
-            }
-
-            for(int i = 0; i<trivia.Length; i++)
-            {
-                trivia[i].Visible = false;
-                trivia[i].Text = " ";
-            }
-
-            ScoreBoard.Visible = false;
-            name.Visible = false;
-            ScoreReport.Visible = false;
-
-        }
-
+        
         public void hideScoreReport()
         {
             images[19].Visible = false;
@@ -172,37 +227,11 @@ namespace WumpusGame
             images[17].Visible = true;
         }
 
-        private void showLoad()
-        {
-            background.Image = Image.FromFile(Environment.CurrentDirectory + "\\Graphics\\Load Page.png");
-            background.Visible = true;
-            images[1].Visible = true;
-            images[3].Visible = true;
-        }
+        
 
-        public void goMain()
-        {
-            hideAll();
-            background.Image = Image.FromFile(Environment.CurrentDirectory + "\\Graphics\\Menu.png");
-            background.Visible = true;
-            for(int i = 4; i<9; i++)
-            {
-                images[i].Visible = true;
-            }
-            displayScores();
-            images[3].Visible = true;
-        }
+        
 
-        public void loadCave(int cave)
-        {
-            hideAll();
-            background.Image = Image.FromFile(Environment.CurrentDirectory + "\\Graphics\\Cave "+cave+".png");
-            background.Visible = true;
-            images[2].Visible = true;
-            images[3].Visible = true;
-            showStats();
-            images[17].Visible = true;
-        }
+        
 
         public void updateStats(int turns, int coins, int arrows)
         {
@@ -229,6 +258,126 @@ namespace WumpusGame
             }
         }
 
+        public void displayScores()
+        {
+            String[] scores = HighScore.GetHighScores();
+
+            ScoreBoard.Text = "SCORE    TURNS      GOLD      ARROWS      CAVE       PLAYER\r\n";
+            int count = 0;
+
+            for (int c = 0; c < 10; c++) {
+                for (int i = 0; i < 6; i++)
+                {
+                    ScoreBoard.Text += (scores[count]+"           ");
+                    count++;
+                }
+                ScoreBoard.Text += "\r\n";
+            }
+            ScoreBoard.Visible = true;
+
+        }
+        
+        public void loadDoors(int[] caveDoors)
+        {
+            for (int i = 0; i < 6; i++)
+                if (caveDoors[i] > 0)
+                {
+                    doors[i].Visible = true;
+                    doors[i].Enabled = true;
+                }
+                else
+                {
+                    doors[i].Visible = false;
+                    doors[i].Enabled = false;
+                }
+                    
+        }
+
+        public void hideDoors()
+        {
+            for(int i = 0; i<6; i++)
+            {
+                doors[i].Visible = false;
+            }
+        }
+
+        
+
+        public void showCenter(String item)
+        {
+            images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\"+item);
+            images[18].Visible = true;
+        }
+
+        public void debug(String[] data)
+        {
+            //update player
+
+            if(data[0] == null)
+            {
+                debugLabels[0].Text = "null";
+            }
+            else
+            {
+                debugLabels[0].Text = data[0];
+            }
+
+            //update wumpus
+
+            if (data[1] == null)
+            {
+                debugLabels[1].Text = "null";
+            }
+            else
+            {
+                debugLabels[1].Text = data[1];
+            }
+
+            //update bat 1
+
+            if (data[2] == null)
+            {
+                debugLabels[2].Text = "null";
+            }
+            else
+            {
+                debugLabels[2].Text = data[2];
+            }
+
+            //update bat 2
+
+            if (data[3] == null)
+            {
+                debugLabels[3].Text = "null";
+            }
+            else
+            {
+                debugLabels[3].Text = data[3];
+            }
+
+            //update pit 1
+
+            if (data[4] == null)
+            {
+                debugLabels[4].Text = "null";
+            }
+            else
+            {
+                debugLabels[4].Text = data[4];
+            }
+
+            //update pit 2
+
+            if (data[5] == null)
+            {
+                debugLabels[5].Text = "null";
+            }
+            else
+            {
+                debugLabels[5].Text = data[5];
+            }
+
+        }
 
         /*
         //receives secret 
@@ -311,133 +460,6 @@ namespace WumpusGame
 
         }
         */
-
-        public void displayScores()
-        {
-            String[] scores = HighScore.GetHighScores();
-
-            ScoreBoard.Text = "SCORE    TURNS      GOLD      ARROWS      CAVE       PLAYER\r\n";
-            int count = 0;
-
-            for (int c = 0; c < 10; c++) {
-                for (int i = 0; i < 6; i++)
-                {
-                    ScoreBoard.Text += (scores[count]+"           ");
-                    count++;
-                }
-                ScoreBoard.Text += "\r\n";
-            }
-            ScoreBoard.Visible = true;
-
-        }
-
-        
-        public void loadDoors(int[] caveDoors)
-        {
-            for (int i = 0; i < 6; i++)
-                if (caveDoors[i] > 0)
-                {
-                    doors[i].Visible = true;
-                    doors[i].Enabled = true;
-                }
-                else
-                {
-                    doors[i].Visible = false;
-                    doors[i].Enabled = false;
-                }
-                    
-        }
-
-        public void hideDoors()
-        {
-            for(int i = 0; i<6; i++)
-            {
-                doors[i].Visible = false;
-            }
-        }
-
-        public void showStats()
-        {
-            Turns.Visible = true;
-            Coins.Visible = true;
-            Arrows.Visible = true;
-        }
-
-        public void showCenter(String item)
-        {
-            images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\"+item);
-            images[18].Visible = true;
-        }
-
-        public void debug(String[] data)
-        {
-            //update player
-
-            if(data[0] == null)
-            {
-                debugLabels[0].Text = "null";
-            }
-            else
-            {
-                debugLabels[0].Text = data[0];
-            }
-
-            //update wumpus
-
-            if (data[1] == null)
-            {
-                debugLabels[1].Text = "null";
-            }
-            else
-            {
-                debugLabels[1].Text = data[1];
-            }
-
-            //update bat 1
-
-            if (data[2] == null)
-            {
-                debugLabels[2].Text = "null";
-            }
-            else
-            {
-                debugLabels[2].Text = data[2];
-            }
-
-            //update bat 2
-
-            if (data[3] == null)
-            {
-                debugLabels[3].Text = "null";
-            }
-            else
-            {
-                debugLabels[3].Text = data[3];
-            }
-
-            //update pit 1
-
-            if (data[4] == null)
-            {
-                debugLabels[4].Text = "null";
-            }
-            else
-            {
-                debugLabels[4].Text = data[4];
-            }
-
-            //update pit 2
-
-            if (data[5] == null)
-            {
-                debugLabels[5].Text = "null";
-            }
-            else
-            {
-                debugLabels[5].Text = data[5];
-            }
-
-        }
 
     }
 }

@@ -50,9 +50,10 @@ class Cave
     {
         int[] output = new int[6];
 
-        for (int i = 0; i < 6; i++)
-            output[i] = doors[room - 1, i];
+        output[0] = doors[room - 1, 5];
 
+        for (int i = 1; i < 6; i++)
+            output[i] = doors[room - 1, i-1];
         return output;
     }
     
