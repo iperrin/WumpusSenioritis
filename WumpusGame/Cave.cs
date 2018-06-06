@@ -66,12 +66,10 @@ class Cave
     
     // gets a random door from the open ones
     public int getRandomDoor(int roomNum){
-        Boolean checker = false;
         Random r = new Random();
         int door = 0;
-        while (checker != true){
-            door = r.Next(1,7);
-            checker = checkForDoor(roomNum, door);
+        while (door == 0){
+            door = doors[roomNum-1,r.Next(0,6)];
         }
         return door;
     }

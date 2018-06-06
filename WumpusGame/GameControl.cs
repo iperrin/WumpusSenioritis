@@ -63,14 +63,29 @@ namespace WumpusGame
             graphics.loadDoors(cave.GetDoors(map.currentRoom));
             turnStatus = "move";
             debug();
-
-            //check for wumpus overlap
-            //check for hazards
-
             if (checkEndConditions())
             {
                 endGame();
             }
+
+            if (map.GetPlayerRoom() == map.GetWumpusLocation())
+            {
+                fightWumpus();
+                return;
+            }
+
+            if (map.GetPlayerRoom() == map.getPit1Location() || map.GetPlayerRoom() == map.getPit2Location())
+            {
+                fellInPit();
+                return;
+            }
+
+            if (map.GetPlayerRoom() == map.getBat1Location() || map.GetPlayerRoom() == map.getBat2Location())
+            {
+                foundBat();
+                return;
+            }
+
         }
 
         public String giveSecret()
@@ -159,6 +174,7 @@ namespace WumpusGame
             debug();
             int startRoom = map.GetPlayerRoom();
             int newRoom = cave.GetDoors(startRoom)[door-1];
+            graphics.showCenter("Player Icon.gif");
             map.SetPlayerRoom(newRoom);
             graphics.loadDoors(cave.GetDoors(newRoom));
             player.GoldCoins++;
@@ -184,7 +200,12 @@ namespace WumpusGame
             }
             else
             {
-                //wumpus might run into an adjacent room
+                Random temp = new Random();
+                if(temp.Next(0,2) == 0)
+                {
+                    map.SetWumpusLocation(cave.getRandomDoor(map.GetWumpusLocation()));
+                }
+                    
                 graphics.hint("Oh no! You Missed, better luck next time");
             }
 
@@ -322,6 +343,8 @@ namespace WumpusGame
             triviaNumQs = 5;
             updateStats();
             loadTrivia();
+            graphics.showCenter("Wumpus.png");
+            graphics.update("Oh no, you woke the wumpus! Get 3/5 Questions right to escape!");
             debug();
         }
 
@@ -331,8 +354,10 @@ namespace WumpusGame
             triviaScore = 0;
             triviaAsked = 0;
             triviaNumQs = 3;
+            graphics.update("Oh no, you fell in a bottomless pit! The only way out is to 2/3 trivia questions right!");
             updateStats();
             loadTrivia();
+            graphics.showCenter("Pit.png");
             debug();
         }
 
@@ -373,6 +398,7 @@ namespace WumpusGame
                 graphics.hint("You survived the pit! Wecome back to the start!");
                 
             }
+            //bat implementation
             debug();
             graphics.hideTrivia();
             endTurn();
@@ -443,11 +469,19 @@ namespace WumpusGame
             if((triviaNumQs == 3 && triviaScore > 1) || (triviaNumQs == 5 && triviaScore>2))
             {
                 winTrivia();
+                return;
             }else if(triviaAsked >= triviaNumQs)
             {
                 lostTrivia();
+                return;
             }else
                 loadTrivia();
+            if (turnStatus.Equals("pit"))
+                graphics.showCenter("Pit.png");
+            if (turnStatus.Equals("bat"))
+                graphics.showCenter("Bat.png");
+            if (turnStatus.Equals("fightWumpus"))
+                graphics.showCenter("Wumpus.png");
         }
 
         public void debug()

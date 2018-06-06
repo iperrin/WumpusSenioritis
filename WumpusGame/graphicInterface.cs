@@ -92,7 +92,7 @@ namespace WumpusGame
             images[16].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\buySecret.png");
             images[17].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\shootArrow.png");
             images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Player Icon.gif");
-            images[19].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\Player Icon.gif");
+            images[19].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\submitButton.png");
 
         }
 

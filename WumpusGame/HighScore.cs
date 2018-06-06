@@ -17,7 +17,7 @@ using System.Threading.Tasks;
         public HighScore(String[] data)
         {
             results = data;
-            Record = System.IO.File.ReadAllLines(Environment.CurrentDirectory+@"\HighScoreRecord.txt");
+            Record = System.IO.File.ReadAllLines(Environment.CurrentDirectory.Substring(0, (Environment.CurrentDirectory.Length - 7)) + @"\HighScoreRecord.txt");
             addScore();
             WriteNewScores();
         }
@@ -41,7 +41,7 @@ using System.Threading.Tasks;
         // returns current 10 top high scores 
         public static String[] GetHighScores()
         {
-            string[] scores = System.IO.File.ReadAllLines(Environment.CurrentDirectory + @"\HighScoreRecord.txt");
+            string[] scores = System.IO.File.ReadAllLines(Environment.CurrentDirectory.Substring(0,(Environment.CurrentDirectory.Length - 7)) + @"\HighScoreRecord.txt");
             return scores;
         }
         // puts the users score in the correct spot on the top ten scores list 

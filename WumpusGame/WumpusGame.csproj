@@ -88,7 +88,9 @@
       <DependentUpon>GameControlTestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="graphicInterface.cs" />
-    <Compile Include="HighScore.cs" />
+    <Compile Include="HighScore.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="HighScoreTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +156,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\app.publish\WumpusGame.exe" />
     <Content Include="bin\Debug\CopyOfRecord.txt" />
     <Content Include="bin\Debug\GameScoreInput.txt" />
     <Content Include="bin\Debug\HighScoreRecord.txt" />
@@ -262,6 +265,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="graphics\Start Button %28Load%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphics\submitButton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="graphics\Trivia Tile.png">
