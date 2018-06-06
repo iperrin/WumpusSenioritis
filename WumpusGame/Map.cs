@@ -73,7 +73,7 @@ namespace WumpusGame
             return randomRoom;
         }
         
-        private int getBat1Location(){
+        public int getBat1Location(){
             return bat1Room;
         }
 
@@ -85,7 +85,7 @@ namespace WumpusGame
             return randomRoom;
         }
         
-        private int getBat2Location(){
+        public int getBat2Location(){
             return bat2Room;
         }
         
@@ -98,11 +98,11 @@ namespace WumpusGame
             return randomRoom;
         }
         
-        private int getPit1Location(){
+        public int getPit1Location(){
             return pit1Room;
         }
         
-         private int getPit2Location(){
+         public int getPit2Location(){
             return pit2Room;
         }
 

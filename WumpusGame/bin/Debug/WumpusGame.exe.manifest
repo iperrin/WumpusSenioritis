@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WumpusGame.exe" size="44976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WumpusGame.exe" size="46512">
       <assemblyIdentity name="WumpusGame" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FL++6yZQtmCJurQc2ICDwVOVc7FIdLh7IGlOKh0Iyc0=</dsig:DigestValue>
+        <dsig:DigestValue>yfr1htq1HXMmVQwqvy0kduxrpdTbtcHM6JZSKimZD4Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -107,22 +107,22 @@
       <dsig:DigestValue>QaKShQjqg5b1KAZVQFYSTw8RlPrpiLWNV03raEYScM4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\WumpusGame.exe" size="44032">
+  <file name="bin\Debug\WumpusGame.exe" size="45568">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>hQLJd1ughJz+Psztef54Vu7hBqwZuebytR+MSCaprzY=</dsig:DigestValue>
+      <dsig:DigestValue>+GPzkJD+zEHnkpEMRqOGeD/kVhMq45KARr0tgRl7Xq0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\WumpusGame.pdb" size="110080">
+  <file name="bin\Debug\WumpusGame.pdb" size="114176">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ybwm1WNExS7dZ+ZqWNBfgdvoFTDMJ97eUYGQw3yeZms=</dsig:DigestValue>
+      <dsig:DigestValue>LmNov6WuqTcZHOfJHPfNApsVfUFJ22ikHz8SCiB7IZo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Caves\map1.txt" size="486">
@@ -458,31 +458,175 @@
       <dsig:DigestValue>qaDY5Ls321XF4u1qQblmff/DTK5MCPHqXSX1oybnkFU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="obj\Debug\WumpusGame.csproj.FileListAbsolute.txt" size="9105">
+  <file name="obj\Debug\WumpusGame.csproj.FileListAbsolute.txt" size="10677">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7UOArP2icd9j+MMZ1FJ4Ps7Vz/mHVppAElsk94E7T6M=</dsig:DigestValue>
+      <dsig:DigestValue>jjANu/vd3fNNYHsL7RhZ6bLiCMacPxEXcoqd9cZUSyk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="obj\Debug\WumpusGame.exe" size="44032">
+  <file name="obj\Debug\WumpusGame.exe" size="45568">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>lkGpPpJqBNbVZrcsQQLyR5QVbXhfh4NQ+ACggLSZ07k=</dsig:DigestValue>
+      <dsig:DigestValue>+GPzkJD+zEHnkpEMRqOGeD/kVhMq45KARr0tgRl7Xq0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="obj\Debug\WumpusGame.pdb" size="110080">
+  <file name="obj\Debug\WumpusGame.pdb" size="114176">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rYUMxWL16s9UzszCgy/fKG3cYqZckc9LSxxBBjZ9QZA=</dsig:DigestValue>
+      <dsig:DigestValue>LmNov6WuqTcZHOfJHPfNApsVfUFJ22ikHz8SCiB7IZo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnBatNearby1.wav" size="3393912">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AsWyqpG4IFrLmZqqlLxniWfjUkxVXoxtgYfwsDUvuKI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnBatNearby2.wav" size="866424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>f3Ou5744xUnL1vqaoFJb8kuK0RhSZD+7EpSzOIjpVNg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnLose1.wav" size="734496">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ldOkv2FcRmfTDorvi1Svt+tU5SBQcBpvz+aKcKeRMjM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnLose2.wav" size="6523774">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DQDnHufKV0/wpWZyMASWjo1BVohjaYkoEay7KWZd3VA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnMove1.wav" size="798930">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xwmznFgI7KOvM1lmBvaauwHkJTJOhl4ZfxZHWXOw1pU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnMove2.wav" size="3441186">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BCayzysVzaM314Q9Uz9JeYFSBp4wBtLhu5iX4gO3fVo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnPitNearby1.wav" size="21691442">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>akQBgVymspcQnYxI0FF7HHPYpMgpkOSgdJM72gO8AAg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnPitNearby2.wav" size="3395272">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TKcgFOMnVZGWwXuJT/V/HYFU9nIl2npG53toJMVwmFc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnShoot1.wav" size="83254">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Jq1mCSzrCPrZFXdbs1XTjU2hq1puqEOGpcRGd3YeXfI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnShoot2.wav" size="14484">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xnXCCclaW9uOWqqPK/kfhqccoHPv1Z6daeG5YYHuHM0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnTriviaQuestion1.wav" size="117174">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uLPR228hsqC+JLehRzvCY/8JaRQrYAFUZiyKk81/Kjg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnTriviaQuestion2.wav" size="86612">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uNG4tXadcYt59/53CPrbtkCJDFPFUP5LdEILUe6B8KQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnWin1.wav" size="950484">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cMgg+aGm+wZU3wBCBH0YsFwZ4QWs94o08pkR4K1Q0Qo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnWin2.wav" size="352376">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RTXVBDTqEIqbENg/i7cWgZevVa8R0iZEpLjUb/CuyBY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnWumpusMove1.wav" size="1814572">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BNtkUUi1OAK6xzsNmByC26SOi0SK7b/3V2kansbKyTM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sound1\playOnWumpusMove2.wav" size="132358">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MKrMtUjwdM56tNOy1HgG/cZy/GA9uu7rSnvqwuEOuf0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TriviaAnswers.txt" size="300">

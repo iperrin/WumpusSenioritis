@@ -7,67 +7,73 @@ using System.Media;
 
 class Sound 
 {
-    private String[,] soundFiles;
-    int soundNum;
+    private String[] soundFiles;
 
-    // constructor takes the theme of the sound (1 or 2) as a parameter; theme is decided in GameControl
-    public Sound(int num)
+    public Sound()
     {
-        // theme num
-        soundNum = num;
+        Random temp = new Random();
+        int num = temp.Next(1, 3);
+        soundFiles = new string[8];
         // array of sound files
-        soundFiles = 
-        {
-            { "playOnMove1.wav", "playOnShoot1.wav", "playOnWumpusMove1.wav", "playOnTriviaQuestion1.wav", "playOnBatNearby1.wav", "playOnPitNearby1.wav", "playOnWin1.wav", "playOnLose1.wav" }
-            { "playOnMove2.wav", "playOnShoot2.wav", "playOnWumpusMove2.wav", "playOnTriviaQuestion2.wav", "playOnBatNearby2.wav", "playOnPitNearby2.wav", "playOnWin2.wav", "playOnLose2.wav" }
-        };
+
+        soundFiles[0] = "playOnMove";
+        soundFiles[1] = "playOnShoot";
+        soundFiles[2] = "playOnWumpusMove";
+        soundFiles[3] = "playOnTriviaQuestion";
+        soundFiles[4] = "playOnBatNearby";
+        soundFiles[5] = "playOnPitNearby";
+        soundFiles[6] = "playOnWin";
+        soundFiles[7] = "playOnLose";
+
+        for (int i = 0; i<soundFiles.Length; i++)
+            soundFiles[i]+=(num+".wav");
     }
 
     // plays sound using SoundPlayer class as part of Media library 
-    public String playSound(String filename){ 
+    public void playSound(String filename){ 
         SoundPlayer sound = new SoundPlayer(Environment.CurrentDirectory + "\\Sound1\\" + filename);  
         sound.Play();  
     }
 
     // each of these methods calls on playSound method to play the particular sound 
     
-    public String playOnMove()
+    public void playOnMove()
     {
-       playSound(soundFiles[num-1, 0]);
+       playSound(soundFiles[0]);
     }
 
-    public String playOnShoot()
+    public void playOnShoot()
     {
-        playSound(soundFiles[num-1, 1]);
+        playSound(soundFiles[1]);
     }
 
-    public String playOnWumpusMove()
+    public void playOnWumpusMove()
     {
-        playSound(soundFiles[num-1, 2]);
+        playSound(soundFiles[2]);
     }
 
-    public String playOnTriviaQuestion()
+    public void playOnTriviaQuestion()
     {
-        playSound(soundFiles[num-1, 3]);
+        playSound(soundFiles[3]);
     }
 
-    public String playOnBatNearby()
+    public void playOnBatNearby()
     {
-        playSound(soundFiles[num-1, 4]);
+        playSound(soundFiles[4]);
     }
 
-    public String playOnPitNearby()
+    public void playOnPitNearby()
     {
-        playSound(soundFiles[num-1, 5]);
+        playSound(soundFiles[5]);
     }
 
-    public String playOnWin()
+    public void playOnWin()
     {
-        playSound(soundFiles[num-1, 6]);
+        playSound(soundFiles[6]);
     }
 
-    public String playOnLose()
+    public void playOnLose()
     {
-        playSound(soundFiles[num-1, 7]);
+        playSound(soundFiles[7]);
     }
 }

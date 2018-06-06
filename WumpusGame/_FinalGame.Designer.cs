@@ -389,7 +389,6 @@
             this.Hint.Padding = new System.Windows.Forms.Padding(5);
             this.Hint.Size = new System.Drawing.Size(510, 53);
             this.Hint.TabIndex = 46;
-            this.Hint.Text = "Hint";
             this.Hint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ScoreReport
@@ -421,7 +420,7 @@
             // Playertag
             // 
             this.Playertag.AutoSize = true;
-            this.Playertag.Location = new System.Drawing.Point(231, 27);
+            this.Playertag.Location = new System.Drawing.Point(1218, 27);
             this.Playertag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Playertag.Name = "Playertag";
             this.Playertag.Size = new System.Drawing.Size(36, 13);
@@ -431,7 +430,7 @@
             // DebugPlayer
             // 
             this.DebugPlayer.AutoSize = true;
-            this.DebugPlayer.Location = new System.Drawing.Point(239, 47);
+            this.DebugPlayer.Location = new System.Drawing.Point(1226, 47);
             this.DebugPlayer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DebugPlayer.Name = "DebugPlayer";
             this.DebugPlayer.Size = new System.Drawing.Size(13, 13);
@@ -441,7 +440,7 @@
             // DebugWumpus
             // 
             this.DebugWumpus.AutoSize = true;
-            this.DebugWumpus.Location = new System.Drawing.Point(322, 47);
+            this.DebugWumpus.Location = new System.Drawing.Point(1225, 90);
             this.DebugWumpus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DebugWumpus.Name = "DebugWumpus";
             this.DebugWumpus.Size = new System.Drawing.Size(13, 13);
@@ -451,7 +450,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(314, 27);
+            this.label2.Location = new System.Drawing.Point(1217, 70);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
@@ -461,7 +460,7 @@
             // DebugBat1
             // 
             this.DebugBat1.AutoSize = true;
-            this.DebugBat1.Location = new System.Drawing.Point(413, 47);
+            this.DebugBat1.Location = new System.Drawing.Point(1234, 147);
             this.DebugBat1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DebugBat1.Name = "DebugBat1";
             this.DebugBat1.Size = new System.Drawing.Size(13, 13);
@@ -471,7 +470,7 @@
             // DebugBat2
             // 
             this.DebugBat2.AutoSize = true;
-            this.DebugBat2.Location = new System.Drawing.Point(485, 47);
+            this.DebugBat2.Location = new System.Drawing.Point(1234, 193);
             this.DebugBat2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DebugBat2.Name = "DebugBat2";
             this.DebugBat2.Size = new System.Drawing.Size(13, 13);
@@ -481,7 +480,7 @@
             // DebugPit1
             // 
             this.DebugPit1.AutoSize = true;
-            this.DebugPit1.Location = new System.Drawing.Point(559, 47);
+            this.DebugPit1.Location = new System.Drawing.Point(1241, 238);
             this.DebugPit1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DebugPit1.Name = "DebugPit1";
             this.DebugPit1.Size = new System.Drawing.Size(13, 13);
@@ -491,7 +490,7 @@
             // DebugPit2
             // 
             this.DebugPit2.AutoSize = true;
-            this.DebugPit2.Location = new System.Drawing.Point(617, 47);
+            this.DebugPit2.Location = new System.Drawing.Point(1229, 290);
             this.DebugPit2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DebugPit2.Name = "DebugPit2";
             this.DebugPit2.Size = new System.Drawing.Size(13, 13);
@@ -501,7 +500,7 @@
             // Bat1
             // 
             this.Bat1.AutoSize = true;
-            this.Bat1.Location = new System.Drawing.Point(404, 27);
+            this.Bat1.Location = new System.Drawing.Point(1225, 127);
             this.Bat1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Bat1.Name = "Bat1";
             this.Bat1.Size = new System.Drawing.Size(29, 13);
@@ -511,7 +510,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(476, 27);
+            this.label3.Location = new System.Drawing.Point(1225, 173);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
@@ -521,7 +520,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(547, 27);
+            this.label4.Location = new System.Drawing.Point(1229, 218);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
@@ -531,7 +530,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(617, 27);
+            this.label5.Location = new System.Drawing.Point(1229, 270);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(25, 13);

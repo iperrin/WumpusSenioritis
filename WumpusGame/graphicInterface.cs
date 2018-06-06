@@ -12,8 +12,6 @@ namespace WumpusGame
     public class graphicInterface
     {
         
-
-
         PictureBox[] images;
         Label[] texts;
         Label[] trivia;
@@ -122,8 +120,6 @@ namespace WumpusGame
 
         }
 
-        //pages
-
         //loading page
         public void showLoad()
         {
@@ -162,36 +158,13 @@ namespace WumpusGame
             images[17].Visible = true;
         }
 
-
-
-
         //hides all move related things to 
-        public void hideMoveEntities()
-        {
-            hideTrivia();
-            hideDoors();
-            hideTrivia();
-        }
-
-
-        public void hidePurchases()
-        {
-            images[15].Visible = false;
-            images[16].Visible = false;
-        }
-
-        public void showPurchases()
-        {
-            images[15].Visible = true;
-            images[16].Visible = true;
-        }
-
+ 
         public void update(String input)
         {
             Instructions.Text = input;
             Instructions.Visible = true;
         }
-
         
         public void hideScoreReport()
         {
@@ -211,27 +184,45 @@ namespace WumpusGame
             ScoreReport.Text = "Score: " + input[0] + "\r\nTurns: " + input[1] + "\r\nGold: " + input[2] + "\r\nArrows: " + input[3] + "\r\nCave: " + input[4];
         }
 
+        public void startMove()
+        {
+            hideAll();
+            images[0].Visible = true;
+            images[2].Visible = true;
+            images[3].Visible = true;
+
+            for (int i = 9; i < 19; i++)
+                images[i].Visible = true;
+
+            showCenter("Player Icon.gif");
+            images[17].Visible = true;
+            images[15].Visible = true;
+            images[16].Visible = true;
+
+            for (int i = 0; i < texts.Length; i++)
+                texts[i].Visible = true;
+        }
+
+        public void TriviaMode()
+        {
+            startMove();
+            for (int i = 9; i < 18; i++)
+                images[i].Visible = false;
+        }
+
+        public void arrowMode()
+        {
+            startMove();
+            images[17].Visible = false;
+            images[15].Visible = false;
+            images[16].Visible = false;
+        }
+
         public void hint(String input)
         {
             Hint.Text = input;
             Hint.Visible = true;
         }
-
-        public void hideArrowButton()
-        {
-            images[17].Visible = false;
-        }
-
-        public void showArrowButton()
-        {
-            images[17].Visible = true;
-        }
-
-        
-
-        
-
-        
 
         public void updateStats(int turns, int coins, int arrows)
         {
@@ -292,17 +283,7 @@ namespace WumpusGame
                 }
                     
         }
-
-        public void hideDoors()
-        {
-            for(int i = 0; i<6; i++)
-            {
-                doors[i].Visible = false;
-            }
-        }
-
-        
-
+               
         public void showCenter(String item)
         {
             images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\"+item);
@@ -378,88 +359,6 @@ namespace WumpusGame
             }
 
         }
-
-        /*
-        //receives secret 
-        public void Secret(String secret) {
-		Console.WriteLine("Here's a secret for you: " + secret); 
-		}
-
-	public void pitWarning (){
-		Console.WriteLine("There's a pit in this room. Watch yourself!"); 
-		}
-
-	public void batWarning() {
-		Console.WriteLine("There are bats in this room. You have been moved to a new room!"); 
-		}
-		
-	public void wumpusWarning (){
-		Console.WriteLine("You've entered a room with the wumpus. Battle commences."); 
-		} 
-
-	public void notEnoughMoney (){
-		Console.WriteLine("Not enough money for purchase."); 
-		} 
-	    
-	public String ChooseAction() {
-            String[] action = {"move", "shoot", "purchase arrow", "purchase secret" }; 
-            Console.WriteLine("Which action will you choose?"); 
-            Console.WriteLine("A. Move"); 
-            Console.WriteLine("B. Shoot arrow"); 
-            Console.WriteLine("C. Purchase arrow"); 
-            Console.WriteLine("D. Purchase secret"); 
-
-            String choice = Console.ReadLine(); 
-            
-            while (choice == null) {
-                choice = Console.ReadLine(); 
-            }
-            if(choice.Equals("A") || choice.Equals ("a")) 
-                return action[0]; 
-            
-            else if(choice.Equals("B") || choice.Equals ("b"))
-                return action[1];  
-
-            else if(choice.Equals("B") || choice.Equals ("b"))
-                return action[1];  
-
-            else if(choice.Equals("C") || choice.Equals ("c"))
-                return action[2]; 
-
-            else if(choice.Equals("D") || choice.Equals ("d"))
-                return action[3]; 
-
-            else 
-                return ChooseAction();   
-        }
-
-        //Displays to user the current stats of gold coins, arrows, trivia pieces 
-        public String Inventory()
-        {
-            return null;
-        }
-
-        //Shows possible action that user can take to move (move, shoot arrow, purchase arrow/secret) 
-        public void Action()
-        {
-
-        }
-
-        //if user encounters hallway, feed trivia piece 
-        public void WalkThrough(Boolean door)
-        {
-            if (door)
-            {
-                //call Trivia method that delivers Trivia to users if door = true (user walks through door)  
-            }
-        }
-
-        //displays current room user is in 
-        public void Room()
-        {
-
-        }
-        */
 
     }
 }
