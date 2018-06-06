@@ -61,6 +61,23 @@ namespace WumpusGame
             batRooms.Add(randomRoom);
             return randomRoom;
         }
+        
+        
+        private int MoveBat1Location()
+        {
+            int randomRoom = random.Next(1, 30);
+            if (!NoOverlap(randomRoom) || batRooms.Contains(randomRoom)) randomRoom = random.Next(1, 30); //(another one) random room number
+            batRooms.Add(randomRoom);
+            return randomRoom;
+        }
+
+        private int MoveBat2Location()
+        {
+            int randomRoom = random.Next(1, 30);
+            if (!NoOverlap(randomRoom) || batRooms.Contains(randomRoom)) randomRoom = random.Next(1, 30); //(another one) random room number
+            batRooms.Add(randomRoom);
+            return randomRoom;
+        }
 
         private int GeneratePitRoomNumber()
         {
