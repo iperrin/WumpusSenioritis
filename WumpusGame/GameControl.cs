@@ -199,6 +199,7 @@ namespace WumpusGame
             turnStatus = "throwArrow";
             graphics.update("Choose a direction to throw the arrow!");
             graphics.arrowMode();
+            graphics.loadDoors(cave.GetDoors(map.GetPlayerRoom()));
             debug();
         }
 
@@ -392,7 +393,7 @@ namespace WumpusGame
             debug();
         }
 
-        private void loadTrivia()
+        public void loadTrivia()
         {
             graphics.TriviaMode();
             updateStats();

@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yfr1htq1HXMmVQwqvy0kduxrpdTbtcHM6JZSKimZD4Y=</dsig:DigestValue>
+        <dsig:DigestValue>pVybYcZxRCLldtB7LiJgKu+7358bcC5nbS1BrGLSbBI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -113,7 +113,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+GPzkJD+zEHnkpEMRqOGeD/kVhMq45KARr0tgRl7Xq0=</dsig:DigestValue>
+      <dsig:DigestValue>OQ/W2Tbtt7dcygYRP6TLXiKB9vgi/cB/cY7YKCVB/lQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Debug\WumpusGame.pdb" size="114176">
@@ -122,7 +122,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>LmNov6WuqTcZHOfJHPfNApsVfUFJ22ikHz8SCiB7IZo=</dsig:DigestValue>
+      <dsig:DigestValue>JtAmRLfVoXBE34Clvcs+5TxRuYQwGdm6H2vV1ZwN+ac=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Caves\map1.txt" size="486">
@@ -473,7 +473,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+GPzkJD+zEHnkpEMRqOGeD/kVhMq45KARr0tgRl7Xq0=</dsig:DigestValue>
+      <dsig:DigestValue>TmJP9ct7ipOGPJPVCwP+NjRplEy1IwxjydsFxeifAME=</dsig:DigestValue>
     </hash>
   </file>
   <file name="obj\Debug\WumpusGame.pdb" size="114176">
@@ -482,7 +482,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>LmNov6WuqTcZHOfJHPfNApsVfUFJ22ikHz8SCiB7IZo=</dsig:DigestValue>
+      <dsig:DigestValue>qU7actEcdqSh6YNLrQPqMyT6Gd0MPm1klgLlrifeKWo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Sound1\playOnBatNearby1.wav" size="3393912">
