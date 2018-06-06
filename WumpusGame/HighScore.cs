@@ -18,7 +18,8 @@ using System.Threading.Tasks;
         {
             results = data;
             Record = System.IO.File.ReadAllLines(Environment.CurrentDirectory+@"\HighScoreRecord.txt");
-            //push comment
+            addScore();
+            WriteNewScores();
         }
         //checks to see if the user's score is high enough to be a high score
         //if it is determinded it is high enough to be on the high scores list it runs the method to add it
@@ -68,7 +69,7 @@ using System.Threading.Tasks;
         // Writes the updated top 10 high scores to a file to save the scores for the next game.
         public void WriteNewScores()
         {
-            System.IO.File.WriteAllLines(@"C:\Users\Public\TestFolder\record.txt", Record);
+            System.IO.File.WriteAllLines(Environment.CurrentDirectory + @"\HighScoreRecord.txt", Record);
         }
     }
 
