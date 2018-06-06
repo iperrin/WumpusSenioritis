@@ -25,6 +25,15 @@ namespace WumpusGame
             Label[] outputTexts = new Label[5];
             Label[] trivia = new Label[5];
 
+            //Debug labels
+            Label[] debug = new Label[6];
+            debug[0] = DebugPlayer;
+            debug[1] = DebugWumpus;
+            debug[2] = DebugBat1;
+            debug[3] = DebugBat2;
+            debug[4] = DebugPit1;
+            debug[5] = DebugPit2;
+
             trivia[0] = Question;
             trivia[1] = A;
             trivia[2] = B;
@@ -94,7 +103,7 @@ namespace WumpusGame
                 outputTexts[i].Visible = false;
             }
 
-            SystemGameControl = new GameControl(images, outputTexts, ScoreBoard, trivia, Name, ScoreReport);
+            SystemGameControl = new GameControl(images, outputTexts, ScoreBoard, trivia, Name, ScoreReport, debug);
         }
 
         private void StartButton_Click(object sender, EventArgs e)

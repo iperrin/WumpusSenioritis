@@ -93,3 +93,7 @@ C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\small
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\smallMenu.png
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\shootArrow.png
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.csprojResolveAssemblyReference.cache
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\WumpusGame.exe.manifest
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\WumpusGame.application
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.exe.manifest
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.application

@@ -18,6 +18,8 @@ namespace WumpusGame
         Label[] texts;
         Label[] trivia;
 
+        //debug buttons
+        Label[] debugLabels;
 
         PictureBox[] doors;
         PictureBox background;
@@ -33,7 +35,10 @@ namespace WumpusGame
         TextBox name;
         TextBox ScoreReport;
 
-        public graphicInterface(PictureBox[] images, Label[] texts, TextBox ScoreBoard, Label[] trivia, TextBox name, TextBox ScoreReport){
+        public graphicInterface(PictureBox[] images, Label[] texts, TextBox ScoreBoard, Label[] trivia, TextBox name, TextBox ScoreReport, Label[] debug){
+
+            debugLabels = debug;
+
             this.name = name;
             this.ScoreReport = ScoreReport;
 
@@ -63,7 +68,7 @@ namespace WumpusGame
 
             hideAll();
             showLoad();
-            
+
         }
 
         private void setDirectory()
@@ -149,6 +154,12 @@ namespace WumpusGame
             images[19].Visible = true;
             ScoreReport.Visible = true;
             ScoreReport.Text = "Score: " + input[0] + "\r\nTurns: " + input[1] + "\r\nGold: " + input[2] + "\r\nArrows: " + input[3] + "\r\nCave: " + input[4];
+        }
+
+        public void hint(String input)
+        {
+            Hint.Text = input;
+            Hint.Visible = true;
         }
 
         public void hideArrowButton()
@@ -356,6 +367,76 @@ namespace WumpusGame
         {
             images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\"+item);
             images[18].Visible = true;
+        }
+
+        public void debug(String[] data)
+        {
+            //update player
+
+            if(data[0] == null)
+            {
+                debugLabels[0].Text = "null";
+            }
+            else
+            {
+                debugLabels[0].Text = data[0];
+            }
+
+            //update wumpus
+
+            if (data[1] == null)
+            {
+                debugLabels[1].Text = "null";
+            }
+            else
+            {
+                debugLabels[1].Text = data[1];
+            }
+
+            //update bat 1
+
+            if (data[2] == null)
+            {
+                debugLabels[2].Text = "null";
+            }
+            else
+            {
+                debugLabels[2].Text = data[2];
+            }
+
+            //update bat 2
+
+            if (data[3] == null)
+            {
+                debugLabels[3].Text = "null";
+            }
+            else
+            {
+                debugLabels[3].Text = data[3];
+            }
+
+            //update pit 1
+
+            if (data[4] == null)
+            {
+                debugLabels[4].Text = "null";
+            }
+            else
+            {
+                debugLabels[4].Text = data[4];
+            }
+
+            //update pit 2
+
+            if (data[5] == null)
+            {
+                debugLabels[5].Text = "null";
+            }
+            else
+            {
+                debugLabels[5].Text = data[5];
+            }
+
         }
 
     }

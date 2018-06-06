@@ -61,6 +61,18 @@
             this.ScoreReport = new System.Windows.Forms.TextBox();
             this.Name = new System.Windows.Forms.TextBox();
             this.ScoreSubmit = new System.Windows.Forms.PictureBox();
+            this.Playertag = new System.Windows.Forms.Label();
+            this.DebugPlayer = new System.Windows.Forms.Label();
+            this.DebugWumpus = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.DebugBat1 = new System.Windows.Forms.Label();
+            this.DebugBat2 = new System.Windows.Forms.Label();
+            this.DebugPit1 = new System.Windows.Forms.Label();
+            this.DebugPit2 = new System.Windows.Forms.Label();
+            this.Bat1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door4)).BeginInit();
@@ -345,10 +357,9 @@
             // 
             // Update
             // 
-            this.Update.AutoSize = true;
             this.Update.Location = new System.Drawing.Point(118, 70);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(42, 13);
+            this.Update.Size = new System.Drawing.Size(245, 51);
             this.Update.TabIndex = 43;
             this.Update.Text = "Update";
             // 
@@ -373,12 +384,13 @@
             // 
             // Hint
             // 
-            this.Hint.AutoSize = true;
-            this.Hint.Location = new System.Drawing.Point(747, 53);
+            this.Hint.Location = new System.Drawing.Point(731, 27);
             this.Hint.Name = "Hint";
-            this.Hint.Size = new System.Drawing.Size(26, 13);
+            this.Hint.Padding = new System.Windows.Forms.Padding(5);
+            this.Hint.Size = new System.Drawing.Size(510, 53);
             this.Hint.TabIndex = 46;
             this.Hint.Text = "Hint";
+            this.Hint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ScoreReport
             // 
@@ -406,11 +418,143 @@
             this.ScoreSubmit.TabStop = false;
             this.ScoreSubmit.Click += new System.EventHandler(this.ScoreSubmit_Click);
             // 
+            // Playertag
+            // 
+            this.Playertag.AutoSize = true;
+            this.Playertag.Location = new System.Drawing.Point(231, 27);
+            this.Playertag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Playertag.Name = "Playertag";
+            this.Playertag.Size = new System.Drawing.Size(36, 13);
+            this.Playertag.TabIndex = 50;
+            this.Playertag.Text = "Player";
+            // 
+            // DebugPlayer
+            // 
+            this.DebugPlayer.AutoSize = true;
+            this.DebugPlayer.Location = new System.Drawing.Point(239, 47);
+            this.DebugPlayer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DebugPlayer.Name = "DebugPlayer";
+            this.DebugPlayer.Size = new System.Drawing.Size(13, 13);
+            this.DebugPlayer.TabIndex = 51;
+            this.DebugPlayer.Text = "0";
+            // 
+            // DebugWumpus
+            // 
+            this.DebugWumpus.AutoSize = true;
+            this.DebugWumpus.Location = new System.Drawing.Point(322, 47);
+            this.DebugWumpus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DebugWumpus.Name = "DebugWumpus";
+            this.DebugWumpus.Size = new System.Drawing.Size(13, 13);
+            this.DebugWumpus.TabIndex = 53;
+            this.DebugWumpus.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(314, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Wumpus";
+            // 
+            // DebugBat1
+            // 
+            this.DebugBat1.AutoSize = true;
+            this.DebugBat1.Location = new System.Drawing.Point(413, 47);
+            this.DebugBat1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DebugBat1.Name = "DebugBat1";
+            this.DebugBat1.Size = new System.Drawing.Size(13, 13);
+            this.DebugBat1.TabIndex = 54;
+            this.DebugBat1.Text = "0";
+            // 
+            // DebugBat2
+            // 
+            this.DebugBat2.AutoSize = true;
+            this.DebugBat2.Location = new System.Drawing.Point(485, 47);
+            this.DebugBat2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DebugBat2.Name = "DebugBat2";
+            this.DebugBat2.Size = new System.Drawing.Size(13, 13);
+            this.DebugBat2.TabIndex = 55;
+            this.DebugBat2.Text = "0";
+            // 
+            // DebugPit1
+            // 
+            this.DebugPit1.AutoSize = true;
+            this.DebugPit1.Location = new System.Drawing.Point(559, 47);
+            this.DebugPit1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DebugPit1.Name = "DebugPit1";
+            this.DebugPit1.Size = new System.Drawing.Size(13, 13);
+            this.DebugPit1.TabIndex = 56;
+            this.DebugPit1.Text = "0";
+            // 
+            // DebugPit2
+            // 
+            this.DebugPit2.AutoSize = true;
+            this.DebugPit2.Location = new System.Drawing.Point(617, 47);
+            this.DebugPit2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DebugPit2.Name = "DebugPit2";
+            this.DebugPit2.Size = new System.Drawing.Size(13, 13);
+            this.DebugPit2.TabIndex = 57;
+            this.DebugPit2.Text = "0";
+            // 
+            // Bat1
+            // 
+            this.Bat1.AutoSize = true;
+            this.Bat1.Location = new System.Drawing.Point(404, 27);
+            this.Bat1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Bat1.Name = "Bat1";
+            this.Bat1.Size = new System.Drawing.Size(29, 13);
+            this.Bat1.TabIndex = 58;
+            this.Bat1.Text = "Bat1";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(476, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Bat2";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(547, 27);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.TabIndex = 60;
+            this.label4.Text = "Pit1";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(617, 27);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 13);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Pit2";
+            // 
             // _FinalGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1265, 666);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Bat1);
+            this.Controls.Add(this.DebugPit2);
+            this.Controls.Add(this.DebugPit1);
+            this.Controls.Add(this.DebugBat2);
+            this.Controls.Add(this.DebugBat1);
+            this.Controls.Add(this.DebugWumpus);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.DebugPlayer);
+            this.Controls.Add(this.Playertag);
             this.Controls.Add(this.ScoreSubmit);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.ScoreReport);
@@ -445,7 +589,6 @@
             this.Controls.Add(this.Turns);
             this.Controls.Add(this.background);
             this.Margin = new System.Windows.Forms.Padding(2);
-   //         this.Name = "_FinalGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wumpus - Senioritis";
             this.Load += new System.EventHandler(this._FinalGame_Load);
@@ -509,5 +652,17 @@
         private System.Windows.Forms.TextBox ScoreReport;
         private System.Windows.Forms.TextBox Name;
         private System.Windows.Forms.PictureBox ScoreSubmit;
+        private System.Windows.Forms.Label Playertag;
+        private System.Windows.Forms.Label DebugPlayer;
+        private System.Windows.Forms.Label DebugWumpus;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label DebugBat1;
+        private System.Windows.Forms.Label DebugBat2;
+        private System.Windows.Forms.Label DebugPit1;
+        private System.Windows.Forms.Label DebugPit2;
+        private System.Windows.Forms.Label Bat1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
