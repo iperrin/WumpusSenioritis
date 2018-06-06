@@ -50,3 +50,69 @@ C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.csp
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.exe.manifest
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.exe
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.pdb
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.csprojAssemblyReference.cache
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Caves\map1.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Caves\map2.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Caves\map3.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Caves\map4.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Caves\map5.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Caves\map6.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\CopyOfRecord.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\GameScoreInput.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\1.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\2.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\3.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\4.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\5.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\6.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Bat.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\buyArrows.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\buySecret.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Cave 1.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Cave 2.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Cave 3.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Cave 4.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Cave 5.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Load Page (w button).png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Load Page.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Menu (w button).png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Menu.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Pit (2).png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Pit.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Play Button (Menu).png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Player Icon.gif
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\shootArrow.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\smallExit.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\smallMenu.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Start Button (Load).png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\submitButton.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Trivia Tile.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\graphics\Wumpus.png
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\HighScoreRecord.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnBatNearby1.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnBatNearby2.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnLose1.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnLose2.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnMove1.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnMove2.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnPitNearby1.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnPitNearby2.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnShoot1.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnShoot2.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnTriviaQuestion1.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnTriviaQuestion2.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnWin1.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnWin2.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnWumpusMove1.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\playOnWumpusMove2.wav
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\TriviaAnswers.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\TriviaFacts.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\TriviaQuestions.txt
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\HighScore.cs
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\Sound1\text1
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\WumpusGame.exe.config
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\WumpusGame.exe.manifest
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\WumpusGame.application
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\WumpusGame.exe
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\bin\Debug\WumpusGame.pdb
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusGame.application

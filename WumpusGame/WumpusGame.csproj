@@ -133,6 +133,7 @@
       <DependentUpon>_FinalGame.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\WumpusGame.exe.config" />
+    <None Include="bin\Debug\WumpusGame_TemporaryKey.pfx" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\WumpusGame.csproj.CoreCompileInputs.cache" />
@@ -157,12 +158,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\app.publish\WumpusGame.exe" />
+    <Content Include="bin\Debug\Caves\map1.txt" />
+    <Content Include="bin\Debug\Caves\map2.txt" />
+    <Content Include="bin\Debug\Caves\map3.txt" />
+    <Content Include="bin\Debug\Caves\map4.txt" />
+    <Content Include="bin\Debug\Caves\map5.txt" />
+    <Content Include="bin\Debug\Caves\map6.txt" />
     <Content Include="bin\Debug\CopyOfRecord.txt" />
     <Content Include="bin\Debug\GameScoreInput.txt" />
     <Content Include="bin\Debug\HighScoreRecord.txt" />
     <Content Include="bin\Debug\TriviaAnswers.txt" />
     <Content Include="bin\Debug\TriviaFacts.txt" />
     <Content Include="bin\Debug\TriviaQuestions.txt" />
+    <Content Include="bin\Debug\WumpusGame.csproj.user" />
     <Content Include="bin\Debug\WumpusGame.exe" />
     <Content Include="bin\Debug\WumpusGame.pdb" />
     <Content Include="Caves\map1.txt">

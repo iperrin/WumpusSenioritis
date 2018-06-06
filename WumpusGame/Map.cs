@@ -128,5 +128,15 @@ namespace WumpusGame
             WumpusRoom = newRoom;
         }
 
+        public void setBat1Location(int newRoom)
+        {
+            bat1Room = newRoom;
+        }
+
+        public void setBat2Location(int newRoom)
+        {
+            bat2Room = newRoom;
+        }
+
     }
 }
