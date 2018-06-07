@@ -28,13 +28,13 @@ class Cave
         // whie the line continues
         while (text.IndexOf("\r\n") != -1)
         {
-            // from 
+            // go along each line
             text = text.Substring(0, text.IndexOf("\r\n")) + " " + text.Substring(text.IndexOf("\r\n") + 2);
         }
-        // 
+        // while there are spaces
         while (text.IndexOf("  ")!=-1)
         {
-             // 
+             // keep adding numbers to the string
             text = text.Substring(0, text.IndexOf("  ")) + text.Substring(text.IndexOf("  ") + 1);
         }
         
@@ -45,7 +45,7 @@ class Cave
             // for each door
             for (int c = 0; c < 6; c++)
             {
-                // get each door value for each room by finding values separated by spaces
+                // get each door value for each room by finding values separated by spaces from the text String
                 doors[r, c] = Int32.Parse(text.Substring(0, text.IndexOf(" ")));
                 text = text.Substring(text.IndexOf(" ")+1);
             }
