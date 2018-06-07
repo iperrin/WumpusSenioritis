@@ -49,7 +49,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>zJsaCGQcTzfYFeFryOIASnw0Hs94w1jSJXZFp1F23T8=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>245CZtlIvdDdTbNUHlPD6jMexxs58Mm6cPKbRUMN6mY=</dsig:DigestValue>
+>>>>>>> master
       </hash>
     </dependentAssembly>
   </dependency>
@@ -59,7 +63,11 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
       <dsig:DigestValue>zJsaCGQcTzfYFeFryOIASnw0Hs94w1jSJXZFp1F23T8=</dsig:DigestValue>
+=======
+      <dsig:DigestValue>245CZtlIvdDdTbNUHlPD6jMexxs58Mm6cPKbRUMN6mY=</dsig:DigestValue>
+>>>>>>> master
     </hash>
   </file>
   <file name="bin\Debug\Caves\map1.txt" size="486">
@@ -140,7 +148,11 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
       <dsig:DigestValue>FjR0Qj5tH/vvmOp73C89fkscl+RLXjqIjeYz0uNlKm8=</dsig:DigestValue>
+=======
+      <dsig:DigestValue>hRgX+iOlP+lUsASjzUZh7oNLAeQWap06W2Z5E0V5EmE=</dsig:DigestValue>
+>>>>>>> master
     </hash>
   </file>
   <file name="bin\Debug\TriviaAnswers.txt" size="300">
@@ -185,7 +197,11 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
       <dsig:DigestValue>ENN3gr9W0/gnabXsO5vOwGIApcAXJ6RzLHFKSytmjH0=</dsig:DigestValue>
+=======
+      <dsig:DigestValue>kcej8OabizFuMXzqQsOfO5tstteKT6apwvA2AdZp/XM=</dsig:DigestValue>
+>>>>>>> master
     </hash>
   </file>
   <file name="bin\Debug\WumpusGame.pdb" size="116224">
@@ -194,7 +210,11 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
       <dsig:DigestValue>hu51wSMLVYtKEgLg3vNAIIOIiocQPKtMMg/BCayo/30=</dsig:DigestValue>
+=======
+      <dsig:DigestValue>Ryo0yu88+bpSlCDIubvXrKoUeVxBPHjCi0mzsVrbSR8=</dsig:DigestValue>
+>>>>>>> master
     </hash>
   </file>
   <file name="Caves\map1.txt" size="486">
@@ -536,16 +556,20 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
       <dsig:DigestValue>FjR0Qj5tH/vvmOp73C89fkscl+RLXjqIjeYz0uNlKm8=</dsig:DigestValue>
+=======
+      <dsig:DigestValue>hRgX+iOlP+lUsASjzUZh7oNLAeQWap06W2Z5E0V5EmE=</dsig:DigestValue>
+>>>>>>> master
     </hash>
   </file>
-  <file name="obj\Debug\WumpusGame.csproj.FileListAbsolute.txt" size="10843">
+  <file name="obj\Debug\WumpusGame.csproj.FileListAbsolute.txt" size="17764">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>lighbKwFcih9aWkAWSpFEdlYHRmoUw1Trm1s3chmQvw=</dsig:DigestValue>
+      <dsig:DigestValue>YQoIM7SazPeEVPGu9X9rSLPT6L+lBl8Gl7+XfhqvitM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="obj\Debug\WumpusGame.exe" size="47616">
@@ -554,7 +578,11 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
       <dsig:DigestValue>ENN3gr9W0/gnabXsO5vOwGIApcAXJ6RzLHFKSytmjH0=</dsig:DigestValue>
+=======
+      <dsig:DigestValue>kcej8OabizFuMXzqQsOfO5tstteKT6apwvA2AdZp/XM=</dsig:DigestValue>
+>>>>>>> master
     </hash>
   </file>
   <file name="obj\Debug\WumpusGame.pdb" size="116224">
@@ -563,7 +591,11 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
       <dsig:DigestValue>hu51wSMLVYtKEgLg3vNAIIOIiocQPKtMMg/BCayo/30=</dsig:DigestValue>
+=======
+      <dsig:DigestValue>Ryo0yu88+bpSlCDIubvXrKoUeVxBPHjCi0mzsVrbSR8=</dsig:DigestValue>
+>>>>>>> master
     </hash>
   </file>
   <file name="Sound1\playOnBatNearby1.wav" size="3393912">
