@@ -25,11 +25,13 @@ namespace WumpusGame
         String turnStatus;
         int[] output;
         Boolean wumpusAlive;
+        Sound sounds;
 
 
         public GameControl(PictureBox[] images, Label[] texts, TextBox ScoreBoard, Label[] triviaLabels, TextBox name, TextBox ScoreReport, Label[] debug)
         {
             player = new Player();
+            sounds = new Sound();
             map = new Map();
             cave = new Cave();
             trivia = new TriviaManagement();
@@ -40,6 +42,7 @@ namespace WumpusGame
         public void StartGame(int caveNumber)
         {
             wumpusAlive = true;
+            sounds = new Sound();
 
             //creates output array for game data and saves cave file
             output = new int[5];
@@ -53,6 +56,7 @@ namespace WumpusGame
             graphics.loadDoors(cave.GetDoors(map.GetPlayerRoom()));
             graphics.update("");
             graphics.update("");
+            turnStatus = "";
             updateStats();
             runTurn();
             debug();
@@ -61,7 +65,8 @@ namespace WumpusGame
         public void runTurn()
         {
             graphics.startMove();
-            graphics.hint("");
+            if(!turnStatus.Equals("buySecret"))
+                graphics.hint("");
             if (turnStatus == "move")
                 graphics.hint(getTriviaFact());
             graphics.update("Click direction to move, fire an arrow, or make a purchase!");
@@ -99,7 +104,7 @@ namespace WumpusGame
         public String giveSecret()
         {
             Random rand = new Random();
-            int test = rand.Next(6);
+            int test = rand.Next(0,6);
 
             if(test == 0)
             {
@@ -144,6 +149,10 @@ namespace WumpusGame
             }
             else
             {
+                if (trivia.IsWrongAnswersEmpty())
+                {
+                    return giveSecret();
+                }
                 return (trivia.GetSecret());
             }
             debug();
@@ -179,6 +188,7 @@ namespace WumpusGame
 
         public void move(int door)
         {
+            sounds.playOnMove();
             debug();
             int startRoom = map.GetPlayerRoom();
             int newRoom = cave.GetDoors(startRoom)[door-1];
@@ -198,6 +208,7 @@ namespace WumpusGame
 
         public void arrowThrow(int arrowDirection)
         {
+            sounds.playOnShoot();
             debug();
             if (cave.GetDoors(map.GetPlayerRoom())[arrowDirection - 1] == map.GetWumpusLocation())
             {
@@ -211,6 +222,7 @@ namespace WumpusGame
                 if(temp.Next(0,2) == 0)
                 {
                     map.SetWumpusLocation(cave.getRandomDoor(map.GetWumpusLocation()));
+                    sounds.playOnWumpusMove();
                 }
                     
                 graphics.hint("Oh no! You Missed, better luck next time");
@@ -242,9 +254,15 @@ namespace WumpusGame
             output[3] = player.Arrow;
 
             if (wumpusAlive)
+            {
                 output[0] = 0;
+                sounds.playOnWin();
+            }
             else
+            {
                 output[0] = 100 - output[1] + output[2] + (10 * output[3]);
+                sounds.playOnWin();
+            }
             graphics.showScoreReport(output);
             debug();
         }
@@ -411,6 +429,7 @@ namespace WumpusGame
                     map.SetWumpusLocation(cave.goToNewRoom(temp.Next(2, 5), map.GetWumpusLocation()));
 
                 graphics.hint("You survived the Wumpus encounter! He ran away, but happy hunting!");
+                sounds.playOnWumpusMove();
             }
             if (turnStatus.Equals("pit"))
             {
@@ -441,6 +460,7 @@ namespace WumpusGame
         public void loadTrivia()
         {
             graphics.TriviaMode();
+            sounds.playOnTriviaQuestion();
             updateStats();
             String temp = trivia.GetNextQuestion();
             String[] inputs = new String[5];
@@ -523,16 +543,19 @@ namespace WumpusGame
                 if (map.GetWumpusLocation() == cave.GetDoors(map.GetPlayerRoom())[i])
                 {
                     graphics.appendHint("I smell a Wumpus!");
+
                 }
 
                 if (map.getBat1Location() == cave.GetDoors(map.GetPlayerRoom())[i] || map.getBat2Location() == cave.GetDoors(map.GetPlayerRoom())[i])
                 {
                     graphics.appendHint("Bats Nearby");
+                    sounds.playOnBatNearby();
                 }
 
                 if (map.getPit1Location() == cave.GetDoors(map.GetPlayerRoom())[i] || map.getPit2Location() == cave.GetDoors(map.GetPlayerRoom())[i])
                 {
                     graphics.appendHint("I feel a draft");
+                    sounds.playOnPitNearby();
                 }
             }
         }

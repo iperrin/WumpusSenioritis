@@ -48,7 +48,10 @@ class Cave
     //returns room doors
     public int[] GetDoors(int room)
     {
-        
+
+        if (room > 30 || room < 1)
+            room = 1;
+
         int[] output = new int[6];
 
         output[0] = doors[room - 1, 5];
