@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iIEBOQKm1ePv5BRK+MZOpxW1WwIXi4geI3vtktcPOvA=</dsig:DigestValue>
+        <dsig:DigestValue>zJsaCGQcTzfYFeFryOIASnw0Hs94w1jSJXZFp1F23T8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -59,7 +59,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>iIEBOQKm1ePv5BRK+MZOpxW1WwIXi4geI3vtktcPOvA=</dsig:DigestValue>
+      <dsig:DigestValue>zJsaCGQcTzfYFeFryOIASnw0Hs94w1jSJXZFp1F23T8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Debug\Caves\map1.txt" size="486">
@@ -134,13 +134,13 @@
       <dsig:DigestValue>lyRBa2BFYckzbA+H7ix7sz6he3wVJNE0GLUDaHvhoJ0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\HighScoreRecord.txt" size="224">
+  <file name="bin\Debug\HighScoreRecord.txt" size="241">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>q9zm1TzreSjRLFO5kf+V3ool8+90ZAjaf2vwwoPUZPw=</dsig:DigestValue>
+      <dsig:DigestValue>FjR0Qj5tH/vvmOp73C89fkscl+RLXjqIjeYz0uNlKm8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Debug\TriviaAnswers.txt" size="300">
@@ -185,7 +185,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>r12M2XPDS+XOlO3lu4CovHbXixXr6vN0cwJEba8VYfk=</dsig:DigestValue>
+      <dsig:DigestValue>ENN3gr9W0/gnabXsO5vOwGIApcAXJ6RzLHFKSytmjH0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Debug\WumpusGame.pdb" size="116224">
@@ -194,7 +194,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>GZ3ow2qgkncsNyrRBCxFmQir0877FmoFb2fys2P8cQI=</dsig:DigestValue>
+      <dsig:DigestValue>hu51wSMLVYtKEgLg3vNAIIOIiocQPKtMMg/BCayo/30=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Caves\map1.txt" size="486">
@@ -530,13 +530,13 @@
       <dsig:DigestValue>6AwRV3ZZbB0vEemfaXZH4Mgt9PWT5PmZjWz9xymSoIY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="HighScoreRecord.txt" size="224">
+  <file name="HighScoreRecord.txt" size="241">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>q9zm1TzreSjRLFO5kf+V3ool8+90ZAjaf2vwwoPUZPw=</dsig:DigestValue>
+      <dsig:DigestValue>FjR0Qj5tH/vvmOp73C89fkscl+RLXjqIjeYz0uNlKm8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="obj\Debug\WumpusGame.csproj.FileListAbsolute.txt" size="10843">
@@ -554,7 +554,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yQ2g+jvu+q++WcgbC4piE9yKfWL9Go/H68QTNKnA3Ds=</dsig:DigestValue>
+      <dsig:DigestValue>ENN3gr9W0/gnabXsO5vOwGIApcAXJ6RzLHFKSytmjH0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="obj\Debug\WumpusGame.pdb" size="116224">
@@ -563,7 +563,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>UX5up8I2C2C/8bjISEDt4f0Yv6bmkmmecCfOPxfQjkg=</dsig:DigestValue>
+      <dsig:DigestValue>hu51wSMLVYtKEgLg3vNAIIOIiocQPKtMMg/BCayo/30=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Sound1\playOnBatNearby1.wav" size="3393912">
