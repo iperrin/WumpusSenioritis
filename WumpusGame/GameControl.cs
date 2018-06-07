@@ -51,6 +51,8 @@ namespace WumpusGame
             trivia.Reset();
             map.Reset();
             graphics.loadDoors(cave.GetDoors(map.GetPlayerRoom()));
+            graphics.update("");
+            graphics.update("");
             updateStats();
             runTurn();
             debug();
@@ -59,6 +61,9 @@ namespace WumpusGame
         public void runTurn()
         {
             graphics.startMove();
+            graphics.hint("");
+            if (turnStatus == "move")
+                graphics.hint(getTriviaFact());
             graphics.update("Click direction to move, fire an arrow, or make a purchase!");
             graphics.showCenter("Player Icon.gif");
             graphics.loadDoors(cave.GetDoors(map.currentRoom));
@@ -181,7 +186,6 @@ namespace WumpusGame
             map.SetPlayerRoom(newRoom);
             graphics.loadDoors(cave.GetDoors(newRoom));
             player.GoldCoins++;
-            graphics.hint(getTriviaFact());
             endTurn();
         }
 
@@ -319,7 +323,6 @@ namespace WumpusGame
             triviaScore = 0;
             triviaAsked = 0;
             triviaNumQs = 3;
-            player.Buy();
             updateStats();
             loadTrivia();
             debug();
@@ -332,7 +335,6 @@ namespace WumpusGame
             triviaScore = 0;
             triviaAsked = 0;
             triviaNumQs = 3;
-            player.Buy();
             updateStats();
             loadTrivia();
             debug();
@@ -367,15 +369,22 @@ namespace WumpusGame
         public void foundBat()
         {
 
-            turnStatus = "bat";
-            triviaScore = 0;
-            triviaAsked = 0;
-            triviaNumQs = 3;
-            graphics.update("Oh no, you were picked up by a superbat! Get 2/3 trivia questions right to live!");
+            Random temp = new Random();
+            if (map.getBat1Location() == map.GetPlayerRoom())
+            {
+                map.setBat1Location(temp.Next(1, 31));
+            }
+            else
+            {
+                map.setBat2Location(temp.Next(1, 31));
+            }
+            map.SetPlayerRoom(temp.Next(1, 31));
+
+            graphics.hint("Looks like a bat just picked you up and dropped you off in a random room!");
             updateStats();
             loadTrivia();
-            graphics.showCenter("Bat.png");
             debug();
+            endTurn();
         }
 
         public void winTrivia()
@@ -396,7 +405,11 @@ namespace WumpusGame
             if (turnStatus.Equals("fightWumpus"))
             {
                 Random temp = new Random();
-                map.SetWumpusLocation(cave.goToNewRoom(temp.Next(2,5),map.GetWumpusLocation()));
+                int wumpusStart = map.GetWumpusLocation();
+
+                while(map.GetWumpusLocation() == wumpusStart)
+                    map.SetWumpusLocation(cave.goToNewRoom(temp.Next(2, 5), map.GetWumpusLocation()));
+
                 graphics.hint("You survived the Wumpus encounter! He ran away, but happy hunting!");
             }
             if (turnStatus.Equals("pit"))
@@ -404,20 +417,6 @@ namespace WumpusGame
                 map.SetPlayerRoom(1);
                 graphics.hint("You survived the pit! Wecome back to the start!");
                 
-            }
-            if (turnStatus.Equals("bat"))
-            {
-                Random temp = new Random();
-                if(map.getBat1Location() == map.GetPlayerRoom())
-                {
-                    map.setBat1Location(temp.Next(1, 31));
-                }
-                else
-                {
-                    map.setBat2Location(temp.Next(1, 31));
-                }
-                map.SetPlayerRoom(temp.Next(1, 31));
-                graphics.hint("Great job! You got free of the bat and fell back into the cave!");
             }
             debug();
             graphics.hideTrivia();
@@ -479,6 +478,7 @@ namespace WumpusGame
 
         public void triviaResponse(String answer)
         {
+            player.Buy();
             if (trivia.CorrectAnswer(answer))
             {
                 triviaScore++;
@@ -498,8 +498,6 @@ namespace WumpusGame
                 loadTrivia();
             if (turnStatus.Equals("pit"))
                 graphics.showCenter("Pit.png");
-            if (turnStatus.Equals("bat"))
-                graphics.showCenter("Bat.png");
             if (turnStatus.Equals("fightWumpus"))
                 graphics.showCenter("Wumpus.png");
         }
@@ -524,20 +522,17 @@ namespace WumpusGame
             {
                 if (map.GetWumpusLocation() == cave.GetDoors(map.GetPlayerRoom())[i])
                 {
-                    graphics.hint("I smell a Wumpus!");
-                    return;
+                    graphics.appendHint("I smell a Wumpus!");
                 }
 
                 if (map.getBat1Location() == cave.GetDoors(map.GetPlayerRoom())[i] || map.getBat2Location() == cave.GetDoors(map.GetPlayerRoom())[i])
                 {
-                    graphics.hint("Bats Nearby");
-                    return;
+                    graphics.appendHint("Bats Nearby");
                 }
 
                 if (map.getPit1Location() == cave.GetDoors(map.GetPlayerRoom())[i] || map.getPit2Location() == cave.GetDoors(map.GetPlayerRoom())[i])
                 {
-                    graphics.hint("I feel a draft");
-                    return;
+                    graphics.appendHint("I feel a draft");
                 }
             }
         }

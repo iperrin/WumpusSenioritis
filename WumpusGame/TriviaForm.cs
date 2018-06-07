@@ -25,7 +25,7 @@ namespace WumpusTest
       String questions = @"C:\Users\vaish\Documents\VVP\12th Grade (2017-2018)\AP Computer Science\HuntTheWumpus\TriviaQuestions.txt";
       String answers = @"C:\Users\vaish\Documents\VVP\12th Grade (2017-2018)\AP Computer Science\HuntTheWumpus\TriviaAnswers.txt";
       String facts = @"C:\Users\vaish\Documents\VVP\12th Grade (2017-2018)\AP Computer Science\HuntTheWumpus\TriviaFacts.txt";
-      _TriviaManagement = new TriviaManagement(questions, answers, facts);
+      _TriviaManagement = new TriviaManagement();
       string word = " ";
       string[] a = { word };
       //System.IO.File.WriteAllLines(@"C:\Users\vaish\Documents\VVP\12th Grade (2017-2018)\AP Computer Science\HuntTheWumpus\TriviaUnitTests.txt", a);

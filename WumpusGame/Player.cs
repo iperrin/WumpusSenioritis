@@ -43,7 +43,7 @@ class Player
     }
     public void Buy()
     {
-        GoldCoins -= 3;
+        GoldCoins--;
     }
     public int NeedForBuyArrows()
     {

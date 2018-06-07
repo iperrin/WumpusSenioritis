@@ -224,6 +224,13 @@ namespace WumpusGame
             Hint.Visible = true;
         }
 
+        public void appendHint(String input)
+        {
+            Hint.Text += ("\r\t"+input);
+            Hint.Visible = true;
+        }
+
+
         public void updateStats(int turns, int coins, int arrows)
         {
             this.Turns.Text = ""+turns;
@@ -253,13 +260,13 @@ namespace WumpusGame
         {
             String[] scores = HighScore.GetHighScores();
 
-            ScoreBoard.Text = "SCORE    TURNS      GOLD      ARROWS      CAVE       PLAYER\r\n";
+            ScoreBoard.Text = "SCORE      TURNS        GOLD        ARROWS        CAVE        PLAYER\r\n";
             int count = 0;
 
             for (int c = 0; c < 10; c++) {
                 for (int i = 0; i < 6; i++)
                 {
-                    ScoreBoard.Text += (scores[count]+"           ");
+                    ScoreBoard.Text += ((scores[count]+"                 ")).Substring(0,15)+"    ";
                     count++;
                 }
                 ScoreBoard.Text += "\r\n";
