@@ -157,15 +157,15 @@ namespace WumpusGame
             Arrows.Visible = true;
             images[17].Visible = true;
         }
-
-        //hides all move related things to 
  
+        //gives instructions to the user
         public void update(String input)
         {
             Instructions.Text = input;
             Instructions.Visible = true;
         }
         
+        //hides alls core related objects
         public void hideScoreReport()
         {
             images[19].Visible = false;
@@ -173,6 +173,7 @@ namespace WumpusGame
             ScoreReport.Visible = false;
         }
 
+        //access high score class and loads scores
         public void showScoreReport(int[] input)
         {
             //score turns gold arrows cave player
@@ -184,6 +185,7 @@ namespace WumpusGame
             ScoreReport.Text = "Score: " + input[0] + "\r\nTurns: " + input[1] + "\r\nGold: " + input[2] + "\r\nArrows: " + input[3] + "\r\nCave: " + input[4];
         }
 
+        //shows start move interface
         public void startMove()
         {
             hideAll();
@@ -203,6 +205,7 @@ namespace WumpusGame
                 texts[i].Visible = true;
         }
 
+        //hides appropriate objects for trivia play
         public void TriviaMode()
         {
             startMove();
@@ -210,6 +213,7 @@ namespace WumpusGame
                 images[i].Visible = false;
         }
 
+        //hides appropriate objects so only arrow throwing is allowed
         public void arrowMode()
         {
             startMove();
@@ -218,19 +222,21 @@ namespace WumpusGame
             images[16].Visible = false;
         }
 
+        //gives the user a hint
         public void hint(String input)
         {
             Hint.Text = input;
             Hint.Visible = true;
         }
 
+        //allows for multiple hints to be viewed at once
         public void appendHint(String input)
         {
             Hint.Text += ("\r\t"+input);
             Hint.Visible = true;
         }
 
-
+        //updates live player stats
         public void updateStats(int turns, int coins, int arrows)
         {
             this.Turns.Text = ""+turns;
@@ -239,6 +245,7 @@ namespace WumpusGame
 
         }
 
+        //shows a trivia question and responses
         public void loadTrivia(String[] input)
         {
             for(int i = 0; i<trivia.Length; i++)
@@ -248,6 +255,7 @@ namespace WumpusGame
             }
         }
 
+        //hides trivia related objects
         public void hideTrivia()
         {
             for(int i = 0; i < trivia.Length; i++)
@@ -256,6 +264,7 @@ namespace WumpusGame
             }
         }
 
+        //shows the user their previous score and lets them upload it
         public void displayScores()
         {
             String[] scores = HighScore.GetHighScores();
@@ -275,6 +284,7 @@ namespace WumpusGame
 
         }
         
+        //loads the doors using an input array of doors
         public void loadDoors(int[] caveDoors)
         {
             for (int i = 0; i < 6; i++)
@@ -291,12 +301,14 @@ namespace WumpusGame
                     
         }
                
+        //updates the central icon
         public void showCenter(String item)
         {
             images[18].Image = Image.FromFile(Environment.CurrentDirectory + "\\graphics\\"+item);
             images[18].Visible = true;
         }
 
+        //updates debug labels if debug labels are turned on
         public void debug(String[] data)
         {
             //update player

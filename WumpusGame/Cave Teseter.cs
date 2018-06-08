@@ -29,7 +29,7 @@ namespace WumpusTest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _Cave.getDoors();
+            //_Cave.getDoors();
         }  
     
     }

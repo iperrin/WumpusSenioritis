@@ -193,3 +193,4 @@ C:\Users\vaish\Source\Repos\WumpusSenioritis2\WumpusGame\obj\Debug\WumpusGame.ap
 C:\Users\vaish\Source\Repos\WumpusSenioritis2\WumpusGame\obj\Debug\WumpusGame.exe
 C:\Users\vaish\Source\Repos\WumpusSenioritis2\WumpusGame\obj\Debug\WumpusGame.pdb
 C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusTest.TriviaForm.resources
+C:\Users\Isaac\source\repos\WumpusSenioritis\WumpusGame\obj\Debug\WumpusTest.Form1.resources

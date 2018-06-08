@@ -22,9 +22,9 @@ namespace WumpusTest
 
     private void constructor(object sender, EventArgs e)
     {
-      String questions = @"C:\Users\vaish\Documents\VVP\12th Grade (2017-2018)\AP Computer Science\HuntTheWumpus\TriviaQuestions.txt";
-      String answers = @"C:\Users\vaish\Documents\VVP\12th Grade (2017-2018)\AP Computer Science\HuntTheWumpus\TriviaAnswers.txt";
-      String facts = @"C:\Users\vaish\Documents\VVP\12th Grade (2017-2018)\AP Computer Science\HuntTheWumpus\TriviaFacts.txt";
+      String questions = Environment.CurrentDirectory+@"\TriviaQuestions.txt";
+      String answers = Environment.CurrentDirectory+@"\TriviaAnswers.txt";
+      String facts = Environment.CurrentDirectory+@"\TriviaFacts.txt";
       _TriviaManagement = new TriviaManagement();
       string word = " ";
       string[] a = { word };

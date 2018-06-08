@@ -34,7 +34,7 @@
             // ConstructorButton
             // 
             this.ConstructorButton.AccessibleName = "ConstructorButton";
-            this.ConstructorButton.Location = new System.Drawing.Point(146, 87);
+            this.ConstructorButton.Location = new System.Drawing.Point(38, 65);
             this.ConstructorButton.Name = "ConstructorButton";
             this.ConstructorButton.Size = new System.Drawing.Size(108, 42);
             this.ConstructorButton.TabIndex = 0;

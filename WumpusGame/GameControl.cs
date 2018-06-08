@@ -27,7 +27,7 @@ namespace WumpusGame
         Boolean wumpusAlive;
         Sound sounds;
 
-
+        //constructor runs constructors of class objects and passes all the form variables to the graphics interface
         public GameControl(PictureBox[] images, Label[] texts, TextBox ScoreBoard, Label[] triviaLabels, TextBox name, TextBox ScoreReport, Label[] debug)
         {
             player = new Player();
@@ -38,7 +38,7 @@ namespace WumpusGame
             graphics = new graphicInterface(images, texts, ScoreBoard, triviaLabels, name, ScoreReport, debug);
         }
 
-        //starts the game
+        //starts the game and loads classes and graphics
         public void StartGame(int caveNumber)
         {
             wumpusAlive = true;
@@ -62,6 +62,7 @@ namespace WumpusGame
             debug();
         }
 
+        //start turn method sets up graphics and gives basic instructions, also checks end conditions and overlaps with hazards and/or wumpus
         public void runTurn()
         {
             graphics.startMove();
@@ -101,6 +102,7 @@ namespace WumpusGame
 
         }
 
+        //selects a random secret and then sends to graphics for viewing
         public String giveSecret()
         {
             Random rand = new Random();
@@ -158,6 +160,7 @@ namespace WumpusGame
             debug();
         }
 
+        //updates statistics at the end of turn and initiates the next turn
         public void endTurn()
         {
             player.incrementTurn();
@@ -166,6 +169,7 @@ namespace WumpusGame
             debug();
         }
        
+        //checks whether the game is over or not
         public Boolean checkEndConditions()
         {
             debug();
@@ -176,16 +180,19 @@ namespace WumpusGame
             return false;
         }
 
+        //interfaces with the trivia class to get questions
         public String getTriviaQuestion()
         {
             return trivia.GetNextQuestion();
         }
 
+        //interfaces with the trivia class to get questions
         public String getTriviaFact()
         {
             return trivia.GetNextFact();
         }
 
+        //updates system and finds new door when player moves
         public void move(int door)
         {
             sounds.playOnMove();
@@ -199,6 +206,7 @@ namespace WumpusGame
             endTurn();
         }
 
+        //gets player info and updates graphics
         public void updateStats()
         {
             graphics.updateStats(player.playerTurns, player.GoldCoins, player.Arrow);
@@ -206,6 +214,7 @@ namespace WumpusGame
             debug();
         }
 
+        //finds location of arrow throw and checks for wumpus impact, then acts accordingly
         public void arrowThrow(int arrowDirection)
         {
             sounds.playOnShoot();
@@ -234,6 +243,7 @@ namespace WumpusGame
             debug();
         }
 
+        //sets UI and turn status when the player decides to throw an arrow
         public void arrowMode()
         {
             turnStatus = "throwArrow";
@@ -243,6 +253,7 @@ namespace WumpusGame
             debug();
         }
 
+        //calculates score and goes to main menu
         public void endGame()
         {
             debug();
@@ -267,6 +278,7 @@ namespace WumpusGame
             debug();
         }
 
+        //adds score to the highscore object and upates leaderboard appropriately
         public void addScore(String name)
         {
             
@@ -280,6 +292,7 @@ namespace WumpusGame
 
         }
 
+        //either throws arrow or moves depending on turnStatus if direction 1 is pressed
         public void direction1()
         {
             if (turnStatus.Equals("throwArrow"))
@@ -287,8 +300,9 @@ namespace WumpusGame
             else 
                 move(1);
             debug();
-        } 
+        }
 
+        //either throws arrow or moves depending on turnStatus if direction 2 is pressed
         public void direction2()
         {
             if (turnStatus.Equals("throwArrow"))
@@ -298,6 +312,7 @@ namespace WumpusGame
             debug();
         }
 
+        //either throws arrow or moves depending on turnStatus if direction 3 is pressed
         public void direction3()
         {
             if (turnStatus.Equals("throwArrow"))
@@ -307,6 +322,7 @@ namespace WumpusGame
             debug();
         }
 
+        //either throws arrow or moves depending on turnStatus if direction 4 is pressed
         public void direction4()
         {
             if (turnStatus.Equals("throwArrow"))
@@ -316,6 +332,7 @@ namespace WumpusGame
             debug();
         }
 
+        //either throws arrow or moves depending on turnStatus if direction 5 is pressed
         public void direction5()
         {
             if (turnStatus.Equals("throwArrow"))
@@ -325,6 +342,7 @@ namespace WumpusGame
             debug();
         }
 
+        //either throws arrow or moves depending on turnStatus if direction 6 is pressed
         public void direction6()
         {
             if (turnStatus.Equals("throwArrow"))
@@ -334,6 +352,7 @@ namespace WumpusGame
             debug();
         }
 
+        //sets interface and turn status if buySecret is chosen
         public void buySecret()
         {
             turnStatus = "buySecret";
@@ -346,6 +365,7 @@ namespace WumpusGame
             debug();
         }
 
+        //sets interface and turn status if buyArriw us chosen
         public void buyArrow()
         {
             turnStatus = "buyArrow";
@@ -358,6 +378,7 @@ namespace WumpusGame
             debug();
         }
 
+        //sets interface and turn status if a wumpus encounter happens
         public void fightWumpus()
         {
             turnStatus = "fightWumpus";
@@ -371,6 +392,7 @@ namespace WumpusGame
             debug();
         }
 
+        //sets interface and turn status if player falls in a pit
         public void fellInPit()
         {
             turnStatus = "pit";
@@ -384,6 +406,7 @@ namespace WumpusGame
             debug();
         }
 
+        //randomly moves player around if he finds a bat and resets the bat location
         public void foundBat()
         {
 
@@ -405,6 +428,7 @@ namespace WumpusGame
             endTurn();
         }
 
+        //runs appropriate response to trivia win when called
         public void winTrivia()
         {
             debug();
@@ -442,6 +466,7 @@ namespace WumpusGame
             endTurn();
         }
 
+        //rus approriate response to trivia when the player has lost
         public void lostTrivia()
         {
             graphics.hideTrivia();
@@ -457,6 +482,7 @@ namespace WumpusGame
             debug();
         }
 
+        //accesses trivia objct and loads next question into the UI
         public void loadTrivia()
         {
             graphics.TriviaMode();
@@ -476,26 +502,31 @@ namespace WumpusGame
             graphics.loadTrivia(inputs);
         }
 
+        //trivia response called by UI
         public void selectA()
         {
             triviaResponse("A");
         }
 
+        //trivia response called by UI
         public void selectB()
         {
             triviaResponse("B");
         }
 
+        //trivia response called by UI
         public void selectC()
         {
             triviaResponse("C");
         }
 
+        //trivia response called by UI
         public void selectD()
         {
             triviaResponse("D");
         }
 
+        //checks answer, removes coin from player, and ends turn if appropriate with a win or loss depending on score
         public void triviaResponse(String answer)
         {
             player.Buy();
@@ -522,6 +553,7 @@ namespace WumpusGame
                 graphics.showCenter("Wumpus.png");
         }
 
+        //method used for reporting location to GUI if debug objects turned on
         public void debug()
         {
             String[] data = new String[6];
@@ -535,7 +567,8 @@ namespace WumpusGame
 
             graphics.debug(data);
         }
-
+        
+        //checks for nearby hazards and tells player
         public void nearbyHazards()
         {
             for(int i = 0; i<6; i++)

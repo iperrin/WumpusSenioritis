@@ -73,6 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cave Teseter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cave Teseter.Designer.cs">
+      <DependentUpon>Cave Teseter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Loader.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     <Compile Include="_FinalGame.Designer.cs">
       <DependentUpon>_FinalGame.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cave Teseter.resx">
+      <DependentUpon>Cave Teseter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HighScoreTestForm.resx">
       <DependentUpon>HighScoreTestForm.cs</DependentUpon>
     </EmbeddedResource>
