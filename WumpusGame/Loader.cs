@@ -31,22 +31,22 @@ namespace WumpusGame.bin
 
         private void TriviaTester_Click(object sender, EventArgs e)
         {
-            Program.run("HighScoreTestForm");
+            Program.run("TriviaForm");
         }
 
         private void CaveTester_Click(object sender, EventArgs e)
         {
-
+            Program.run("Cave Teseter");
         }
 
         private void mapTester_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void PlayerTester_Click(object sender, EventArgs e)
         {
-
+            Program.run("HighScoreTestForm");
         }
     }
 }
